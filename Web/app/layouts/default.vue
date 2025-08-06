@@ -1,6 +1,6 @@
 <template>
-    <section>
+    <div class="pt-16">
         <slot />
-    </section>
-    <LoadingFullPage />
+        <div class="h-32"></div>
+    </div>
 </template>
