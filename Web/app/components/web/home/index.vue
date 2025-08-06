@@ -1,6 +1,7 @@
 <template>
+    <WebHomeHero />
     <PageLayout>
-        <WebHomeHero />
+        <WebHomeStrategy />
     </PageLayout>
 </template>
 <script lang="ts" setup>

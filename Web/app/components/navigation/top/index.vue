@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-20 lg:px-4 relative flex justify-center">
+  <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-20 lg:px-4 flex justify-center z-50">
     <div class="w-full h-full px-4 md:px-4 lg:w-4/5 2xl:w-4/6 flex items-center justify-between">
       <NavigationTopLogo />
       <NavigationTopMenu />
