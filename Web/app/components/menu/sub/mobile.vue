@@ -9,8 +9,8 @@
             <span>{{ $t(menu.locale) }}</span>
           </div>
           <Icon v-if="menu.children && menu.children.length > 0" name="lucide:chevron-down"
-            :class="{ 'rotate-180': openMenu?.id === menu.id }" class="transition-transform duration-300" />
-          <Icon v-if="!menu.children" name="lucide:chevron-right" class="transition-transform duration-300" />
+            :class="{ 'rotate-180': openMenu?.id === menu.id }" class="transition-transform duration-300 mr-5" />
+          <Icon v-if="!menu.children" name="lucide:chevron-right" class="transition-transform duration-300 mr-5" />
         </div>
       </div>
 

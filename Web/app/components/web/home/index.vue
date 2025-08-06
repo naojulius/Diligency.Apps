@@ -2,6 +2,7 @@
     <WebHomeHero />
     <PageLayout>
         <WebHomeStrategy />
+        <WebHomeExpertise />
     </PageLayout>
 </template>
 <script lang="ts" setup>
