@@ -1,3 +1,28 @@
 {
-    "app": "FR"
+    "home": {
+        "hero": {
+            "title": "Offrez-vous la diligence digitale",
+            "subtitle": "Sites web & applications sur-mesure, pensés pour la performance, la clarté et la conversion"
+        }
+    },
+    "button": {
+        "menu": {
+            "agency": "Agence",
+            "service": "Services",
+            "contact": "Contact"
+        },
+        "submenu": {
+            "about": "A propos",
+            "jobCarrier": "Job & Carrière",
+            "hub": "Le Hub",
+            "webApp": "Web App",
+            "webShow": "Sites vitrines",
+            "eCommerce": "E-commerce",
+            "itIaSolution": "Solution IT/IA"
+        },
+        "cta": {
+            "reserveStrategyCall": "Réservez un appel stratégique",
+            "applyMyProject": "Soumettre mon projet"
+        }
+    }
 }

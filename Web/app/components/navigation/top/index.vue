@@ -1,17 +1,15 @@
 <template>
-  <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-20 relative">
-    <div class="px-4 lg:px-16 xl:px-40 w-full h-full flex items-center justify-between">
+  <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-20 lg:px-4 relative flex justify-center">
+    <div class="w-full h-full px-4 md:px-4 lg:w-4/5 2xl:w-4/6 flex items-center justify-between">
       <NavigationTopLogo />
       <NavigationTopMenu />
       <NavigationTopLocale />
       <NavigationTopHumberger />
     </div>
-    <section
-      v-if="isHumberger"
-      ref="menu"
-      class="absolute w-full h-[calc(100vh-5rem)] lg:h-92 xl:h-98 bg-red-100 origin-top overflow-hidden">
-        <MenuSubMobile />
-        <MenuSubDesktop />
+    <section v-if="isHumberger" ref="menu"
+      class="absolute w-full h-[calc(100vh-5rem)] lg:h-92 xl:h-98 bg-red-100 top-20 overflow-hidden z-20">
+      <MenuSubMobile />
+      <MenuSubDesktop />
     </section>
   </nav>
 </template>

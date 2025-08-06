@@ -1,3 +1,28 @@
 {
-    "app": "EN"
+    "home": {
+        "hero": {
+            "title": "Treat yourself to digital diligence",
+            "subtitle": "Custom websites & applications, designed for performance, clarity, and conversion"
+        }
+    },
+    "button": {
+        "menu": {
+            "agency": "Agency",
+            "service": "Services",
+            "contact": "Contact"
+        },
+        "submenu": {
+            "about": "About",
+            "jobCarrier": "Job & Career",
+            "hub": "The Hub",
+            "webApp": "Web App",
+            "webShow": "Showcase Sites",
+            "eCommerce": "E-commerce",
+            "itIaSolution": "IT/AI Solution"
+        },
+        "cta": {
+            "reserveStrategyCall": "Book a strategy call",
+            "applyMyProject": "Submit my project"
+        }
+    }
 }
