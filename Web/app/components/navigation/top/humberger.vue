@@ -1,21 +1,15 @@
 <template>
-  <div
-    class="group lg:hidden flex h-20 w-20 cursor-pointer items-center justify-center rounded-3xl p-2 aspect-square"
-    @click="toggleMenu"
-  >
+  <div class="group lg:hidden flex h-14 w-14 cursor-pointer items-center justify-center p-2 aspect-square"
+    @click="toggleMenu">
     <div class="space-y-2" ref="menuIcon">
-      <span
-        :class="[
-          'block h-1 w-10 origin-center rounded-full bg-secondary transition-transform ease-in-out',
-          isHumberger ? 'translate-y-1.5 rotate-45' : ''
-        ]"
-      ></span>
-      <span
-        :class="[
-          'block h-1 w-8 origin-center rounded-full bg-accent-200 transition-all ease-in-out',
-          isHumberger ? 'w-10 -translate-y-1.5 -rotate-45' : ''
-        ]"
-      ></span>
+      <span :class="[
+      'block h-1 w-8 origin-center rounded-full bg-secondary transition-transform ease-in-out',
+      isHumberger ? 'translate-y-1.5 rotate-45' : ''
+    ]"></span>
+      <span :class="[
+      'block h-1 w-6 origin-center rounded-full bg-accent-200 transition-all ease-in-out',
+      isHumberger ? 'w-8 -translate-y-1.5 -rotate-45' : ''
+    ]"></span>
     </div>
   </div>
 </template>

@@ -2,7 +2,7 @@
     <HeroLayout>
         <section class="relative z-0">
             <div ref="textEl"
-                class=" text-6xl lg:text-4xl xl:text-6xl inter font-bold text-tertiary py-15 xl:pb-5 xl:pt-5 w-full xl:w-2/3 2xl:w-1/2">
+                class=" text-5xl lg:text-4xl xl:text-6xl inter font-bold text-tertiary py-15 xl:pb-5 xl:pt-5 w-full xl:w-2/3 2xl:w-1/2">
                 {{ $t('home.hero.title') }}
             </div>
             <div class="text-xl w-full xl:w-1/2">
