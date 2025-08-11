@@ -1,9 +1,9 @@
 <template>
     <WebHomeHero />
-    <PageLayout>
+    <!-- <PageLayout>
         <WebHomeStrategy />
         <WebHomeExpertise />
-    </PageLayout>
+    </PageLayout> -->
 </template>
 <script lang="ts" setup>
 import PageLayout from '~/layouts/page-layout.vue';
