@@ -1,19 +1,19 @@
 <template>
   <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-20 flex justify-center z-50">
-    <div class="w-full px-4 lg:px-0 lg:w-11/12 h-full flex items-center justify-between">
+    <div class="w-full px-4 lg:px-0 xl:w-11/12 2xl:w-10/12 h-full flex items-center justify-between">
       <NavigationTopLogo />
       <NavigationTopMenu />
       <NavigationTopLocale />
       <NavigationTopHumberger />
-      <!-- <NavigationTopLogo />
-      <NavigationTopMenu />
-      <NavigationTopLocale />
-      <NavigationTopHumberger /> -->
     </div>
-    <section v-if="isHumberger" ref="menu"
-      class="absolute w-full h-[calc(100vh-5rem)] lg:h-92 xl:h-98 bg-red-100 top-20 overflow-hidden z-20">
-      <MenuSubMobile />
-      <MenuSubDesktop />
+    <section v-if="isHumberger"
+      class="absolute w-full h-[calc(100vh-5rem)] lg:h-92 xl:h-98 top-20 overflow-hidden z-20">
+      <div v-if="isHumberger" class="h-full" ref="mobileMenu">
+        <MenuSubMobile />
+      </div>
+      <!-- <div v-if="true" class="h-full" ref="desktopMenu">
+        <MenuSubDesktop />
+      </div> -->
     </section>
   </nav>
 </template>
@@ -25,13 +25,13 @@ import gsap from 'gsap'
 
 const menuStore = UseMenuStore()
 const isHumberger = computed(() => menuStore.isHumberger)
-const menu = ref<HTMLElement | null>(null)
+const mobileMenu = ref<HTMLElement | null>(null)
 
 watch(isHumberger, async (open) => {
   if (open) {
     await nextTick()
     gsap.fromTo(
-      menu.value,
+      mobileMenu.value,
       { scaleY: 0 },
       {
         scaleY: 1,
@@ -41,7 +41,7 @@ watch(isHumberger, async (open) => {
       }
     )
   } else {
-    gsap.to(menu.value, {
+    gsap.to(mobileMenu.value, {
       scaleY: 0,
       duration: 0.4,
       ease: 'power2.inOut',
