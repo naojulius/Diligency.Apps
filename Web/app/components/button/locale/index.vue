@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-col gap-0 size-full p-0">
-    <button @click="setlocale" :class="['h-full w-full cursor-pointer p-1 uppercase inter transition-all duration-100', getActiveLocaleTextClass]">
+    <button @click="setlocale"
+      :class="['h-full w-full cursor-pointer p-1 uppercase inter transition-all duration-100', getActiveLocaleTextClass]">
       {{ props.text }}
     </button>
     <div :class="['h-0.5 -mt-1.5 overflow-hidden']">
