@@ -2,6 +2,7 @@
     <WebHomeHero />
     <WebHomeStrategy />
     <WebHomeExpertise />
+    <WebHomeOffer />
     <!-- <PageLayout>
         <WebHomeStrategy />
         <WebHomeExpertise />

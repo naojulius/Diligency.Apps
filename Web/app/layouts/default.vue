@@ -3,5 +3,8 @@
         <slot />
         <div class="h-32"></div>
     </div> -->
-    <slot />
+    <div>
+        <slot />
+        <WebFooter />
+    </div>
 </template>

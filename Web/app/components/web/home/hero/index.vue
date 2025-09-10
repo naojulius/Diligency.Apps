@@ -17,7 +17,7 @@ onMounted(() => {
         <div class="h-full w-full md:w-[700px] flex flex-col gap-4 items-start pt-12 md:pt-0 md:justify-center">
             <h1
                 class="text-center md:text-left text-[2.5rem]/13 md:text-7xl/20 font-bold text-tertiary tracking-normal">
-                Offrez-vous la <span class="border-1 bg-secondary p-1 split">Diligence</span>
+                Offrez-vous la <span class="border-1 bg-secondary p-[0.5px] px-1 split">Diligence</span>
                 digitale
             </h1>
             <h2 class="text-center md:text-left text-xl text-secondary-900">
