@@ -1,71 +1,70 @@
 <template>
     <div class="w-full flex gap-3 md:px-0 overflow-hidden mt-4 p-2">
-        <div ref="leftRef" class="h-[100vh] w-1/3 md:-translate-y-10 bg-secondary" style="
-                    background-image: url('/images/storysets/collaboration-animate.svg');
-                    background-size: 300% 100%;
-                    background-position: left center;
-                    background-repeat: no-repeat;" />
-
-        <div class="h-[100vh] w-1/3 bg-secondary-200" style="
-                    background-image: url('/images/storysets/collaboration-animate.svg');
-                    background-size: 300% 100%;
-                    background-position: center center;
-                    background-repeat: no-repeat;" />
-
-        <div ref="rightRef" class="h-[100vh] w-1/3 md:translate-y-10 bg-tertiary" style="
-                    background-image: url('/images/storysets/collaboration-animate.svg');
-                    background-size: 300% 100%;
-                    background-position: right center;
-                    background-repeat: no-repeat;" />
+        <div ref="leftRef" class="h-[30vh] md:h-[50vh] w-1/3 bg-secondary bg-no-repeat bg-left bg-contain"
+            :style="bgStyle('left')">
+        </div>
+        <div class="h-[30vh] md:h-[50vh] w-1/3 bg-secondary-200 bg-no-repeat bg-center bg-contain"
+            :style="bgStyle('center')">
+        </div>
+        <div ref="rightRef" class="h-[30vh] md:h-[50vh] w-1/3 bg-tertiary bg-no-repeat bg-right bg-contain"
+            :style="bgStyle('right')"></div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { onBeforeUnmount, onMounted, ref } from 'vue'
-gsap.registerPlugin(ScrollTrigger)
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const leftRef = ref<HTMLElement | null>(null)
 const rightRef = ref<HTMLElement | null>(null)
 
-onMounted(() => {
+const bgStyle = (position: 'left' | 'center' | 'right') => ({
+    backgroundImage: "url('/images/storysets/collaboration-animate.svg')",
+    backgroundSize: 'contain',
+    backgroundPosition:
+        position === 'left'
+            ? 'left center'
+            : position === 'right'
+                ? 'right center'
+                : 'center center',
+    backgroundRepeat: 'no-repeat',
+})
+
+onMounted(async () => {
     if (!leftRef.value || !rightRef.value) return
 
-    // Left div slides in from left
-    gsap.fromTo(leftRef.value,
-        { x: '-100%', opacity: 0 },
-        {
-            x: '0%',
-            opacity: 1,
-            duration: 1,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: leftRef.value,
-                start: 'top 80%',
-                toggleActions: 'play none none reverse',
-            }
-        }
-    )
+    if (process.client) {
+        const gsapModule = await import('gsap')
+        const gsap = gsapModule.gsap
+        const ScrollTrigger = (await import('gsap/ScrollTrigger')).default
+        gsap.registerPlugin(ScrollTrigger)
 
-    // Right div slides in from right
-    gsap.fromTo(rightRef.value,
-        { x: '100%', opacity: 0 },
-        {
-            x: '0%',
-            opacity: 1,
-            duration: 1,
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: rightRef.value,
-                start: 'top 80%',
-                toggleActions: 'play none none reverse',
-            }
+        const animateFromSide = (el: HTMLElement, fromX: string) => {
+            gsap.fromTo(
+                el,
+                { x: fromX, opacity: 0 },
+                {
+                    x: '0%',
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            )
         }
-    )
+
+        animateFromSide(leftRef.value, '-100%')
+        animateFromSide(rightRef.value, '100%')
+    }
 })
 
 onBeforeUnmount(() => {
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+    if (process.client) {
+        const ScrollTrigger = require('gsap/ScrollTrigger').default
+        ScrollTrigger.getAll().forEach((trigger: any) => trigger.kill())
+    }
 })
 </script>
