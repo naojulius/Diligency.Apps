@@ -32,7 +32,7 @@ const bgStyle = (position: 'left' | 'center' | 'right') => ({
 onMounted(async () => {
     if (!leftRef.value || !rightRef.value) return
 
-    if (process.client) {
+    if (import.meta.client) {
         const gsapModule = await import('gsap')
         const gsap = gsapModule.gsap
         const ScrollTrigger = (await import('gsap/ScrollTrigger')).default
@@ -62,7 +62,7 @@ onMounted(async () => {
 })
 
 onBeforeUnmount(() => {
-    if (process.client) {
+    if (import.meta.client) {
         const ScrollTrigger = require('gsap/ScrollTrigger').default
         ScrollTrigger.getAll().forEach((trigger: any) => trigger.kill())
     }
