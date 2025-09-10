@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full px-4 md:px-10 py-10">
+    <section class="w-full px-4 md:px-10 2xl:px-35 py-10">
         <div class="text-4xl font-semibold relative z-10 text-tertiary flex gap-3">
             <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
             <span>Nos expertises sur-mesure</span>

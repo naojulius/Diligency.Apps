@@ -13,8 +13,8 @@ onMounted(() => {
 })
 </script>
 <template>
-    <section class="mt-18 w-full h-[calc(100vh-20rem)] lg:h-[calc(100vh-5rem)] px-10">
-        <div class="h-full w-full md:w-[700px] flex flex-col gap-4 items-start pt-12 md:pt-0 md:justify-center">
+    <section class="mt-18 w-full h-[calc(100vh-20rem)] lg:h-[calc(100vh-5rem)] px-10 2xl:px-35">
+        <div class=" h-full w-full md:w-[700px] flex flex-col gap-4 items-start pt-12 md:pt-0 md:justify-center">
             <h1
                 class="text-center md:text-left text-[2.5rem]/13 md:text-7xl/20 font-bold text-tertiary tracking-normal">
                 Offrez-vous la <span class="border-1 bg-secondary p-[0.5px] px-1 split">Diligence</span>

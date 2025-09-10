@@ -3,6 +3,7 @@
     <WebHomeStrategy />
     <WebHomeExpertise />
     <WebHomeOffer />
+    <WebHomeHub />
     <!-- <PageLayout>
         <WebHomeStrategy />
         <WebHomeExpertise />
