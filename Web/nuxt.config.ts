@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   modules: [
-    '@nuxtjs/google-fonts',
     "@pinia/nuxt",
     "@nuxt/icon",
     "@nuxtjs/i18n",
@@ -14,7 +13,8 @@ export default defineNuxtConfig({
   ],
   css: [
     "~/assets/app.css",
-    "~/assets/default.css"
+    "~/assets/default.css",
+    "~/assets/inter.css"
   ],
   pinia: {
     storesDirs: ['./stores/**'],
@@ -40,10 +40,7 @@ export default defineNuxtConfig({
           { charset: "utf-8" },
           { name: "viewport", content: "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" },
           { "http-equiv": "X-UA-Compatible", content: "ie=edge" },
-        ],
-        link: [
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Poppins' }
-      ]
-    }
+        ]
+    },
   }
 })

@@ -1,5 +1,6 @@
 <template>
     <WebHomeHero />
+    <WebHomeStrategy />
     <!-- <PageLayout>
         <WebHomeStrategy />
         <WebHomeExpertise />

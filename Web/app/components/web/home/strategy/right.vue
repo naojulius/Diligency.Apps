@@ -1,18 +1,18 @@
 <template>
-    <div class="w-full flex gap-3 md:px-0 overflow-hidden mt-4">
-        <div ref="leftRef" class="h-[40vh] w-1/3 md:-translate-y-10 bg-secondary" style="
+    <div class="w-full flex gap-3 md:px-0 overflow-hidden mt-4 p-2">
+        <div ref="leftRef" class="h-[100vh] w-1/3 md:-translate-y-10 bg-secondary" style="
                     background-image: url('/images/storysets/collaboration-animate.svg');
                     background-size: 300% 100%;
                     background-position: left center;
                     background-repeat: no-repeat;" />
 
-        <div class="h-[40vh] w-1/3 bg-secondary-200" style="
+        <div class="h-[100vh] w-1/3 bg-secondary-200" style="
                     background-image: url('/images/storysets/collaboration-animate.svg');
                     background-size: 300% 100%;
                     background-position: center center;
                     background-repeat: no-repeat;" />
 
-        <div ref="rightRef" class="h-[40vh] w-1/3 md:translate-y-10 bg-tertiary" style="
+        <div ref="rightRef" class="h-[100vh] w-1/3 md:translate-y-10 bg-tertiary" style="
                     background-image: url('/images/storysets/collaboration-animate.svg');
                     background-size: 300% 100%;
                     background-position: right center;

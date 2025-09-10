@@ -1,9 +1,7 @@
 <template>
-    <button class="h-16 xl:h-12 bg-secondary-600 text-tertiary p-4 text-xl w-full xl:w-auto  rounded-lg flex items-center justify-center gap-2
-        hover:bg-secondary-800 transition-all duration-700">
-        <Icon name="lucide:calendar" class="size-8 fill-accent" />
-        <span>
-            Réservez un appel stratégique
-        </span>
+    <button
+        class="transition-all duration-300 h-14 bg-tertiary text-secondary w-full rounded-lg flex items-center justify-center gap-3 active:bg-secondary hover:bg-secondary active:text-tertiary hover:text-tertiary active:ring-1 active:ring-tertiary hover:ring-1 hover:ring-tertiary">
+        <Icon name="lucide:calendar" class="size-7 fill-accent" />
+        <span class="font-semibold">Réservez un appel stratégique</span>
     </button>
 </template>

@@ -15,7 +15,9 @@ export const MenusList: Menu[] = [
                 link: "/agency/about",
                 icon: "lucide-info",
                 locale: "button.submenu.about",
-                visible: true
+                visible: true,
+                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution."
+
             },
             {
                 id: 102,
@@ -23,7 +25,9 @@ export const MenusList: Menu[] = [
                 link: "/agency/jobcarrier",
                 icon: "lucide-briefcase",
                 locale: "button.submenu.jobCarrier",
-                visible: true
+                visible: true,
+                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution."
+
             },
             {
                 id: 103,
@@ -31,7 +35,9 @@ export const MenusList: Menu[] = [
                 link: "/agency/hub",
                 icon: "lucide-network",
                 locale: "button.submenu.hub",
-                visible: true
+                visible: true,
+                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution."
+
             }
         ]
     },
@@ -58,6 +64,7 @@ export const MenusList: Menu[] = [
                 link: "/services/web-show",
                 icon: "lucide-layers",
                 locale: "button.submenu.webShow",
+                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
                 visible: true
             },
             {
@@ -66,6 +73,7 @@ export const MenusList: Menu[] = [
                 link: "/services/e-commerce",
                 icon: "lucide-view",
                 locale: "button.submenu.eCommerce",
+                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
                 visible: true
             },
             {
@@ -74,6 +82,7 @@ export const MenusList: Menu[] = [
                 link: "/services/it-ia",
                 icon: "lucide-brain",
                 locale: "button.submenu.itIaSolution",
+                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
                 visible: true
             }
         ]

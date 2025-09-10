@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-20 flex justify-center z-50">
+  <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-16 flex justify-center z-50">
     <div class="w-full px-4 lg:px-0 xl:w-11/12 2xl:w-10/12 h-full flex items-center justify-between">
       <NavigationTopLogo />
       <NavigationTopMenu />
@@ -27,7 +27,7 @@ const menuStore = UseMenuStore()
 const isHumberger = computed(() => menuStore.isHumberger)
 const mobileMenu = ref<HTMLElement | null>(null)
 
-watch(isHumberger, async (open) => {
+watch(isHumberger, async (open: any) => {
   if (open) {
     await nextTick()
     gsap.fromTo(
