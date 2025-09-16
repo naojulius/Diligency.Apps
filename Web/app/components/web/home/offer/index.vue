@@ -1,10 +1,8 @@
 <template>
-    <section class="py-24 relative">
-        <!-- Gradient Background -->
+    <section class="py-10 md:py-24 relative">
         <div class="absolute h-[36.5rem] w-full top-0 bg-gradient-to-t from-secondary-500 to-tertiary-500 -z-10"></div>
 
         <div class="px-4 md:px-10 2xl:px-35">
-            <!-- Section Header -->
             <div class="mb-12">
                 <div class="text-4xl font-semibold flex gap-3 text-secondary">
                     <div class="min-w-[10px] max-w-[10px] bg-secondary-600 rounded-full"></div>
@@ -17,8 +15,6 @@
                     Choisissez l’accompagnement qui correspond à votre niveau de maturité digitale
                 </p>
             </div>
-
-            <!-- Cards -->
             <div class="flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0">
                 <div v-for="(plan, idx) in plans" :key="idx"
                     class="flex flex-col w-full max-w-sm bg-white rounded-2xl shadow-2xl transition-all duration-300 p-8 xl:p-12">

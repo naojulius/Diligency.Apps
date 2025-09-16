@@ -1,5 +1,5 @@
 <template>
-    <section class="py-20">
+    <section class="py-5 md:py-20">
         <div class="px-4 md:px-10 2xl:px-35">
             <div class="mb-16">
                 <div class="text-4xl font-semibold flex gap-3 text-tertiary">
@@ -18,14 +18,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card" v-for="i in 3">
                     <div class="flex items-center mb-4">
-                        <img src="/images/hero/000.jpg" alt="Portrait de Thomas Moreau"
+                        <img src="/images/hero/000.jpg" alt="hub-img"
                             class="w-12 h-12 rounded-full object-cover mr-4" />
                         <div>
-                            <div class="font-semibold">Thomas Moreau</div>
-                            <div class="text-sm text-text-secondary">CTO, FinTech Solutions</div>
+                            <div class="font-semibold text-tertiary">Thomas Moreau</div>
+                            <div class="text-sm text-gray-600">CTO, FinTech Solutions</div>
                         </div>
                     </div>
-                    <blockquote class="text-text-secondary italic mb-4">
+                    <blockquote class="text-tertiary italic mb-4">
                         "Application de trading développée en 12 semaines. Performance exceptionnelle, zéro bug critique
                         depuis le lancement."
                     </blockquote>

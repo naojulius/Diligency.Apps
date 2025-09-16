@@ -5,7 +5,7 @@ import SmoothScroll from './layouts/smooth-scroll.vue';
 
 <template>
   <section class="w-full">
-    <DebugScreen />
+    <!-- <DebugScreen /> -->
     <NavigationTop />
     <NuxtLayout>
       <NuxtPage />

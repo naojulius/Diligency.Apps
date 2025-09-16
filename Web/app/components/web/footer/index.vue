@@ -1,14 +1,11 @@
 <template>
-    <footer class="bg-tertiary text-white py-16">
+    <footer class="bg-black text-white py-16">
         <div class="w-full mx-auto px-4 md:px-10 2xl:px-35">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <!-- Company Info -->
                 <div class="md:col-span-2">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <svg class="w-8 h-8 text-white" viewBox="0 0 32 32" fill="currentColor">
-                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 4l8 4v12l-8 4-8-4V10l8-4z" />
-                            <circle cx="16" cy="16" r="3" />
-                        </svg>
+                    <div class="flex items-center mb-4">
+                        <img src="/images/icons/android-chrome-192x192.png" class="size-18">
                         <span class="text-2xl font-bold">Diligency</span>
                     </div>
                     <p class="text-gray-300 mb-4 max-w-md">
