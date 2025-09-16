@@ -20,6 +20,7 @@
 <script lang="ts" setup>
 import { Text } from './Text';
 import { useI18n } from 'vue-i18n';
+import { gsap } from 'gsap';
 
 const { locale } = useI18n()
 </script>
