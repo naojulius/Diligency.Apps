@@ -5,29 +5,27 @@
                 <div class="text-4xl font-semibold flex gap-3 text-tertiary">
                     <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
                     <div>
-                        <div>Le Hub</div>
-                        <div>Comprendre avant de commander</div>
+                        <div v-for="(title, index) in Text.title[locale]" :key="index">
+                            {{ title }}
+                        </div>
                     </div>
                 </div>
                 <div class="py-5 text-xl text-gray-500 font-regular w-full md:w-[700px]">
-                    Explorez nos articles, études de cas, guides et démonstrations. Un espace dédié à l’intelligence
-                    digitale, sans jargon inutile.
+                    {{ Text.subtitle[locale] }}
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card" v-for="i in 3">
+                <div class="card" v-for="(item, index) in Text.testimonials" :key="index">
                     <div class="flex items-center mb-4">
-                        <img src="/images/hero/000.jpg" alt="hub-img"
-                            class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <img :src="item.image" alt="hub-img" class="w-12 h-12 rounded-full object-cover mr-4" />
                         <div>
-                            <div class="font-semibold text-tertiary">Thomas Moreau</div>
-                            <div class="text-sm text-gray-600">CTO, FinTech Solutions</div>
+                            <div class="font-semibold text-tertiary">{{ item.name }}</div>
+                            <div class="text-sm text-gray-600">{{ item.role }}</div>
                         </div>
                     </div>
                     <blockquote class="text-tertiary italic mb-4">
-                        "Application de trading développée en 12 semaines. Performance exceptionnelle, zéro bug critique
-                        depuis le lancement."
+                        {{ item.quote[locale] }}
                     </blockquote>
                 </div>
             </div>
@@ -38,3 +36,11 @@
         </div>
     </section>
 </template>
+<script lang="ts" setup>
+const hover = ref(false)
+
+import { Text } from './Text';
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
+</script>

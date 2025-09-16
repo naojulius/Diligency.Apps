@@ -1,7 +1,13 @@
 <template>
     <button
-        class="transition-all duration-300 h-14 bg-tertiary text-secondary w-full rounded-lg flex items-center justify-center gap-3 active:bg-secondary hover:bg-secondary active:text-tertiary hover:text-tertiary active:ring-1 active:ring-tertiary hover:ring-1 hover:ring-tertiary">
+        class="transition-all duration-300 h-14 bg-tertiary text-secondary w-full md:w-auto px-4 rounded-lg flex items-center justify-center gap-3 active:bg-secondary hover:bg-secondary active:text-tertiary hover:text-tertiary active:ring-1 active:ring-tertiary hover:ring-1 hover:ring-tertiary">
         <Icon name="lucide:calendar" class="size-7 fill-accent" />
-        <span class="font-semibold">Réserver un appel</span>
+        <span class="font-semibold">{{ Text.cta.reserveCall[locale] }}</span>
     </button>
 </template>
+<script lang="ts" setup>
+import { Text } from './Text';
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
+</script>

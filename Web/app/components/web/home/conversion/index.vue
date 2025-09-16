@@ -3,18 +3,16 @@
         <img src="/images/calendar/calendar.jpg" class="absolute top-0 left-0 size-full opacity-60">
         <div class="w-full flex flex-col md:flex-row">
             <div>
-                <p class="text-4xl font-bold  text-tertiary opacity-90 text-center md:text-left">
-                    <span class="bg-secondary border-1 border-tertiary">
-                        Gagnez du temps.
-                    </span>
-                    <br />
-                    <span class="bg-secondary border-1 border-tertiary px-1 -ml-2">
-                        Et des clients.
-                    </span>
-                </p>
+                <div class="text-4xl font-semibold flex gap-3 text-tertiary opacity-90">
+                    <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
+                    <div>
+                        <div v-for="(title, index) in Text.title[locale]" :key="index">
+                            {{ title }}
+                        </div>
+                    </div>
+                </div>
                 <p class="text-xl mb-8 opacity-90 text-tertiary text-center md:text-left py-5  w-full md:w-[700px]">
-                    Votre équipe est déjà débordée ? On vous fait gagner 10h/semaine avec une solution conçue pour
-                    durer. Lancez votre projet avec un appel stratégique gratuit.
+                    {{ Text.subtitle[locale] }}
                 </p>
             </div>
             <div class="w-full py-5 flex flex-col gap-2 items-center justify-center px-4 opacity-90 ">
@@ -24,3 +22,9 @@
         </div>
     </section>
 </template>
+<script lang="ts" setup>
+import { Text } from './Text';
+import { useI18n } from 'vue-i18n';
+
+const { locale } = useI18n();
+</script>
