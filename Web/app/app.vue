@@ -5,11 +5,12 @@ import SmoothScroll from './layouts/smooth-scroll.vue';
 
 <template>
   <section class="w-full">
-    <!-- <DebugScreen /> -->
     <NavigationTop />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <SmoothScroll>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </SmoothScroll>
     <LoadingFullPage />
   </section>
 </template>
