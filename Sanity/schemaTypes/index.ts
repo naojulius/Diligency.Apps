@@ -1,9 +1,12 @@
-import { Icons } from "./documents/icon";
-import { Menus } from "./documents/menu";
-import { SubMenus } from "./documents/menu-sub";
+import { LocaleSchema } from "./common/locale";
+import { PageSectionSchema } from "./common/pageSection";
+import { HomePageSchema } from "./home";
+
 
 export const schemaTypes = [
-    Menus,
-    Icons,
-    SubMenus
+  LocaleSchema,
+  PageSectionSchema,
+
+  //Pages
+  HomePageSchema
 ]

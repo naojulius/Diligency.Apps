@@ -9,18 +9,15 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy",
-    "populate": "ts-node --compiler-options \"{\\\"target\\\":\\\"ES2017\\\"}\" run-populate.ts"
+    "deploy-graphql": "sanity graphql deploy"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^4.9.0",
+    "@sanity/vision": "^3.99.0",
     "react": "^19.1",
     "react-dom": "^19.1",
-    "react-icons": "^3.11.0",
-    "sanity": "^4.9.0",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
@@ -28,8 +25,9 @@
     "@types/react": "^19.1",
     "eslint": "^9.28",
     "prettier": "^3.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "react-is": "^19.1.1",
+    "sanity": "^4.9.0",
+    "typescript": "^5.8"
   },
   "prettier": {
     "semi": false,

@@ -7,13 +7,10 @@ export default defineConfig({
   name: 'default',
   title: 'Diligency',
 
-  projectId: 'if67oozt',
+  projectId: 'eh8i7equ',
   dataset: 'production',
 
-  plugins: [
-    structureTool(),
-    visionTool(),
-  ],
+  plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schemaTypes,
