@@ -1,17 +1,5 @@
 export const Text = [
     {
-        "icon": "lucide:monitor",
-        "title": {
-            "fr": "Sites vitrines performants",
-            "en": "High-Performance Showcase Websites"
-        },
-        "description": {
-            "fr": "Création de sites modernes, rapides et optimisés pour la visibilité en ligne.",
-            "en": "Creation of modern, fast, and optimized websites for online visibility."
-        },
-        "technos": ["WordPress", "Next.js", "PHP"]
-    },
-    {
         "icon": "lucide:layout-dashboard",
         "title": {
             "fr": "Applications web évolutives",
@@ -24,10 +12,22 @@ export const Text = [
         "technos": ["Node.js", "Vue.js", "Express"]
     },
     {
+        "icon": "lucide:monitor",
+        "title": {
+            "fr": "Sites vitrines performants",
+            "en": "High-Performance Showcase Websites"
+        },
+        "description": {
+            "fr": "Création de sites modernes, rapides et optimisés pour la visibilité en ligne.",
+            "en": "Creation of modern, fast, and optimized websites for online visibility."
+        },
+        "technos": ["WordPress", "Next.js", "PHP"]
+    },
+    {
         "icon": "lucide:workflow",
         "title": {
-            "fr": "Automatisations business",
-            "en": "Business Automations"
+            "fr": "Solution d’intelligence artificielle",
+            "en": "AI Solutions"
         },
         "description": {
             "fr": "Mise en place de workflows automatisés pour gagner en productivité et efficacité.",
@@ -38,8 +38,8 @@ export const Text = [
     {
         "icon": "lucide:plug",
         "title": {
-            "fr": "Intégrations API",
-            "en": "API Integrations"
+            "fr": "Service IT & Support ",
+            "en": "IT Services & Support"
         },
         "description": {
             "fr": "Connexion fluide de vos outils et services grâce à des intégrations sur mesure.",

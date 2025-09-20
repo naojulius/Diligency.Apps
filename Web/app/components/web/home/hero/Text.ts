@@ -1,7 +1,7 @@
 export const Text = {
     title: {
-        fr: "Offrez-vous la Diligence Digitale",
-        en: "Treat yourself to Digital Diligence"
+        fr: "Offrez-vous la diligence digitale",
+        en: "Treat yourself to digital diligence"
     },
     subtitle: {
         fr: "Sites web & applications sur-mesure, pensés pour la performance, la clarté et la conversion",

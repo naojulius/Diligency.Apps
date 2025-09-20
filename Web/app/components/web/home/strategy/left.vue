@@ -10,8 +10,8 @@
     </div>
 </template>
 <script lang="ts" setup>
-import { Text } from './Text';
 import { useI18n } from 'vue-i18n';
+import { Text } from './Text';
 
 const { locale } = useI18n()
 </script>

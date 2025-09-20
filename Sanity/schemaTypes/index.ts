@@ -1,12 +1,7 @@
-import { LocaleSchema } from "./common/locale";
-import { PageSectionSchema } from "./common/pageSection";
-import { HomePageSchema } from "./home";
-
+import { HomeSchema } from "./home";
+import { OptionSchema } from "./Options";
 
 export const schemaTypes = [
-  LocaleSchema,
-  PageSectionSchema,
-
-  //Pages
-  HomePageSchema
+  OptionSchema,
+  HomeSchema
 ]

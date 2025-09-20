@@ -16,7 +16,7 @@
                     {{ Text.subtitle[locale] }}
                 </p>
             </div>
-            <div class="flex flex-col lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0">
+            <div class="flex flex-col justify-center lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0">
                 <div v-for="(plan, idx) in Text.plans" :key="idx"
                     class="flex flex-col w-full max-w-sm bg-white rounded-2xl shadow-2xl transition-all duration-300 p-8 xl:p-12">
                     <!-- Header -->
@@ -46,8 +46,8 @@
 </template>
 
 <script setup lang="ts">
-import { Text } from './Text';
 import { useI18n } from 'vue-i18n';
+import { Text } from './Text';
 
 const { locale } = useI18n()
 </script>

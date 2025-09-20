@@ -1,5 +1,8 @@
 <template>
-  <nav class="bg-tertiary border-none top-0 fixed w-full h-20 lg:h-16 flex justify-center z-50">
+  <nav :class="[
+    'border-none top-0 fixed w-full h-20 lg:h-16 flex justify-center z-50 transition-colors duration-300',
+    isScrolled ? 'bg-black' : 'bg-transparent'
+  ]">
     <div class="w-full px-4 lg:px-0 xl:w-11/12 2xl:w-10/12 h-full flex items-center justify-between">
       <NavigationTopLogo />
       <NavigationTopMenu />
@@ -11,22 +14,37 @@
       <div v-if="isHumberger" class="h-full" ref="mobileMenu">
         <MenuSubMobile />
       </div>
-      <!-- <div v-if="true" class="h-full" ref="desktopMenu">
-        <MenuSubDesktop />
-      </div> -->
     </section>
   </nav>
 </template>
 
 <script lang="ts" setup>
-import { UseMenuStore } from '~/stores/menu.store';
-import { computed, watch, ref, nextTick } from 'vue'
 import gsap from 'gsap'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { UseMenuStore } from '~/stores/menu.store'
 
 const menuStore = UseMenuStore()
 const isHumberger = computed(() => menuStore.isHumberger)
 const mobileMenu = ref<HTMLElement | null>(null)
 
+// SCROLL LOGIC
+const isScrolled = ref(false)
+const SCROLL_POINT = 80 // px
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > SCROLL_POINT
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+  handleScroll()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
+// GSAP logic (unchanged)
 watch(isHumberger, async (open: any) => {
   if (open) {
     await nextTick()
@@ -50,9 +68,3 @@ watch(isHumberger, async (open: any) => {
   }
 })
 </script>
-
-<style scoped>
-section {
-  transform-origin: top center;
-}
-</style>

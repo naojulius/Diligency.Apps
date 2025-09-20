@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-full">
         <h3 class="text-lg font-semibold mb-4">Navigation</h3>
         <div class="flex gap-4">
             <ul class="flex-1 space-y-2">
