@@ -42,5 +42,13 @@ export default defineNuxtConfig({
           { "http-equiv": "X-UA-Compatible", content: "ie=edge" },
         ]
     },
+  },
+  runtimeConfig: {
+    // Public (accessible in the browser)
+    public: {
+      SanityProjectToken: process.env.SANITY_TOKEN,
+      SanityProjectId: process.env.SANITY_PROJECT_ID,
+      SanityProjectDataset: process.env.SANITY_DATASET,
+    }
   }
 })

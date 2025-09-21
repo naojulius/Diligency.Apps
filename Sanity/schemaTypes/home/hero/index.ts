@@ -18,25 +18,25 @@ export const HeroSchemaField = {
             title: 'Title',
             type: 'array',
             description: 'Titre principal affiché dans la section Hero. Peut contenir plusieurs parties pour différentes langues.',
-            of: [
-                {
-                    type: 'object',
-                    fields: [
-                        { name: 'en', title: 'English', type: 'string' },
-                        { name: 'fr', title: 'Français', type: 'string' },
-                    ],
-                },
-            ],
+            of: [{ type: 'locale' }],
         }),
         defineField({
             name: 'subtitle',
             title: 'Subtitle',
-            type: 'object',
+            type: 'locale',
             description: 'Sous-titre affiché sous le titre principal dans la section Hero.',
-            fields: [
-                { name: 'en', title: 'English', type: 'string' },
-                { name: 'fr', title: 'Français', type: 'string' },
-            ],
+        }),
+        defineField({
+            name: 'reserveStrategyCall',
+            title: 'CTA Reservez un appel stratégique',
+            type: 'locale',
+            description: 'Texte affiché du CTA dans la section Hero.',
+        }),
+        defineField({
+            name: 'applyMyProject',
+            title: 'CTA soummetre Mon projet',
+            type: 'locale',
+            description: 'Texte affiché du CTA dans la section Hero.',
         }),
     ],
 }

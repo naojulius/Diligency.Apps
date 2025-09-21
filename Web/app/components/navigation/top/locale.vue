@@ -32,9 +32,9 @@ const { locales, locale, setLocale } = useI18n()
 const show = ref(false)
 const dropdownRef = ref<HTMLElement | null>(null)
 
-const setCurrentLocale = (_locale: "fr" | "en") => {
+const setCurrentLocale = (localeCode: "fr" | "en") => {
     show.value = false
-    setLocale(_locale)
+    setLocale(localeCode)
 }
 
 function handleClickOutside(event: MouseEvent) {
@@ -42,6 +42,7 @@ function handleClickOutside(event: MouseEvent) {
         show.value = false
     }
 }
+
 onMounted(() => {
     document.addEventListener('click', handleClickOutside)
 })

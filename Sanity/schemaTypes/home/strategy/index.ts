@@ -18,25 +18,13 @@ export const StrategySchemaField = {
             title: 'Title',
             type: 'array',
             description: 'Titre principal affiché dans la section Introduction Strategique. Peut contenir plusieurs parties pour différentes langues.',
-            of: [
-                {
-                    type: 'object',
-                    fields: [
-                        { name: 'en', title: 'English', type: 'string' },
-                        { name: 'fr', title: 'Français', type: 'string' },
-                    ],
-                },
-            ],
+            of: [{ type: 'locale' }],
         }),
         defineField({
             name: 'subtitle',
             title: 'Subtitle',
-            type: 'object',
+            type: 'locale',
             description: 'Sous-titre affiché sous le titre principal dans la section Introduction strategique.',
-            fields: [
-                { name: 'en', title: 'English', type: 'string' },
-                { name: 'fr', title: 'Français', type: 'string' },
-            ],
         }),
     ],
 }

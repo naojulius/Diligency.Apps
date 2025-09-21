@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import { gsap } from 'gsap/gsap-core';
-import SplitText from 'gsap/SplitText';
 import { useI18n } from 'vue-i18n';
-import { Text } from './Text';
+import { UseHomeStore } from '~/stores/home.store';
 
 const { locale } = useI18n()
-onMounted(() => {
-    const split = SplitText.create(".split", { type: "words, chars" })
-    gsap.from(split.chars, {
-        duration: 0.5,
-        y: 50,
-        autoAlpha: 0,
-        stagger: 0.05,
-        ease: "power3.out"
-    })
+const Text = ref<any>(null)
+
+onMounted(async () => {
+    Text.value = await UseHomeStore().GetData('home-hero', "hero")
+    //console.log("Hero Data:", Text.value.hero);
 })
 </script>
 <template>
@@ -23,16 +17,16 @@ onMounted(() => {
             <div class=" h-full w-full md:w-[700px] flex flex-col gap-4 items-start pt-12 md:pt-0 md:justify-center">
                 <h1 id="hero"
                     class="text-center text-[2.5rem]/13 md:text-7xl/20 font-bold text-secondary tracking-normal z-10">
-                    <span>
-                        {{ Text.title[locale] }}
+                    <span v-for="(title, index) in Text?.title" :key="index">
+                        {{ title[locale] }}
                     </span>
                 </h1>
-                <h2 class="text-center md:text-left text-xl text-secondary z-10">
-                    {{ Text.subtitle[locale] }}
+                <h2 class="text-center text-xl text-secondary z-10">
+                    {{ Text?.subtitle[locale] }}
                 </h2>
-                <div class="py-2 w-full flex items-center  justify-center flex-col xl:flex-row gap-4 z-10">
-                    <WebHomeHeroReserveStrategyCall />
-                    <WebHomeHeroApplyProject />
+                <div class="py-2 w-full flex items-center  justify-center flex-col xl:flex-row gap-4 z-10 text-white">
+                    <!-- <WebHomeHeroReserveStrategyCall :text="Text?.reserveStrategyCall[locale]" /> -->
+                    <!-- <WebHomeHeroApplyProject :text="Text?.applyMyProject[locale]" /> -->
                 </div>
             </div>
         </div>

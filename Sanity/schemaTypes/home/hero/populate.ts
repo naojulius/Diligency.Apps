@@ -1,5 +1,5 @@
 import { createClient } from '@sanity/client';
-import { Client } from '../../../configs/client';
+import { Client } from '../../configs/client';
 import { data } from './data';
 
 const client = createClient(Client)
