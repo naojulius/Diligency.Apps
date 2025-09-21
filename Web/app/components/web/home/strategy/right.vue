@@ -12,6 +12,7 @@
 </template>
 
 <script setup lang="ts">
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const leftRef = ref<HTMLElement | null>(null)
@@ -63,7 +64,6 @@ onMounted(async () => {
 
 onBeforeUnmount(() => {
     if (import.meta.client) {
-        const ScrollTrigger = require('gsap/ScrollTrigger').default
         ScrollTrigger.getAll().forEach((trigger: any) => trigger.kill())
     }
 })

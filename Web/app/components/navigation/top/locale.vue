@@ -1,5 +1,5 @@
 <template>
-    <div ref="dropdownRef" class="dropdown relative  hidden md:inline-flex">
+    <div ref="dropdownRef" class="dropdown relative  hidden md:inline-flex z-50">
         <button @click="show = !show"
             class="w-30 inline-flex justify-center items-center gap-2 py-3 px-6 text-md text-secondary rounded-lg  cursor-pointer font-semibold text-center transition-all duration-500 hover:text-secondary-700 ">
             <span class="uppercase">
