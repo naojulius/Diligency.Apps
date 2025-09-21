@@ -1,6 +1,5 @@
 <template>
     <section class="w-full px-4 md:px-10 2xl:px-35 py-10 md:py-20 relative h-auto">
-        <!-- <img src="/images/calendar/calendar.jpg" class="absolute top-0 left-0 size-full opacity-60"> -->
         <WebHomeConversionBackground />
         <div class="w-full flex flex-col md:flex-row">
             <div>

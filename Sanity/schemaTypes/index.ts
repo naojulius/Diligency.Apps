@@ -1,5 +1,7 @@
-import { OptionSchema } from "./Options";
+import { HomeSchema } from "./schemaTypes/home";
+import { OptionSchema } from "./schemaTypes/options";
 
 export const schemaTypes = [
-  OptionSchema
+  OptionSchema,
+  HomeSchema
 ]

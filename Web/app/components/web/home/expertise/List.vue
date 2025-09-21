@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10 ">
-        <div class="card group hover:scale-105 transition-all duration-300 cursor-pointer bg-gray-100 p-4 rounded-lg"
-            v-for="(item, index)  in Text" :key="index">
+        <a v-for="(item, index) in Text" :key="index" :href="item.link"
+            class="card group hover:scale-105 transition-all duration-300 cursor-pointer bg-gray-100 p-4 rounded-lg">
             <div class="text-center">
                 <div class="w-16 h-16  rounded-lg flex items-center justify-center mx-auto mb-4 transition-fast">
                     <Icon :name="item.icon" class="h-16 w-16 text-accent-200" />
@@ -14,13 +14,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
 </template>
 <script lang="ts" setup>
-import { Text } from './Text';
 import { useI18n } from 'vue-i18n';
-import { gsap } from 'gsap';
+import { Text } from './Text';
 
 const { locale } = useI18n()
 </script>

@@ -2,7 +2,6 @@
     <div ref="dropdownRef" class="dropdown relative  hidden md:inline-flex">
         <button @click="show = !show"
             class="w-30 inline-flex justify-center items-center gap-2 py-3 px-6 text-md text-secondary rounded-lg  cursor-pointer font-semibold text-center transition-all duration-500 hover:text-secondary-700 ">
-            <Icon name="lucide:languages" class="size-6 fill-accent" />
             <span class="uppercase">
                 {{locales.find(x => x.code == locale)?.code}}
             </span>

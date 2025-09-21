@@ -9,7 +9,8 @@ export const Text = [
             "fr": "Développement d’applications robustes et scalables pour accompagner votre croissance.",
             "en": "Development of robust and scalable applications to support your growth."
         },
-        "technos": ["Node.js", "Vue.js", "Express"]
+        "technos": ["Node.js", "Vue.js", "Express"],
+        "link": "/home/expertise/scalable-web"
     },
     {
         "icon": "lucide:monitor",
@@ -21,7 +22,8 @@ export const Text = [
             "fr": "Création de sites modernes, rapides et optimisés pour la visibilité en ligne.",
             "en": "Creation of modern, fast, and optimized websites for online visibility."
         },
-        "technos": ["WordPress", "Next.js", "PHP"]
+        "technos": ["WordPress", "Next.js", "PHP"],
+        "link": "/home/expertise/showcase-web"
     },
     {
         "icon": "lucide:workflow",
@@ -33,7 +35,8 @@ export const Text = [
             "fr": "Mise en place de workflows automatisés pour gagner en productivité et efficacité.",
             "en": "Implementation of automated workflows to increase productivity and efficiency."
         },
-        "technos": ["Node.js", "Zapier", "MongoDB"]
+        "technos": ["Node.js", "Zapier", "MongoDB"],
+        "link": "/home/expertise/ai-solution"
     },
     {
         "icon": "lucide:plug",
@@ -45,6 +48,7 @@ export const Text = [
             "fr": "Connexion fluide de vos outils et services grâce à des intégrations sur mesure.",
             "en": "Seamless connection of your tools and services through custom integrations."
         },
-        "technos": ["REST", "GraphQL", "PHP"]
+        "technos": ["REST", "GraphQL", "PHP"],
+        "link": "/home/expertise/it-support"
     }
 ]

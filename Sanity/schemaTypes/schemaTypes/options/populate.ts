@@ -1,7 +1,8 @@
-import { createClient } from '@sanity/client'
-import { Client } from '../client'
-import { data } from './data'
-import type { Option } from './interface'
+import { createClient } from '@sanity/client';
+import { Client } from '../../configs/client';
+import { data } from './data';
+import { Option } from './interface';
+
 
 
 const client = createClient(Client)
