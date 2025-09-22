@@ -1,5 +1,6 @@
-# app/types/gql/queries/get-hero.gql
 
+import { gql } from "graphql-tag"
+export const GetHeroDataQuery = gql`
 query GetHomeHero {
 	allHome {
 		_id
@@ -23,4 +24,4 @@ query GetHomeHero {
 			link
 		}
 	}
-}
+}`

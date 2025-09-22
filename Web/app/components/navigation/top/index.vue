@@ -20,7 +20,7 @@ const router = useRouter();
 
 // SCROLL LOGIC
 const isScrolled = ref(false)
-const SCROLL_POINT = 80 // px
+const SCROLL_POINT = 80
 
 const handleScroll = () => {
   if (router.currentRoute.value.path.toLowerCase().endsWith("/contact")) {

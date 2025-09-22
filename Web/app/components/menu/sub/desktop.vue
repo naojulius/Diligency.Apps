@@ -1,7 +1,7 @@
 <template>
     <div v-if="subMenuList.length > 0"
-        class="absolute hidden lg:block w-full h-auto top-16 border-t-[0.5px] border-tertiary bg-secondary px-10 2xl:px-35 transition-all duration-500 overflow-y-scroll">
-        <div class="grid grid-cols-3 gap-6 w-full h-auto mt-4">
+        class="shadow absolute hidden lg:block w-full h-auto top-16 border-t-[0.5px] border-tertiary bg-secondary px-10 2xl:px-35 transition-all duration-500">
+        <div class="grid grid-cols-3 gap-2 w-full h-auto py-10">
             <a v-for="(subMenu, subIndex) in subMenuList" :key="subIndex" :href="subMenu.link"
                 class="p-4 hover:rounded  hover:shadow-sm transition-all duration-200 transform hover:scale-102 hover:bg-primary/80">
                 <div class="text-lg font-semibold inline-flex items-center gap-4 text-tertiary">
