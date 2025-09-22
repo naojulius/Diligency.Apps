@@ -44,9 +44,9 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    SanityProjectToken: process.env.SANITY_TOKEN,
     // Public (accessible in the browser)
     public: {
-      SanityProjectToken: process.env.SANITY_TOKEN,
       SanityProjectId: process.env.SANITY_PROJECT_ID,
       SanityProjectDataset: process.env.SANITY_DATASET,
     }

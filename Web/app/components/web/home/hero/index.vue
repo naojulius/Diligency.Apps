@@ -25,8 +25,9 @@ onMounted(async () => {
                     {{ Text?.subtitle[locale] }}
                 </h2>
                 <div class="py-2 w-full flex items-center  justify-center flex-col xl:flex-row gap-4 z-10 text-white">
-                    <!-- <WebHomeHeroReserveStrategyCall :text="Text?.reserveStrategyCall[locale]" /> -->
-                    <!-- <WebHomeHeroApplyProject :text="Text?.applyMyProject[locale]" /> -->
+                    <!-- {{ UseHomeStore().client }} -->
+                    <WebHomeHeroReserveCall :text="Text?.reserveStrategyCall[locale]" />
+                    <WebHomeHeroApplyProject :text="Text?.applyMyProject[locale]" />
                 </div>
             </div>
         </div>
