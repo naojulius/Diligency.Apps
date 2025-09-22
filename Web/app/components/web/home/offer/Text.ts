@@ -1,4 +1,6 @@
-export const Text = {
+import type { Offer } from "./interface";
+
+export const Text: Offer = {
     title: {
         fr: ["Deux formules.", "Un même engagement de qualité"],
         en: ["Two plans.", "One same commitment to quality"]
@@ -9,6 +11,7 @@ export const Text = {
     },
     plans: [
         {
+            id: "essential",
             icon: "lucide:heart-plus",
             title: {
                 fr: "Essentiel",
@@ -21,6 +24,7 @@ export const Text = {
             },
         },
         {
+            id: "premium",
             icon: "lucide:crown",
             title: {
                 fr: "Premium",

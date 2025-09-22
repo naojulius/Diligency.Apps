@@ -14,5 +14,15 @@
     {
       "path": "./.nuxt/tsconfig.node.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~gql/*": [
+        "app/types/gql/builds/*"
+      ]
+    },
+    "moduleResolution": "node16",
+    "module": "node16",
+  }
 }

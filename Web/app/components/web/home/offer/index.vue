@@ -16,31 +16,7 @@
                     {{ Text.subtitle[locale] }}
                 </p>
             </div>
-            <div class="flex flex-col justify-center lg:flex-row lg:space-x-6 space-y-6 lg:space-y-0">
-                <div v-for="(plan, idx) in Text.plans" :key="idx"
-                    class="flex flex-col w-full max-w-sm bg-white rounded-2xl shadow-2xl transition-all duration-300 p-8 xl:p-12">
-                    <!-- Header -->
-                    <div class="border-b border-gray-200 pb-9 mb-9 text-center">
-                        <div class="w-16 h-16 rounded-full bg-secondary-50 mx-auto flex justify-center items-center">
-                            <Icon :name="plan.icon" class="w-14 h-14 text-accent opacity-50" />
-                        </div>
-                        <h3 class="text-2xl font-bold my-7 text-tertiary-500">{{ plan.title[locale] }}</h3>
-                    </div>
-
-                    <!-- Features -->
-                    <ul class="space-y-6 text-left text-lg text-gray-600">
-                        <li v-for="(feature, i) in plan.features[locale]" :key="i"
-                            class="flex items-center space-x-3.5">
-                            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                            <span>{{ feature }}</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="py-10">
-                <WebHomeOfferCta />
-            </div>
+            <WebHomeOfferCard />
         </div>
     </section>
 </template>

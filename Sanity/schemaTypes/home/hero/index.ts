@@ -38,5 +38,11 @@ export const HeroSchemaField = {
             type: 'locale',
             description: 'Texte affiché du CTA dans la section Hero.',
         }),
+        defineField({
+            name: 'link',
+            title: 'Video de fond',
+            type: 'link',
+            description: 'Background video de la section Hero.',
+        }),
     ],
 }

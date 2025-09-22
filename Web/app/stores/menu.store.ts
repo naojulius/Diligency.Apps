@@ -1,5 +1,5 @@
 import { MenusList } from "~/config/local-api/menus-list";
-import type { Menu } from "~/types/menu/menu";
+import type { Menu } from "~/types/interfaces/menu";
 
 export const UseMenuStore = defineStore('menu-store', () => {
     const isHumberger: Ref<Boolean> = ref(false)

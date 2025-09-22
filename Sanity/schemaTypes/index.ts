@@ -1,3 +1,4 @@
+import { LinkSchema } from "./common/link";
 import { LocaleSchema } from "./common/locale";
 import { HomeSchema } from "./home";
 import { HeroSchemaField } from "./home/hero";
@@ -7,6 +8,7 @@ import { HomeStrategyType } from "./home/strategy/strategy.type";
 import { OptionSchema } from "./options";
 
 export const schemaTypes = [
+  LinkSchema,
   LocaleSchema,
   HomeStrategyType,
   HomeHeroType,

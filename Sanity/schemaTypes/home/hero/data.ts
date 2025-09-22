@@ -22,7 +22,8 @@ export const data = [
             reserveStrategyCall: {
                 en: 'Book a strategy call',
                 fr: 'Réserver un appel stratégique'
-            }
+            },
+            link: 'https://www.bigbuckbunny.org/',
         }
     }
 ]

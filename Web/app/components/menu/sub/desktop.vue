@@ -16,11 +16,10 @@
     </div>
 </template>
 
-
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { UseMenuStore } from '~/stores/menu.store'
-import type { Menu } from '~/types/menu/menu'
+import type { Menu } from '~/types/interfaces/menu'
 
 const menuStore = UseMenuStore()
 const subMenuList = computed(() => menuStore.subMenuList)
