@@ -1,4 +1,4 @@
-import type { Menu } from "~/types/menu/menu";
+import type { Menu } from "~/types/interfaces/menu";
 
 export const MenusList: Menu[] = [
     {
@@ -44,7 +44,7 @@ export const MenusList: Menu[] = [
     {
         id: 2,
         text: "Services",
-        link: "/services",
+        link: "/service",
         icon: "lucide:square-terminal",
         locale: "button.menu.service",
         visible: true,
@@ -52,7 +52,7 @@ export const MenusList: Menu[] = [
             {
                 id: 201,
                 text: "Web app",
-                link: "/services/web-app",
+                link: "/service/web-app",
                 icon: "lucide-globe",
                 locale: "button.submenu.webApp",
                 visible: true,
@@ -61,7 +61,7 @@ export const MenusList: Menu[] = [
             {
                 id: 202,
                 text: "Sites vitrines",
-                link: "/services/web-show",
+                link: "/service/web-show",
                 icon: "lucide-layers",
                 locale: "button.submenu.webShow",
                 description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
@@ -70,7 +70,7 @@ export const MenusList: Menu[] = [
             {
                 id: 203,
                 text: "E-commerce",
-                link: "/services/e-commerce",
+                link: "/service/e-commerce",
                 icon: "lucide-view",
                 locale: "button.submenu.eCommerce",
                 description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
@@ -79,7 +79,7 @@ export const MenusList: Menu[] = [
             {
                 id: 204,
                 text: "Solutions IT/IA",
-                link: "/services/it-ia",
+                link: "/service/it-ia",
                 icon: "lucide-brain",
                 locale: "button.submenu.itIaSolution",
                 description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",

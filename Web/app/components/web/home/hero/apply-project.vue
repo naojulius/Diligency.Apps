@@ -1,20 +1,33 @@
 <template>
-    <button @mouseenter="hover = true" @mouseleave="hover = false"
+    <button @mouseenter="hover = true" @mouseleave="hover = false" @click="navigate"
         class="transition-all duration-300 h-14 bg-primary text-tertiary w-full md:w-auto px-4 rounded-lg flex items-center justify-center gap-3">
         <span class="font-semibold">
-            {{ props?.text }}
+            {{ props.cta.text[locale] }}
         </span>
-        <Icon name="lucide:arrow-right"
+        <Icon :name="props.cta.icon"
             :class="['transition-all duration-300 size-7 fill-accent', hover ? 'ml-4' : 'ml-0']" />
     </button>
 </template>
 <script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
+import { DefaultCta } from '~/types/default/cta';
+
 const hover = ref(false)
+const router = useRouter();
+const { locale } = useI18n()
+
 const props = defineProps({
-    text: {
+    cta: {
         required: true,
-        type: String,
-        default: ''
+        type: Object,
+        default: DefaultCta
     }
 })
+
+const navigate = () => {
+    const link = props.cta.link
+    if (link) {
+        router.push(link);
+    }
+}
 </script>

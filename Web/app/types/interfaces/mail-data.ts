@@ -1,0 +1,6 @@
+export interface MailData {
+    firstName: string,
+    lastName: string,
+    email: string,
+    message: string,
+}

@@ -39,4 +39,10 @@ const toggleMenu = () => {
     menuStore.SetSubMenuList(menu)
   }
 }
+
+const showUnderline = (): boolean => {
+  const currentRoute: string = router.currentRoute.value.path
+  return false;
+}
+
 </script>
