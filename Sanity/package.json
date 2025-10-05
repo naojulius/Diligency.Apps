@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^6.0.0",
+    "@sanity/cli": "^4.10.2",
     "@sanity/eslint-config-studio": "^5.0.2",
     "@types/react": "^19.1",
     "eslint": "^9.28",
