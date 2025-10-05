@@ -2,9 +2,9 @@
 
   <div v-if="isHumberger" class="absolute w-full h-[calc(100vh-5rem)] lg:h-screen top-20 md:top-16 overflow-hidden z-20"
     ref="mobileMenu">
-    <div class="lg:hidden size-full bg-tertiary flex flex-col gap-5 p-4 pt-8 overflow-y-scroll">
+    <div class="lg:hidden size-full bg-primary flex flex-col gap-5 p-4 pt-8 overflow-y-scroll">
       <div v-for="(menu, index) in menusList" :key="index"
-        class="inter w-full font-semibold text-left text-secondary-500 cursor-pointer">
+        class="inter w-full font-semibold text-left text-tertiary-500 cursor-pointer">
         <div @click="toggleMenu(menu)">
           <div class="flex flex-row items-center justify-between gap-2 w-full">
             <div class="flex flex-row items-center gap-4">
@@ -21,7 +21,7 @@
 
         <div v-if="openMenu?.id === menu.id" class="pl-12 pt-2 space-y-2">
           <div @click="clickSubMenu(subMenu)" v-for="(subMenu, subIndex) in subMenuList" :key="subIndex"
-            class="text-secondary-300 size-full py-2 font-normal text-2xl flex flex-col gap-2">
+            class="text-tertiary-500/80 size-full py-2 font-normal text-2xl flex flex-col gap-2">
             <div class="text-lg font-semibold">
               {{ $t(subMenu.locale) }}
             </div>
@@ -66,6 +66,7 @@ const clickSubMenu = (subMenu: Menu) => {
 watch(isHumberger, async (open: any) => {
   if (open) {
     await nextTick()
+    document.body.classList.add('overflow-hidden')
     gsap.fromTo(
       mobileMenu.value,
       { scaleY: 0 },
@@ -77,6 +78,7 @@ watch(isHumberger, async (open: any) => {
       }
     )
   } else {
+    document.body.classList.remove('overflow-hidden')
     gsap.to(mobileMenu.value, {
       scaleY: 0,
       duration: 0.4,

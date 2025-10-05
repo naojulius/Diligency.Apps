@@ -19,8 +19,8 @@ onMounted(async () => {
         <div class="flex flex-col md:flex-row -m-4">
             <div class="p-4 w-full md:h-[80vh]">
                 <div
-                    class="bg-secondary h-full p-6 rounded-lg border-2 border-secondary flex flex-col relative overflow-hidden">
-                    <h1 class="inter text-5xl text-tertiary pb-4 mb-4 border-b border-tertiary leading-none">
+                    class="transition-all duration-600 hover:bg-secondary bg-white h-full p-6 rounded-lg border-2 border-secondary-600 flex flex-col relative overflow-hidden">
+                    <h1 class="inter text-5xl text-tertiary pb-4 mb-4 leading-none">
                         {{ ESSENTIAL?.title[locale] }}
                     </h1>
                     <p class="inter flex items-center text-tertiary mb-2"
@@ -38,13 +38,11 @@ onMounted(async () => {
             </div>
             <div class="p-4 w-full md:h-[80vh]">
                 <div
-                    class="cursor-pointer h-full p-6 rounded-lg border-2 border-tertiary-500 flex flex-col relative overflow-hidden bg-tertiary">
-                    <span
-                        class="bg-secondary-500 text-tertiary px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+                    class="transition-all duration-600 hover:bg-secondary cursor-pointer h-full p-6 rounded-lg border-2 border-tertiary-500 flex flex-col relative overflow-hidden bg-secondary-300">
                     <h1 class="text-5xl text-secondary-700 pb-4 mb-4 border-b border-gray-200 leading-none">
                         {{ PREMIUM?.title[locale] }}
                     </h1>
-                    <p class="inter flex items-center text-secondary mb-2"
+                    <p class="inter flex items-center text-tertiary mb-2"
                         v-for="(premium, index) in PREMIUM?.features[locale]" :key="index">
                         <span
                             class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-tertiary/70 text-primary rounded-full flex-shrink-0">

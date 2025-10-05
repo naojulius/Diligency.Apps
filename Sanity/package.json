@@ -20,7 +20,7 @@
     "react": "^19.1",
     "react-dom": "^19.1",
     "react-icons": "^3.11.0",
-    "sanity": "^4.9.0",
+    "sanity": "^2.36.6",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
