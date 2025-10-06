@@ -1,5 +1,5 @@
 <template>
-    <div class="h-screen">
-        WEB APP
-    </div>
+    <WebServiceWebAppHero />
+    <WebServiceWebAppWeb />
+    <LazyWebServiceWebAppMethod />
 </template>
