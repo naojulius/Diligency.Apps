@@ -16,12 +16,20 @@ export const data = [
                 fr: 'Sites web & applications sur-mesure, pensés pour la performance, la clarté et la conversion'
             },
             applyMyProject: {
-                en: 'Apply my project',
-                fr: 'Soumettre mon projet'
+                text: {
+                    en: 'Apply my project',
+                    fr: 'Soumettre mon projet'
+                },
+                icon: "lucide:arrow-right",
+                link: "/contact"
             },
             reserveStrategyCall: {
-                en: 'Book a strategy call',
-                fr: 'Réserver un appel stratégique'
+                text: {
+                    en: 'Book a strategy call',
+                    fr: 'Réserver un appel stratégique'
+                },
+                icon: "lucide:calendar",
+                link: "/contact"
             },
             link: 'https://www.bigbuckbunny.org/',
         }

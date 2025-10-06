@@ -1,8 +1,3 @@
 <template>
-    <PageLayout>
-        Job && Carrier
-    </PageLayout>
+    <WebAgencyJobcarrierHero />
 </template>
-<script setup lang="ts">
-import PageLayout from '~/layouts/page-layout.vue';
-</script>

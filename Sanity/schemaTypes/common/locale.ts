@@ -5,7 +5,11 @@ export const LocaleSchema = defineType({
     title: 'Traduction',
     type: 'object',
     fields: [
-        { name: 'en', title: 'English', type: 'string' },
+        {
+            name: 'en',
+            title: 'English',
+            type: 'string',
+        },
         { name: 'fr', title: 'Français', type: 'string' },
     ],
 });

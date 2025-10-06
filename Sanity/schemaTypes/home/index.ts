@@ -1,3 +1,4 @@
+import { MdHome } from 'react-icons/md';
 import { defineType } from 'sanity';
 import { HomeSectionPreviewSelect, HomeSections } from './section';
 
@@ -5,6 +6,7 @@ export const HomeSchema = defineType({
     name: 'home',
     title: 'Page - Home',
     type: 'document',
+    icon: MdHome,
     fields: [
         {
             name: 'hero',
