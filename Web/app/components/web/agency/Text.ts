@@ -65,5 +65,35 @@ export const Text = {
             description:
                 "Pas de tâches jetables : chaque mission apporte une vraie valeur, sur des projets concrets, utiles et durables.",
         },
+    ],
+    "hubdata": [
+        {
+            id: 1,
+            icon: "lucide:file-text",
+            text: "Articles d’analyse sur la création de sites et d'applications",
+            description:
+                "Des contenus stratégiques qui explorent les bonnes pratiques, les tendances et les choix techniques pour concevoir des sites web et applications performants",
+        },
+        {
+            id: 2,
+            icon: "lucide:briefcase-business",
+            text: "Études de cas issues de projets réels ou fictifs",
+            description:
+                "Des retours d’expérience détaillés illustrant notre méthodologie, nos solutions concrètes et les résultats obtenus sur des projets variés.",
+        },
+        {
+            id: 3,
+            icon: "lucide:download",
+            text: "Mini-guides pratiques et checklists à télécharger",
+            description:
+                "Des ressources prêtes à l’emploi pour vous aider à structurer vos projets, vérifier les étapes clés et gagner en autonomie rapidement.",
+        },
+        {
+            id: 4,
+            icon: "lucide:bot",
+            text: "Démonstrations concrètes en IA, design et performance",
+            description:
+                "Des exemples visuels et interactifs de notre approche technique et créative, mettant en lumière nos expertises en intelligence artificielle, UX/UI et optimisation.",
+        },
     ]
 }

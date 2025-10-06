@@ -1,8 +1,5 @@
 <template>
-    <PageLayout>
-        HUB
-    </PageLayout>
+    <WebAgencyHubHero />
+    <WebAgencyHubFound />
+    <WebAgencyHubWhy />
 </template>
-<script setup lang="ts">
-import PageLayout from '~/layouts/page-layout.vue';
-</script>
