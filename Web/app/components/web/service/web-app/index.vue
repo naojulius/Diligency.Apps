@@ -1,5 +1,7 @@
 <template>
     <WebServiceWebAppHero />
     <WebServiceWebAppWeb />
-    <LazyWebServiceWebAppMethod />
+    <WebServiceWebAppMethod />
+    <WebServiceWebAppFaq />
+    <WebServiceWebAppCta />
 </template>

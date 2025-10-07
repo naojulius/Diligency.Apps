@@ -2,7 +2,7 @@
     <section class="py-5 md:py-20 bg-secondary">
         <div class="px-4 md:px-10 2xl:px-35">
             <div class="mb-16">
-                <div class="text-4xl font-semibold flex gap-3 text-tertiary">
+                <div class="text-4xl font-semibold flex gap-3 text-tertiary pb-3">
                     <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
                     <div>
                         <div>
@@ -20,6 +20,8 @@
             </div>
             <div class="w-full py-2 flex flex-col md:flex-row justify-start gap-5 md:gap-10">
                 <WebServiceWebAppMethodOurMethod />
+                <WebServiceWebAppMethodGain />
+                <WebServiceWebAppMethodWhy />
             </div>
         </div>
     </section>

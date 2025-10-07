@@ -1,6 +1,6 @@
 <template>
     <div class="text-xl">
-        <div class="py-1 text-base/5" v-for="(usage, index) in Text.method.methods" :key="index">
+        <div class="py-1 text-base/5" v-for="(usage, index) in Text.method.why" :key="index">
             <p class="inline-flex gap-2 items-center inter ">
                 <Icon :name="usage.icon" size="22" class="text-secondary-700" />
                 <span class="text-tertiary-500">{{ usage.name }}</span>

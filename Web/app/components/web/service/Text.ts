@@ -38,27 +38,27 @@ export const Text = {
     "method": {
         "methods": [
             {
-                name: "service.method.items.auditCadrage",
+                name: "Audit & Cadrage fonctionnel",
                 icon: "lucide-clipboard-check"
             },
             {
-                name: "service.method.items.techArchitecture",
+                name: "Architecture technique & stack adaptée",
                 icon: "lucide-circuit-board"
             },
             {
-                name: "service.method.items.uiUx",
+                name: "Maquettes UI/UX avec validation",
                 icon: "lucide-app-window"
             },
             {
-                name: "service.method.items.modularDev",
+                name: "Développement modulaire et visible",
                 icon: "lucide-terminal"
             },
             {
-                name: "service.method.items.userTest",
+                name: "Test utilisateurs",
                 icon: "lucide-test-tubes"
             },
             {
-                name: "service.method.items.docsDeployment",
+                name: "Mise en production + documentation",
                 icon: "lucide-cloud-upload"
             }
         ],
@@ -106,5 +106,19 @@ export const Text = {
                 icon: "lucide-life-buoy"
             }
         ]
-    }
+    },
+    faq: [
+        {
+            q: "Combien de temps pour développer une application web ?",
+            r: "Entre 4 et 10 semaines selon la complexité et le niveau de détail initial."
+        },
+        {
+            q: "Pui-je la faire évoluer plus tard ?",
+            r: "Oui tout est pensé pour être modulaire, scalable et maintenable."
+        },
+        {
+            q: "je n'ai pas encore de cahier des charges, est-ce un probléme ?",
+            r: "Non, On commence ensemble par un cadrage structuré."
+        }
+    ]
 }
