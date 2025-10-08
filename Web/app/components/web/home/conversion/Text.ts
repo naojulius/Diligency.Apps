@@ -1,16 +1,16 @@
 export const Text = {
     title: {
-        fr: ["Gagnez du temps.", "Et des clients."],
-        en: ["Save time.", "And win clients."],
+        fr: ["Et si on posait les bases de votre projet ?"],
+        en: ["How about we lay the foundations for your project?"],
     },
     subtitle: {
-        fr: "Votre équipe est déjà débordée ? On vous fait gagner 10h/semaine avec une solution conçue pour durer. Lancez votre projet avec un appel stratégique gratuit.",
-        en: "Is your team already overwhelmed? We help you save 10 hours per week with a solution built to last. Kickstart your project with a free strategy call.",
+        fr: "Prenons 30 minutes pour en parler. Nous vous aiderons à clarifier vos objectifs, à évaluer la faisabilité et envisager les premières étapes concrètes.",
+        en: "Let’s take 30 minutes to discuss it. We’ll help you clarify your goals, assess feasibility, and consider the first concrete steps.",
     },
     cta: {
         applyProject: {
-            fr: "Soumettre mon projet",
-            en: "Apply my project"
+            fr: "Remplir le formulaire projet",
+            en: "Fill out the project form"
         },
         reserveCall: {
             fr: "Réserver un appel",

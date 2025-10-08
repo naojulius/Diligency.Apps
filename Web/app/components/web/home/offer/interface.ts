@@ -6,6 +6,7 @@ export interface Plan {
     title: AppLocale;
     price: string;
     features: AppLocale;
+    description: AppLocale;
 }
 
 export interface Offer {

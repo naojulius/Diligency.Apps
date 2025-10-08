@@ -1,3 +1,3 @@
 <template>
-    <WebService />
+    <WebServiceWebApp />
 </template>

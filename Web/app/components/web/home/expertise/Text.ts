@@ -2,12 +2,12 @@ export const Text = [
     {
         "icon": "lucide:layout-dashboard",
         "title": {
-            "fr": "Applications web évolutives",
+            "fr": "Application Web évolutive",
             "en": "Scalable Web Applications"
         },
         "description": {
-            "fr": "Développement d’applications robustes et scalables pour accompagner votre croissance.",
-            "en": "Development of robust and scalable applications to support your growth."
+            "fr": "Développement de plateformes web robustes, sécurisées et évolutives : portails clients, dashboards métier, SaaS sur-mesure. Pensées pour s’adapter à vos besoins et vous rendre autonome.",
+            "en": "Development of robust, secure, and scalable web platforms: client portals, business dashboards, custom SaaS solutions. Designed to adapt to your needs and empower you with autonomy."
         },
         "technos": ["Node.js", "Vue.js", "Express"],
         "link": "/home/expertise/scalable-web"
@@ -15,12 +15,12 @@ export const Text = [
     {
         "icon": "lucide:monitor",
         "title": {
-            "fr": "Sites vitrines performants",
-            "en": "High-Performance Showcase Websites"
+            "fr": "Site vitrine performant",
+            "en": "High-performance showcase website"
         },
         "description": {
-            "fr": "Création de sites modernes, rapides et optimisés pour la visibilité en ligne.",
-            "en": "Creation of modern, fast, and optimized websites for online visibility."
+            "fr": "Création de sites professionnels rapides, responsives et optimisés SEO. Pensés comme des leviers de conversion et gérables facilement.",
+            "en": "Creation of professional websites that are fast, responsive, and SEO-optimized. Designed as conversion drivers and easy to manage."
         },
         "technos": ["WordPress", "Next.js", "PHP"],
         "link": "/home/expertise/showcase-web"
@@ -28,12 +28,12 @@ export const Text = [
     {
         "icon": "lucide:workflow",
         "title": {
-            "fr": "Solution d’intelligence artificielle",
+            "fr": "Solutions d'intelligence artificielle",
             "en": "AI Solutions"
         },
         "description": {
-            "fr": "Mise en place de workflows automatisés pour gagner en productivité et efficacité.",
-            "en": "Implementation of automated workflows to increase productivity and efficiency."
+            "fr": "Intégration de fonctionnalités IA concrètes dans vos outils : assistants, génération, scoring, automatisations. L’IA devient un levier réel, utile, sans complexité inutile.",
+            "en": "Integration of practical AI features into your tools: assistants, generation, scoring, automations. AI becomes a real, useful lever without unnecessary complexity."
         },
         "technos": ["Node.js", "Zapier", "MongoDB"],
         "link": "/home/expertise/ai-solution"
@@ -41,12 +41,12 @@ export const Text = [
     {
         "icon": "lucide:plug",
         "title": {
-            "fr": "Service IT & Support ",
-            "en": "IT Services & Support"
+            "fr": "Support & Maintenance évolutive",
+            "en": "Scalable Support & Maintenance"
         },
         "description": {
-            "fr": "Connexion fluide de vos outils et services grâce à des intégrations sur mesure.",
-            "en": "Seamless connection of your tools and services through custom integrations."
+            "fr": "Suivi post-livraison, mises à jour techniques, correctifs, extensions et sécurité. Un accompagnement flexible pour faire vivre vos outils dans la durée.",
+            "en": "Post-delivery monitoring, technical updates, bug fixes, feature extensions, and security. Flexible support to keep your tools thriving over time."
         },
         "technos": ["REST", "GraphQL", "PHP"],
         "link": "/home/expertise/it-support"
