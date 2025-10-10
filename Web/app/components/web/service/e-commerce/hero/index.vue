@@ -28,6 +28,6 @@ const { locale } = useI18n()
 const Text = ref<any>(null)
 
 onMounted(async () => {
-    Text.value = await UseHomeStore().GetHeroData()
+    //Text.value = await UseHomeStore().GetHeroData()
 })
 </script>

@@ -15,6 +15,6 @@
 import { useI18n } from 'vue-i18n';
 import { UseAgencyStore } from '~/stores/agency.store';
 import { Text } from '../../Text';
-const agencyStore = UseAgencyStore()
+const store = UseAgencyStore()
 const { locale } = useI18n()
 </script>
