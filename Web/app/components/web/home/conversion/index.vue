@@ -6,24 +6,33 @@
                 <div class="text-4xl font-semibold flex gap-3 text-secondary opacity-90">
                     <div class="min-w-[10px] max-w-[10px] bg-secondary rounded-full"></div>
                     <div>
-                        <div v-for="(title, index) in Text.title[locale]" :key="index">
-                            {{ title }}
+                        <div v-for="(item, index) in title" :key="index">
+                            {{ item[locale] }}
                         </div>
                     </div>
                 </div>
                 <p class="text-xl mb-8 opacity-90 text-primary text-center md:text-left py-5  w-full md:w-[700px]">
-                    {{ Text.subtitle[locale] }}
+                    {{ subtitle[locale] }}
                 </p>
             </div>
             <div class="w-full py-5 flex flex-col gap-2 items-center justify-center px-4 opacity-90 ">
-                <WebHomeConversionApplyProject />
+                <WebHomeConversionCtaA />
             </div>
         </div>
     </section>
 </template>
+
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
-import { Text } from './Text';
+import { UseHomeStore } from '~/stores/home.store';
+const store = UseHomeStore()
+const { locale } = useI18n()
 
-const { locale } = useI18n();
+const title = computed(() => {
+    return store.GetConversionTitle()
+})
+
+const subtitle = computed(() => {
+    return store.GetConversionSubTitle()
+})
 </script>

@@ -3,6 +3,8 @@ import type { AppLocale } from "~/types/interfaces/app-locale"
 import { Cta } from "~/types/interfaces/common/cta"
 import { Title } from "~/types/interfaces/common/title"
 import { UseLoaderStore } from "./loader.store"
+import type { Expertise } from "~/components/web/home/expertise/expertise.type"
+import type { Offer, Plan } from "~/components/web/home/offer/interface"
 
 const data = ref(HOME_DATA)
 /*
@@ -46,6 +48,103 @@ export const UseHomeStore = defineStore("home-store", () => {
         return data?.value?.strategy?.title ?? []
     }
 
+    const GetStrategySubTitle = (): AppLocale => {
+        return data?.value?.strategy?.subtitle ?? []
+    }
+
+    const GetStrategyImages = (): Array<string> => {
+        return data?.value?.strategy?.images ?? []
+    }
+
+    //#endregion
+
+    //#region Expertise
+
+    const GetExpertiseTitle = (): Array<Title> => {
+        return data?.value?.expertise?.title ?? []
+    }
+
+    const GetExpertiseSubTitle = (): AppLocale => {
+        return data?.value?.expertise?.subtitle ?? []
+    }
+
+    const GetExpertiseItems = (): Array<Expertise> => {
+        return data?.value?.expertise?.items ?? []
+    }
+
+    const GetExpertiseCta = (): Cta => {
+        return data?.value?.expertise?.cta
+    }
+
+    //#endregion
+
+    //#region Offer
+
+    const GetOfferTitle = (): Array<Title> => {
+        return data?.value?.offer?.title ?? []
+    }
+
+    const GetOfferSubTitle = (): AppLocale => {
+        return data?.value?.offer?.subtitle ?? []
+    }
+
+    const GetOfferPlanEssentialItems = (): Plan => {
+        return data?.value?.offer?.plans?.essential
+    }
+
+    const GetOfferPlanPremiumItems = (): Plan => {
+        return data?.value?.offer.plans.premium
+    }
+
+    //#endregion
+
+    //#region Hub
+
+    const GetHubTitle = (): Array<Title> => {
+        return data?.value?.hub?.title ?? []
+    }
+
+    const GetHubSubTitle = (): AppLocale => {
+        return data?.value?.hub?.subtitle ?? []
+    }
+
+    const GetHubTestimonialItems = (): any => {
+        return data?.value?.hub?.testimonials ?? []
+    }
+
+    //#endregion
+
+    //#region Conversion
+
+    const GetConversionTitle = (): Array<Title> => {
+        return data?.value?.conversion?.title ?? []
+    }
+
+    const GetConversionSubTitle = (): AppLocale => {
+        return data?.value?.conversion?.subtitle ?? []
+    }
+
+    const GetConversionBacground = (): string => {
+        return data?.value?.conversion?.background
+    }
+
+    const GetConversionCta = (key: string): Cta => {
+        switch (key.toLocaleLowerCase()) {
+            case "a":
+                return data?.value?.conversion?.ctaA
+        }
+
+        return new Cta();
+    }
+
+    const GetConversionFooterText = (): AppLocale => {
+        return data?.value?.conversion?.footer.text
+    }
+
+    const GetConversionFooterCta = (): Cta => {
+        return data?.value?.conversion?.footer.cta ?? new Cta()
+    }
+
     //#endregion
 
     //#region GetMainData
@@ -75,10 +174,35 @@ export const UseHomeStore = defineStore("home-store", () => {
     //#endregion
 
     return {
+        //Hero
         GetHeroTitle,
         GetHeroSubTitle,
         GetHeroBackground,
         GetHeroCta,
+        //Strategy
         GetStrategyTitle,
+        GetStrategySubTitle,
+        GetStrategyImages,
+        //Exprtise
+        GetExpertiseTitle,
+        GetExpertiseSubTitle,
+        GetExpertiseItems,
+        GetExpertiseCta,
+        //Offer
+        GetOfferTitle,
+        GetOfferSubTitle,
+        GetOfferPlanEssentialItems,
+        GetOfferPlanPremiumItems,
+        //Hub
+        GetHubTitle,
+        GetHubSubTitle,
+        GetHubTestimonialItems,
+        //Conversion
+        GetConversionTitle,
+        GetConversionSubTitle,
+        GetConversionCta,
+        GetConversionBacground,
+        GetConversionFooterText,
+        GetConversionFooterCta
     }
 })

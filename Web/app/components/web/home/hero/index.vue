@@ -42,7 +42,7 @@ const title = computed(() => {
     if (Array.isArray(data)) {
         return data
     } else if (typeof data === 'string') {
-        return [{ en: data, fr: data }] // conversion string -> Title[]
+        return [{ en: data, fr: data }]
     }
 
     return []

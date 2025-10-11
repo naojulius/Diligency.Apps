@@ -14,21 +14,37 @@
 <script setup lang="ts">
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { UseHomeStore } from '~/stores/home.store'
 
 const leftRef = ref<HTMLElement | null>(null)
 const rightRef = ref<HTMLElement | null>(null)
+const store = UseHomeStore()
 
-const bgStyle = (position: 'left' | 'center' | 'right') => ({
-    backgroundImage: "url('/images/storysets/collaboration-animate.svg')",
-    backgroundSize: 'contain',
-    backgroundPosition:
-        position === 'left'
-            ? 'left center'
-            : position === 'right'
-                ? 'right center'
-                : 'center center',
-    backgroundRepeat: 'no-repeat',
+const images = computed(() => {
+    return store.GetStrategyImages()
 })
+
+const bgStyle = (position: 'left' | 'center' | 'right') => {
+    const indexMap: Record<typeof position, number> = {
+        left: 0,
+        center: 1,
+        right: 2,
+    }
+
+    const imageUrl = images.value[indexMap[position]] || '/images/default.svg'
+
+    return {
+        backgroundImage: `url('${imageUrl}')`,
+        backgroundSize: 'contain',
+        backgroundPosition:
+            position === 'left'
+                ? 'left center'
+                : position === 'right'
+                    ? 'right center'
+                    : 'center center',
+        backgroundRepeat: 'no-repeat',
+    }
+}
 
 onMounted(async () => {
     if (!leftRef.value || !rightRef.value) return
@@ -67,4 +83,5 @@ onBeforeUnmount(() => {
         ScrollTrigger.getAll().forEach((trigger: any) => trigger.kill())
     }
 })
+
 </script>

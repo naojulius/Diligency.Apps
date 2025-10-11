@@ -3,7 +3,7 @@
         <div>
             <p class="text-3xl font-regular  text-tertiary opacity-90 text-center py-5 px-4">
                 <span class="">
-                    {{ Text.text[locale] }}
+                    {{ data[locale] }}
                 </span>
             </p>
             <div class="w-full flex items-center justify-center">
@@ -12,9 +12,13 @@
         </div>
     </section>
 </template>
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
-import { Text } from './Text';
-
+import { UseHomeStore } from '~/stores/home.store';
+const store = UseHomeStore()
 const { locale } = useI18n()
+
+const data = computed(() => {
+    return store.GetConversionFooterText()
+})
 </script>

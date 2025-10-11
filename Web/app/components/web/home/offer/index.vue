@@ -7,25 +7,33 @@
                 <div class="text-4xl font-semibold flex gap-3 text-tertiary">
                     <div class="min-w-[10px] max-w-[10px] bg-tertiary-500 rounded-full"></div>
                     <div>
-                        <div v-for="(title, index) in Text.title[locale]" :key="index">
-                            {{ title }}
+                        <div v-for="(item, index) in title" :key="index">
+                            {{ item[locale] }}
                         </div>
                     </div>
                 </div>
                 <p class="text-tertiary/80 text-2xl leading-7 w-full md:w-[700px] py-10">
-                    {{ Text.subtitle[locale] }}
+                    {{ subtitle[locale] }}
                 </p>
             </div>
             <div class="w-2/3 mx-auto">
-                <WebHomeOfferCard />
+                <WebHomeOfferCards />
             </div>
         </div>
     </section>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
-import { Text } from './Text';
-
+import { UseHomeStore } from '~/stores/home.store';
+const store = UseHomeStore()
 const { locale } = useI18n()
+
+const title = computed(() => {
+    return store.GetOfferTitle()
+})
+
+const subtitle = computed(() => {
+    return store.GetOfferSubTitle()
+})
 </script>
