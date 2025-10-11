@@ -20,7 +20,8 @@
                                         manière claire et accessible de valoriser notre approche en IA, UX/UI et
                                         performance.
                                     </p>
-                                    <div class="mt-10 w-full space-y-8 text-base/7 text-tertiary">
+                                    <WebAgencyHubFoundList />
+                                    <!-- <div class="mt-10 w-full space-y-8 text-base/7 text-tertiary">
                                         <div class="relative" v-for="(hub, index) in Text.hubdata" :key="index">
                                             <div class="inline-flex  gap-2 text-gray-900">
                                                 <Icon :name="hub.icon" class="size-11 text-accent/70" />
@@ -29,7 +30,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <img src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
@@ -44,5 +45,4 @@
     </section>
 </template>
 <script lang="ts" setup>
-import { Text } from '../../Text';
 </script>

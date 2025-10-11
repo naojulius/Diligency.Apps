@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full px-4 md:px-10 2xl:px-35 py-10 bg-secondary">
+    <section class="w-full px-4 md:px-10 2xl:px-35 py-10 bg-primary">
         <div class="text-4xl font-semibold relative z-10 text-tertiary flex gap-3">
             <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
             <span>Équipe Diligency</span>
@@ -10,8 +10,9 @@
             freelances — sélectionnés pour leur rigueur, leur sens de la structure et leur adaptabilité. Chaque projet
             est piloté par un référent unique, garant de la qualité et de la fluidité de la production.
         </div>
-        <div class="w-full">
-            <WebAgencyAboutTeamList />
+        <div class="w-full py-2 flex flex-col gap-3 md:flex-row">
+            <WebAgencyAboutTeamCtaContactUs />
+            <WebAgencyAboutTeamCtaJoinUs />
         </div>
     </section>
 </template>

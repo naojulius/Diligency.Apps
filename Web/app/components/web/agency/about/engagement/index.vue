@@ -10,7 +10,7 @@
             aux besoins réels. Nos livrables sont pensés comme des solutions concrètes, utiles et alignées avec vos
             objectifs stratégiques et opérationnels.
         </div>
-        <div class="w-full">
+        <div class="w-full pt-10">
             <WebAgencyAboutEngagementList />
         </div>
     </section>

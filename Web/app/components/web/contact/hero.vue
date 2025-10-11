@@ -2,14 +2,12 @@
     <div class="w-full h-auto  px-4 lg:px-10 2xl:px-35 py-16">
         <div class="h-full w-full flex flex-col md:flex-row items-start justify-center gap-2 z-10 py-10">
             <div class="w-full md:w-1/2 space-y-6">
-                <div class="text-5xl font-bold text-secondary ">Entrons en contact</div>
-                <div class="text-xl font-regular text-secondary/70 w-full md:w-[700px]">
+                <div class="text-5xl font-bold text-tertiary ">Entrons en contact</div>
+                <div class="text-xl font-regular text-tertiary/70 w-full md:w-[700px]">
                     Pour toute demande d’information ou de collaboration,
                     notre équipe est disponible et prête à vous répondre rapidement.
                 </div>
-                <div style="color: darkgray !important;">
-                    <WebContactList />
-                </div>
+                <WebContactList />
             </div>
             <div class="p-1 w-full md:w-1/2 h-full  flex items-end justify-end">
                 <div class="p-4 w-full md:w-9/12 h-full bg-tertiary rounded-xl ">
@@ -26,12 +24,14 @@
                             <input v-model="form.lastName" type="text" placeholder="Prénom"
                                 class="h-12 w-full bg-primary rounded-lg p-2" />
                         </div>
-                        <input v-model="form.email" type="email" placeholder="Votre adresse email"
+                        <input v-model="form.email" type="email" placeholder="E-mail"
                             class="h-12 w-full bg-primary rounded-lg p-2" />
-                        <textarea v-model="form.message" placeholder="Message"
+                        <textarea v-model="form.message" placeholder="Votre Message"
                             class="min-h-42 w-full bg-primary rounded-lg p-2"></textarea>
 
-                        <ul v-if="errors.length" class="text-red-500 text-sm list-disc pl-4">
+                        <WebContactType v-model="form.typeAppel" :options="options" />
+                        <hr class="text-primary">
+                        <ul v-if="errors.length" class="text-primary text-sm list-disc pl-4">
                             <li v-for="err in errors" :key="err">{{ err }}</li>
                         </ul>
 
@@ -63,12 +63,20 @@ import type { MailData } from '~/types/interfaces/mail-data'
 
 const mailStore = useMailStore()
 
+const options = [
+    { label: 'Appel stratégique', value: 'strategique' },
+    { label: 'Appel de découverte (Candidats / Public)', value: 'decouverte' },
+]
+
 // Zod schema
 const MailSchema = z.object({
     firstName: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
     lastName: z.string().min(2, "Le prénom doit contenir au moins 2 caractères"),
     email: z.email("Adresse email invalide"),
-    message: z.string().min(10, "Le message doit contenir au moins 10 caractères")
+    message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
+    typeAppel: z.enum(['strategique', 'decouverte'], {
+        message: 'Veuillez sélectionner un type d’appel',
+    }),
 })
 
 // formulaire réactif
@@ -76,7 +84,8 @@ const form = reactive<MailData & { email: string }>({
     firstName: '',
     lastName: '',
     email: '',
-    message: ''
+    message: '',
+    typeAppel: null,
 })
 
 const errors = ref<string[]>([])
@@ -94,7 +103,8 @@ const handleSubmit = async () => {
     await mailStore.Save({
         firstName: form.firstName,
         lastName: form.lastName,
-        message: form.message
+        message: form.message,
+        typeAppel: form.typeAppel!,
     } as MailData)
 }
 

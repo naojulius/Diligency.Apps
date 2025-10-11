@@ -1,33 +1,84 @@
-import type { GetHomeHeroQuery } from "~/types/gql/builds/graphql"
-import { GetHeroDataQuery } from "~/types/gql/queries/get-hero.gql"
-import { throwIfNull } from "~/types/utils/error"
+import { HOME_DATA } from "~/data/home.data"
+import type { AppLocale } from "~/types/interfaces/app-locale"
+import { Cta } from "~/types/interfaces/common/cta"
+import { Title } from "~/types/interfaces/common/title"
 import { UseLoaderStore } from "./loader.store"
 
+const data = ref(HOME_DATA)
+/*
+    Définition du store "home-store" avec Pinia.
+    Contient la logique pour récupérer les données du Hero depuis l'API GraphQL.
+*/
 export const UseHomeStore = defineStore("home-store", () => {
     const nuxtApp = useNuxtApp()
     const apollo = nuxtApp.$apollo
     const loader = UseLoaderStore()
 
-    const GetHeroData = async (): Promise<NonNullable<GetHomeHeroQuery["allHome"][number]["hero"]>> => {
-        loader.ShowLoader()
+    //#region Hero
 
-        try {
-            const { data } = await apollo.query<GetHomeHeroQuery>({
-                query: GetHeroDataQuery,
-            })
-
-            const item = throwIfNull(
-                data.allHome.find((i) => i._id === "home-hero"),
-                "Hero not found"
-            )
-            return throwIfNull(item.hero, "Hero not found")
-
-        } finally {
-            loader.HideLoader()
-        }
+    const GetHeroTitle = (): Array<Title> | string => {
+        return data?.value?.hero?.title ?? []
     }
 
+    const GetHeroSubTitle = (): AppLocale => {
+        return data?.value?.hero?.subtitle ?? []
+    }
+
+    const GetHeroBackground = (): string => {
+        return data?.value?.hero?.link ?? ""
+    }
+
+    const GetHeroCta = (key: string): Cta => {
+        switch (key.toLowerCase()) {
+            case "a":
+                return data?.value?.hero?.ctaA;
+            case "b":
+                return data?.value?.hero?.ctaB;
+        }
+        return new Cta();
+    }
+
+    //#endregion
+
+    //#region Strategy
+
+    const GetStrategyTitle = (): Array<Title> => {
+        return data?.value?.strategy?.title ?? []
+    }
+
+    //#endregion
+
+    //#region GetMainData
+
+    const GetData = async () => {
+        data.value = HOME_DATA;
+        // loader.ShowLoader()
+
+        // try {
+        //     const { data } = await apollo.query<GetHomeHeroQuery>({
+        //         query: GetHeroDataQuery,
+        //     })
+
+        //     // const item = throwIfNull(
+        //     //     data.allHome.find((i) => i._id === "home-hero"), "Hero not found"
+        //     // )
+        //     // return throwIfNull(item.hero, "Hero not found")
+        //     return []
+
+        // } finally {
+        //     loader.HideLoader()
+        // }
+    }
+
+    GetData()
+
+    //#endregion
+
     return {
-        GetHeroData,
+        GetHeroTitle,
+        GetHeroSubTitle,
+        GetHeroBackground,
+        GetHeroCta,
+        GetStrategyTitle,
     }
 })

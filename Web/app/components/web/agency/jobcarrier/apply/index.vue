@@ -7,7 +7,7 @@
         <div class="w-full h-auto container mx-auto py-[1rem] text-center
                          md:w-4/5 xl:w-3/5  md:text-left md:flex-col  
                                 flex flex-col">
-            <div class="w-full inter px-4 py-[3rem]">
+            <div class="w-full inter px-4 md:px-0 py-[3rem]">
                 <h1 class="text-3xl md:text-4xl text-center md:text-left font-bold text-tertiary-500">
                     Postuler
                 </h1>

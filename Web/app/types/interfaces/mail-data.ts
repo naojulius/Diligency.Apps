@@ -3,4 +3,5 @@ export interface MailData {
     lastName: string,
     email: string,
     message: string,
+    typeAppel: any,
 }

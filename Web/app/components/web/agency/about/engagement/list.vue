@@ -16,6 +16,6 @@
 import { useI18n } from 'vue-i18n';
 import { UseAgencyStore } from '~/stores/agency.store';
 const agencyStore = UseAgencyStore()
-const data = ref(agencyStore.GetEngagement())
+const data = ref(agencyStore.GetAgencyAboutEngagementItems())
 const { locale } = useI18n()
 </script>

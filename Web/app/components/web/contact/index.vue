@@ -1,5 +1,5 @@
 <template>
-    <PageLayout customClass="h-auto">
+    <PageLayout customClass="h-auto bg-white">
         <WebContactHero />
     </PageLayout>
 </template>
