@@ -1,7 +1,20 @@
+import { v4 as uuidv4 } from 'uuid';
 export const AGENCY_DATA = {
     about: {
         hero: {
-
+            section: 'Hero',
+            title: [
+                {
+                    _key: uuidv4(),
+                    en: 'À propos de Diligency',
+                    fr: 'About Diligency'
+                }
+            ],
+            subtitle: {
+                en: 'Diligency est une agence digitale indépendante fondée sur une conviction forte : l’efficacité digitale naît d’un équilibre entre rigueur, modernité et compréhension métier. Nous accompagnons les PME, cabinets, structures ambitieuses et entrepreneurs exigeants dans la création de plateformes web, d’applications sur mesure et de systèmes digitaux fiables. Notre nom est notre promesse : livrer avec diligence, précision et intégrité.',
+                fr: 'Diligency is an independent digital agency founded on a strong conviction: digital efficiency is born from a balance between rigor, modernity, and business understanding. We support SMEs, firms, ambitious organizations, and demanding entrepreneurs in creating web platforms, custom applications, and reliable digital systems. Our name is our promise: to deliver with diligence, precision, and integrity.'
+            },
+            background: '/images/hero/ecommerce.jpg',
         },
         engagement: {
             items: [

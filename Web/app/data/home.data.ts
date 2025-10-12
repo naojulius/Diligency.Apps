@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-import type { Cta } from '~/types/interfaces/common/cta';
 export const HOME_DATA = {
     hero: {
         section: 'Hero',
