@@ -1,7 +1,7 @@
 <template>
     <section class="py-5 md:py-20">
         <div class="px-4 md:px-10 2xl:px-35">
-            <div class="mb-16">
+            <div class="mb-0">
                 <div class="text-4xl font-semibold flex gap-3 text-tertiary">
                     <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
                     <div>
@@ -14,6 +14,7 @@
                     {{ subtitle[locale] }}
                 </div>
             </div>
+            <SpacingBlock />
             <WebHomeHubTestimonial />
             <div class="w-full py-10">
                 <WebHomeHubCta />

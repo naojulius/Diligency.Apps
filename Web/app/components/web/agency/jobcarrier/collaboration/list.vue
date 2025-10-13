@@ -20,5 +20,7 @@ import { UseAgencyStore } from '~/stores/agency.store';
 
 const { locale } = useI18n();
 const store = UseAgencyStore()
-const data = ref(store.GetAgencyJobCarrierCollaborationItems())
+const data = computed(() => {
+    return store.GetAgencyJobCarrierCollaborationItems()
+})
 </script>

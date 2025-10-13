@@ -9,9 +9,8 @@
         <div class="py-4 text-left relative z-10 text-gray-500 font-regular w-full md:w-[700px] text-xl font-regular">
             {{ subtitle[locale] }}
         </div>
-        <div class="w-full">
-            <WebHomeExpertiseList />
-        </div>
+        <SpacingBlock />
+        <WebHomeExpertiseList />
         <WebHomeExpertiseCta />
     </section>
 </template>

@@ -9,6 +9,6 @@ import { UseAgencyStore } from '~/stores/agency.store';
 const store = UseAgencyStore()
 
 const data = computed(() => {
-    return store.GetAgencyAboutHeroBackground()
+    return store.GetAgencyJobCarrierHeroBackground()
 })
 </script>

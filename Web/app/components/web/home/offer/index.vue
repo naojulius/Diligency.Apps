@@ -16,7 +16,7 @@
                     {{ subtitle[locale] }}
                 </p>
             </div>
-            <div class="w-2/3 mx-auto">
+            <div class="w-full md:w-2/3 mx-auto">
                 <WebHomeOfferCards />
             </div>
         </div>

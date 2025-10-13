@@ -5,10 +5,21 @@
                                 flex flex-col">
             <div class="w-full inter px-4 py-[1rem]">
                 <h1 class="text-3xl md:text-4xl text-center md:text-left font-bold text-tertiary-500">
-                    Profils recherchés
+                    {{ data[locale] }}
                 </h1>
                 <WebAgencyJobcarrierProfileList />
             </div>
         </div>
     </section>
 </template>
+<script lang="ts" setup>
+
+import { useI18n } from 'vue-i18n';
+import { UseAgencyStore } from '~/stores/agency.store';
+
+const { locale } = useI18n();
+const store = UseAgencyStore()
+const data = computed(() => {
+    return store.GetAgencyJobCarrierProfileTitle()
+})
+</script>

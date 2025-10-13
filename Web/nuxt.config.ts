@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   css: [
     "~/assets/app.css",
     "~/assets/default.css",
-    // "~/assets/inter.css"
+    "~/assets/dynamic.css"
   ],
   pinia: {
     storesDirs: ['./stores/**'],

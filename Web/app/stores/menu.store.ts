@@ -1,9 +1,9 @@
-import { MenusList } from "~/config/local-api/menus-list";
+import { MENU_DATA } from "~/data/menu.data";
 import type { Menu } from "~/types/interfaces/menu";
 
 export const UseMenuStore = defineStore('menu-store', () => {
     const isHumberger: Ref<Boolean> = ref(false)
-    const menusList: Ref<Menu[]> = ref(MenusList)
+    const menusList: Ref<Menu[]> = ref([] as any)
     const subMenuList: Ref<Menu[]> = ref([])
     const openMenu: Ref<Menu | null> = ref(null)
 
@@ -24,6 +24,12 @@ export const UseMenuStore = defineStore('menu-store', () => {
             subMenuList.value = menu.children ? [...menu.children] : []
         }
     }
+
+    const Getdata = () => {
+        menusList.value = MENU_DATA;
+    }
+
+    Getdata()
 
     return {
         isHumberger,

@@ -1,19 +1,19 @@
 <template>
-    <div v-if="subMenuList.length > 0"
-        class="shadow absolute hidden lg:block w-full h-auto top-16 border-t-[0.5px] border-tertiary bg-primary px-10 2xl:px-35 transition-all duration-500">
-        <div class="grid grid-cols-3 gap-2 w-full h-auto py-10">
-            <a v-for="(subMenu, subIndex) in subMenuList" :key="subIndex" :href="subMenu.link"
-                class="p-4 hover:rounded  hover:shadow-sm transition-all duration-200 transform hover:scale-102 hover:bg-gray-200">
-                <div class="text-lg font-semibold inline-flex items-center gap-4 text-tertiary">
-                    <Icon :name="subMenu.icon" size="35" />
-                    {{ $t(subMenu.locale) }}
-                </div>
-                <div class="font-regular text-sm text-gray-600 mt-1">
-                    {{ subMenu.description }}
-                </div>
-            </a>
+  <div v-if="subMenuList.length > 0"
+    class="shadow absolute hidden lg:block w-full h-auto top-16 border-t-[0.5px] border-tertiary bg-primary px-10 2xl:px-35 transition-all duration-500">
+    <div class="grid grid-cols-3 gap-2 w-full h-auto py-10">
+      <a v-for="(subMenu, subIndex) in subMenuList" :key="subIndex" :href="subMenu.link"
+        class="p-4 hover:rounded  hover:shadow-sm transition-all duration-200 transform hover:scale-102 hover:bg-gray-200">
+        <div class="text-lg font-semibold inline-flex items-center gap-4 text-tertiary">
+          <Icon :name="subMenu.icon" size="35" />
+          {{ $t(subMenu.locale) }}
         </div>
+        <div class="font-regular text-sm text-gray-600 mt-1">
+          {{ subMenu.description }}
+        </div>
+      </a>
     </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -28,8 +28,8 @@ const router = useRouter()
 const lastScrollY = ref(0)
 
 const clickSubMenu = (subMenu: Menu) => {
-    router.push(subMenu.link)
-    menuStore.SetHumberger(false);
+  router.push(subMenu.link)
+  menuStore.SetHumberger(false);
 }
 
 const handleScroll = () => {

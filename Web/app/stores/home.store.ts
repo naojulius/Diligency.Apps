@@ -1,12 +1,12 @@
+import type { Expertise } from "~/components/web/home/expertise/expertise.type"
+import type { Plan } from "~/components/web/home/offer/interface"
 import { HOME_DATA } from "~/data/home.data"
 import type { AppLocale } from "~/types/interfaces/app-locale"
 import { Cta } from "~/types/interfaces/common/cta"
 import { Title } from "~/types/interfaces/common/title"
 import { UseLoaderStore } from "./loader.store"
-import type { Expertise } from "~/components/web/home/expertise/expertise.type"
-import type { Offer, Plan } from "~/components/web/home/offer/interface"
 
-const data = ref(HOME_DATA)
+const data = ref()
 /*
     Définition du store "home-store" avec Pinia.
     Contient la logique pour récupérer les données du Hero depuis l'API GraphQL.
@@ -112,6 +112,10 @@ export const UseHomeStore = defineStore("home-store", () => {
         return data?.value?.hub?.testimonials ?? []
     }
 
+    const GetHubCta = (): Cta => {
+        return data?.value?.hub?.cta ?? new Cta()
+    }
+
     //#endregion
 
     //#region Conversion
@@ -150,7 +154,9 @@ export const UseHomeStore = defineStore("home-store", () => {
     //#region GetMainData
 
     const GetData = async () => {
+        loader.ShowLoader()
         data.value = HOME_DATA;
+        loader.HideLoader()
         // loader.ShowLoader()
 
         // try {
@@ -197,6 +203,7 @@ export const UseHomeStore = defineStore("home-store", () => {
         GetHubTitle,
         GetHubSubTitle,
         GetHubTestimonialItems,
+        GetHubCta,
         //Conversion
         GetConversionTitle,
         GetConversionSubTitle,

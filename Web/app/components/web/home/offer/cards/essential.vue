@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 w-full md:h-[90vh]">
+    <div class="p-4 w-full md:h-[90vh] cursor-pointer">
         <div
             class="transition-all duration-600 hover:bg-secondary bg-white h-full p-6 rounded-lg border-2 border-secondary-600 flex flex-col relative overflow-hidden">
             <h1 class="inter text-5xl text-tertiary pb-4 mb-4 leading-none">

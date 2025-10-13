@@ -1,0 +1,12 @@
+/* assets/css/section-spacing.css */
+.block-spacing {
+    width: var(--block-spacing-mobile);
+    height: var(--block-spacing-mobile);
+}
+
+@media (min-width: 768px) {
+    .block-spacing {
+        width: var(--block-spacing-desktop);
+        height: var(--block-spacing-desktop);
+    }
+}
