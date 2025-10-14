@@ -1,10 +1,11 @@
+import type { AppLocale } from "./app-locale";
+
 export interface Menu {
-    id: number,
-    text: String;
+    id: string;
+    name: AppLocale;
     link: string;
     icon: string;
-    locale: string;
     visible: boolean;
-    description?: string;
+    texte: AppLocale;
     children?: Menu[];
 }

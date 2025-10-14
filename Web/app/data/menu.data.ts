@@ -1,97 +1,136 @@
+import { v4 as uuidv4 } from 'uuid';
 
 export const MENU_DATA = [
     {
-        id: 1,
-        text: "Agence",
+        id: uuidv4(),
+        name: {
+            fr: "Agence",
+            en: "Agency"
+        },
         link: "/",
         icon: "lucide:square-user",
-        locale: "button.menu.agency",
         visible: true,
         children: [
             {
-                id: 101,
-                text: "A propos",
+                id: uuidv4(),
+                name: {
+                    fr: "À propos",
+                    en: "About"
+                },
                 link: "/agency/about",
-                icon: "lucide-info",
-                locale: "button.submenu.about",
+                icon: "lucide:info",
                 visible: true,
-                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution."
-
+                texte: {
+                    fr: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
+                    en: "Beyond the website: your custom business application. CRM, dashboard, marketplace, booking system… We design robust, secure, and business-oriented web platforms. 100% responsive, scalable, and ready for growth."
+                }
             },
             {
-                id: 102,
-                text: "Job & Carrière",
+                id: uuidv4(),
+                name: {
+                    fr: "Job & Carrière",
+                    en: "Jobs & Careers"
+                },
                 link: "/agency/jobcarrier",
-                icon: "lucide-briefcase",
-                locale: "button.submenu.jobCarrier",
+                icon: "lucide:briefcase",
                 visible: true,
-                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution."
-
+                texte: {
+                    fr: "Découvrez les opportunités de carrière et les valeurs qui animent notre équipe. Rejoignez une agence en pleine croissance, où chaque talent compte.",
+                    en: "Discover career opportunities and the values driving our team. Join a fast-growing agency where every talent matters."
+                }
             },
             {
-                id: 103,
-                text: "Le Hub",
+                id: uuidv4(),
+                name: {
+                    fr: "Le Hub",
+                    en: "The Hub"
+                },
                 link: "/agency/hub",
-                icon: "lucide-network",
-                locale: "button.submenu.hub",
+                icon: "lucide:network",
                 visible: true,
-                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution."
-
+                texte: {
+                    fr: "Espace d’échange et de veille technologique. Suivez nos actualités, nos innovations et les tendances du digital.",
+                    en: "A space for sharing and tech insights. Follow our latest news, innovations, and digital trends."
+                }
             }
         ]
     },
     {
-        id: 2,
-        text: "Services",
+        id: uuidv4(),
+        name: {
+            fr: "Services",
+            en: "Services"
+        },
         link: "/service",
         icon: "lucide:square-terminal",
-        locale: "button.menu.service",
         visible: true,
         children: [
             {
-                id: 201,
-                text: "Web app",
+                id: uuidv4(),
+                name: {
+                    fr: "Web app",
+                    en: "Web app"
+                },
                 link: "/service/web-app",
-                icon: "lucide-globe",
-                locale: "button.submenu.webApp",
+                icon: "lucide:globe",
                 visible: true,
-                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution."
+                texte: {
+                    fr: "Applications web sur mesure : CRM, tableau de bord, marketplace, ou outil de gestion. Sécurité, performance et évolutivité au cœur du développement.",
+                    en: "Custom web applications: CRM, dashboard, marketplace, or management tool. Security, performance, and scalability at the core."
+                }
             },
             {
-                id: 202,
-                text: "Sites vitrines",
+                id: uuidv4(),
+                name: {
+                    fr: "Sites vitrines",
+                    en: "Showcase websites"
+                },
                 link: "/service/web-show",
-                icon: "lucide-layers",
-                locale: "button.submenu.webShow",
-                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
-                visible: true
+                icon: "lucide:layers",
+                visible: true,
+                texte: {
+                    fr: "Des sites vitrines élégants et rapides pour valoriser votre image et convertir vos visiteurs en clients.",
+                    en: "Elegant, fast showcase websites to highlight your brand and turn visitors into clients."
+                }
             },
             {
-                id: 203,
-                text: "E-commerce",
+                id: uuidv4(),
+                name: {
+                    fr: "E-commerce",
+                    en: "E-commerce"
+                },
                 link: "/service/e-commerce",
-                icon: "lucide-view",
-                locale: "button.submenu.eCommerce",
-                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
-                visible: true
+                icon: "lucide:view",
+                visible: true,
+                texte: {
+                    fr: "Des boutiques en ligne performantes, ergonomiques et optimisées pour la conversion et la fidélisation.",
+                    en: "High-performing online stores designed for conversion, usability, and customer loyalty."
+                }
             },
             {
-                id: 204,
-                text: "Solutions IT/IA",
+                id: uuidv4(),
+                name: {
+                    fr: "Solutions IT/IA",
+                    en: "IT/AI Solutions"
+                },
                 link: "/service/it-ia",
-                icon: "lucide-brain",
-                locale: "button.submenu.itIaSolution",
-                description: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
-                visible: true
+                icon: "lucide:brain",
+                visible: true,
+                texte: {
+                    fr: "Intelligence artificielle, automatisation, cloud, et intégration d’outils IT adaptés à vos enjeux stratégiques.",
+                    en: "Artificial intelligence, automation, cloud, and IT tools tailored to your strategic challenges."
+                }
             }
         ]
     },
     {
-        id: 3,
-        text: "Contact",
+        id: uuidv4(),
+        name: {
+            fr: "Contact",
+            en: "Contact"
+        },
         link: "/contact",
         icon: "lucide:messages-square",
-        locale: "button.menu.contact",
         visible: true
     }
-]
+];

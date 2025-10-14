@@ -2,7 +2,7 @@
   <button @click="toggleMenu()" class="btn text-lg p-2 px-2 flex items-center justify-center gap-1 inter-bold text-secondary 
         hover:text-secondary-600 transition-all diuration-400">
     <span>
-      {{ props.data.text }}
+      {{ props.data.name[locale] }}
     </span>
     <Icon v-if="hasChilren" name="lucide:chevron-down"
       :class="['size-6 transition-transform duration-300 mr-3', openMenu?.id === currentMenuId ? 'rotate-180' : 'rotate-0']" />
@@ -21,6 +21,8 @@ const props = defineProps({
     type: Object,
   }
 })
+
+const { locale } = useI18n()
 
 const hasChilren = computed(() => {
   return props.data.children?.length > 0 ? true : false

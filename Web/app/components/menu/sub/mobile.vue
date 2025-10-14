@@ -5,11 +5,11 @@
     <div class="lg:hidden size-full bg-primary flex flex-col gap-5 p-4 pt-8 overflow-y-scroll">
       <div v-for="(menu, index) in menusList" :key="index"
         class="inter w-full font-semibold text-left text-tertiary-500 cursor-pointer">
-        <div @click="toggleMenu(menu)">
+        <div @click="toggleMenu(menu as Menu)">
           <div class="flex flex-row items-center justify-between gap-2 w-full">
             <div class="flex flex-row items-center gap-4">
               <Icon :name="menu.icon" class="size-8" />
-              <span class="text-2xl">{{ $t(menu.locale) }}</span>
+              <span class="text-2xl">{{ menu.name[locale] }}</span>
             </div>
             <Icon v-if="menu.children && menu.children.length > 0" name="lucide:chevron-down"
               :class="{ 'rotate-180': openMenu?.id === menu.id }"
@@ -23,10 +23,10 @@
           <div @click="clickSubMenu(subMenu)" v-for="(subMenu, subIndex) in subMenuList" :key="subIndex"
             class="text-tertiary-500/80 size-full py-2 font-normal text-2xl flex flex-col gap-2">
             <div class="text-lg font-semibold">
-              {{ $t(subMenu.locale) }}
+              {{ subMenu.name[locale] }}
             </div>
             <div class="inter text-[18px]">
-              {{ subMenu.description }}
+              {{ subMenu.texte[locale] }}
             </div>
           </div>
         </div>
@@ -40,6 +40,7 @@ import { computed, ref } from 'vue'
 import { UseMenuStore } from '~/stores/menu.store'
 import type { Menu } from '~/types/interfaces/menu'
 
+const { locale } = useI18n()
 const mobileMenu = ref<HTMLElement | null>(null)
 const openMenu = computed(() => menuStore.openMenu)
 

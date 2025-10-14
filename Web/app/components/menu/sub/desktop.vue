@@ -6,10 +6,12 @@
         class="p-4 hover:rounded  hover:shadow-sm transition-all duration-200 transform hover:scale-102 hover:bg-gray-200">
         <div class="text-lg font-semibold inline-flex items-center gap-4 text-tertiary">
           <Icon :name="subMenu.icon" size="35" />
-          {{ $t(subMenu.locale) }}
+          <span>
+            {{ subMenu.name[locale] }}
+          </span>
         </div>
         <div class="font-regular text-sm text-gray-600 mt-1">
-          {{ subMenu.description }}
+          {{ subMenu.texte[locale] }}
         </div>
       </a>
     </div>
@@ -20,12 +22,14 @@
 import { computed } from 'vue'
 import { UseMenuStore } from '~/stores/menu.store'
 import type { Menu } from '~/types/interfaces/menu'
-
+const { locale } = useI18n()
 const menuStore = UseMenuStore()
-const subMenuList = computed(() => menuStore.subMenuList)
 const router = useRouter()
-
 const lastScrollY = ref(0)
+
+const subMenuList = computed(() => {
+  return menuStore.subMenuList
+})
 
 const clickSubMenu = (subMenu: Menu) => {
   router.push(subMenu.link)

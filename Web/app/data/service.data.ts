@@ -1,4 +1,246 @@
+import { v4 as uuidv4 } from 'uuid';
 export const SERVICE_DATA = {
+    webApp: {
+        hero: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Applications Web & Plateformes métier — Construisons l'efficacité digitale",
+                    en: "Web Applications & Business Platforms — Building Digital Efficiency Together"
+                }
+            ],
+            subtitle: {
+                fr: 'Développement sur-mesure de plateformes digitales : dashboards, CRM, réservation, marketplace, outils SaaS.',
+                en: 'Tailor-made digital platform development: dashboards, CRMs, booking systems, marketplaces, and SaaS tools.'
+            },
+            background: '/images/hero/ecommerce.jpg',
+        },
+        web: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Pourquoi une application web ?',
+                    en: 'Why a Web Application?'
+                }
+            ],
+            subtitle: {
+                fr: 'Dès qu’un site web doit faire plus que présenter, vous avez besoin d’une application. Une application web intervient là où les sites vitrines atteignent leurs limites : dès qu’il faut gérer des utilisateurs, automatiser des processus, sécuriser des données ou connecter des services. Chez Diligency, nous concevons des plateformes digitales sur-mesure : robustes, évolutives et pensées métier. Marketplace, portail client, système de réservation ou CRM sur navigateur — si votre projet exige plus qu’un simple affichage, nous le structurons et le développons comme une vraie application.',
+                en: 'Whenever a website needs to do more than simply showcase content, you need a web application. A web app steps in where traditional websites reach their limits — when it’s time to manage users, automate processes, secure data, or connect services. At Diligency, we design custom digital platforms that are robust, scalable, and business-oriented. Whether it’s a marketplace, client portal, booking system, or browser-based CRM — if your project demands more than a simple display, we structure and develop it as a true application.'
+            },
+            items: {
+                usage: {
+                    title: {
+                        fr: "cas d'usage fréquents:",
+                        en: "Common use cases",
+                    },
+                    list: [
+                        {
+                            name: {
+                                fr: "Marketplace B2B ou B2C",
+                                en: "B2B or B2C Marketplace"
+                            },
+                            icon: "lucide-briefcase-business"
+                        },
+                        {
+                            name: {
+                                fr: "Système de réservation intelligent",
+                                en: "Smart Booking System"
+                            },
+                            icon: "lucide-brain-circuit"
+                        },
+                        {
+                            name: {
+                                fr: "Portail client ou extranet sécurisé",
+                                en: "Client Portal or Secure Extranet"
+                            },
+                            icon: "lucide-globe-lock"
+                        },
+                        {
+                            name: {
+                                fr: "Applications SaaS ou interface de gestion",
+                                en: "SaaS Applications or Management Interface"
+                            },
+                            icon: "lucide-square-mouse-pointer"
+                        }
+
+                    ]
+                },
+                advantage: {
+                    title: {
+                        fr: "Avantage concrets:",
+                        en: "Concrete advantages:"
+                    },
+                    list: [
+                        {
+                            name: {
+                                fr: "Responsive (desktop & mobile)",
+                                en: "Responsive (desktop & mobile)"
+                            },
+                            icon: "lucide-monitor-smartphone"
+                        },
+                        {
+                            name: {
+                                fr: "Architecture scalable (React, Vue, Next.js, API-first)",
+                                en: "Scalable architecture (React, Vue, Next.js, API-first)"
+                            },
+                            icon: "lucide-scaling"
+                        },
+                        {
+                            name: {
+                                fr: "Sécurité by design (Authentification, Rôle, traçabilité)",
+                                en: "Security by design (Authentication, Role, Traceability)"
+                            },
+                            icon: "lucide-shield-ellipsis"
+                        },
+                        {
+                            name: {
+                                fr: "UX optimisée pour l’usage réel et les objectifs métier",
+                                en: "UX optimized for real use and business goals"
+                            },
+                            icon: "lucide-target"
+                        }
+                    ]
+                }
+
+            }
+        },
+        method: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Notre Méthode',
+                    en: 'Our Method'
+                }
+            ],
+            subtitle: {
+                fr: 'Nous adoptons une méthode agile, rigoureuse et transparente. Chaque projet avance de façon structurée et en étroite collaboration avec nos clients, afin d’assurer une compréhension approfondie des enjeux, une conception centrée sur l’utilisateur et une exécution parfaitement maîtrisée. L’implication continue de nos clients à chaque étape nous permet de garantir la qualité, la lisibilité et la pertinence des livrables jusqu’à leur mise en production.',
+                en: 'We follow an agile, rigorous, and transparent approach. Every project progresses in a structured way and in close collaboration with our clients, ensuring a deep understanding of challenges, user-centered design, and perfectly executed delivery. Our clients’ continuous involvement at every stage guarantees the quality, clarity, and relevance of deliverables all the way to production.'
+            },
+            items: {
+                methods: [
+                    {
+                        name: { fr: "Audit & Cadrage fonctionnel", en: "Functional Audit & Scoping" },
+                        icon: "lucide-clipboard-check"
+                    },
+                    {
+                        name: { fr: "Architecture technique & stack adaptée", en: "Technical Architecture & Appropriate Stack" },
+                        icon: "lucide-circuit-board"
+                    },
+                    {
+                        name: { fr: "Maquettes UI/UX avec validation", en: "UI/UX Mockups with Validation" },
+                        icon: "lucide-app-window"
+                    },
+                    {
+                        name: { fr: "Développement modulaire et visible", en: "Modular and Transparent Development" },
+                        icon: "lucide-terminal"
+                    },
+                    {
+                        name: { fr: "Test utilisateurs", en: "User Testing" },
+                        icon: "lucide-test-tubes"
+                    },
+                    {
+                        name: { fr: "Mise en production + documentation", en: "Deployment & Documentation" },
+                        icon: "lucide-cloud-upload"
+                    }
+                ],
+                gain: [
+                    {
+                        name: { fr: "Expérience fluide, 100 % responsive", en: "Smooth, Fully Responsive Experience" },
+                        icon: "lucide-smartphone"
+                    },
+                    {
+                        name: { fr: "Back-end robuste et évolutif", en: "Robust and Scalable Back-end" },
+                        icon: "lucide-server-cog"
+                    },
+                    {
+                        name: { fr: "Interface pensée performance", en: "Performance-Oriented Interface" },
+                        icon: "lucide-gauge"
+                    },
+                    {
+                        name: { fr: "Connexion à vos outils internes", en: "Integration with Your Internal Tools" },
+                        icon: "lucide-plug"
+                    },
+                    {
+                        name: { fr: "Système de rôles, sécurité, logs", en: "Role System, Security, and Logging" },
+                        icon: "lucide-shield-check"
+                    },
+                    {
+                        name: { fr: "Architecture scalable (API-ready)", en: "Scalable Architecture (API-Ready)" },
+                        icon: "lucide-network"
+                    }
+                ],
+                why: [
+                    {
+                        name: { fr: "Pilotage projet par une équipe dédiée", en: "Project Managed by a Dedicated Team" },
+                        icon: "lucide-users"
+                    },
+                    {
+                        name: { fr: "Aucun développeur non validé", en: "Only Verified Developers" },
+                        icon: "lucide-shield-check"
+                    },
+                    {
+                        name: { fr: "Transparence sur les délais, livrables et méthodes", en: "Transparency on Deadlines, Deliverables & Methods" },
+                        icon: "lucide-eye"
+                    },
+                    {
+                        name: { fr: "Garantie post-livraison (support + maintenance possible)", en: "Post-Delivery Guarantee (Support & Maintenance Available)" },
+                        icon: "lucide-life-buoy"
+                    }
+                ]
+
+            }
+        },
+        faq: {
+            title: {
+                en: "FAQ",
+                fr: "FAQ"
+            },
+            items: [
+                {
+                    q: {
+                        fr: "Combien de temps pour développer une application web ?",
+                        en: "How long does it take to develop a web application?"
+                    },
+                    r: {
+                        fr: "Entre 4 et 10 semaines selon la complexité et le niveau de détail initial.",
+                        en: "Between 4 and 10 weeks, depending on complexity and the level of initial detail."
+                    }
+                },
+                {
+                    q: {
+                        fr: "Puis-je la faire évoluer plus tard ?",
+                        en: "Can it be upgraded later?"
+                    },
+                    r: {
+                        fr: "Oui tout est pensé pour être modulaire, scalable et maintenable.",
+                        en: "Yes, everything is designed to be modular, scalable, and maintainable."
+                    }
+                },
+                {
+                    q: {
+                        fr: "Je n'ai pas encore de cahier des charges, est-ce un problème ?",
+                        en: "I don’t have a requirements specification yet. Is that a problem?"
+                    },
+                    r: {
+                        fr: "Non, On commence ensemble par un cadrage structuré.",
+                        en: "No, we start together with a structured scoping phase."
+                    }
+                }
+            ]
+        },
+        ctaText: {
+            fr: "Votre plateforme mérite plus qu’un site standard. Construisons une application qui vous fait gagner du temps, des clients, et du contrôle.",
+            en: "our platform deserves more than a standard website. Let’s build an application that saves you time, attracts clients, and gives you control."
+        },
+        cta: {
+            icon: "lucide:calendar",
+            link: "/contact",
+            text: {
+                fr: "Réservez un appel stratégique",
+                en: "Book a strategic call"
+            }
+        }
+    },
     ecommerce: {
         for: {
             title: {

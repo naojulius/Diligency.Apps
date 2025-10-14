@@ -3,9 +3,13 @@ import type { Menu } from "~/types/interfaces/menu";
 
 export const UseMenuStore = defineStore('menu-store', () => {
     const isHumberger: Ref<Boolean> = ref(false)
-    const menusList: Ref<Menu[]> = ref([] as any)
+    const menusList = ref(MENU_DATA)
     const subMenuList: Ref<Menu[]> = ref([])
     const openMenu: Ref<Menu | null> = ref(null)
+
+    const GetMenus = computed(() => {
+        return menusList.value
+    })
 
     const SetHumberger = (state: boolean) => {
         isHumberger.value = state;
@@ -37,6 +41,7 @@ export const UseMenuStore = defineStore('menu-store', () => {
         subMenuList,
         openMenu,
         SetHumberger,
-        SetSubMenuList
+        SetSubMenuList,
+        GetMenus
     }
 });
