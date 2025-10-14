@@ -271,55 +271,132 @@ export const AGENCY_DATA = {
         }
     },
     hub: {
-        items: [
-            {
-                id: 1,
-                icon: "lucide:file-text",
-                name: {
-                    fr: "Articles d’analyse sur la création de sites et d'applications",
-                    en: "Analysis articles on website and application creation"
+        hero: {
+            section: 'Hero',
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Le Hub Diligency',
+                    en: 'The Diligency Hub'
+                }
+            ],
+            subtitle: {
+                fr: "Bienvenue dans notre Hub. Ici, on partage nos idées, nos méthodes, nos démonstrations. Le Hub, c’est notre façon d’éduquer, de structurer le flou digital, et de vous donner les clés pour décider intelligemment. C’est aussi une preuve de ce que nous savons faire : transformer du savoir en action concrète, lisible, utile.",
+                en: "Welcome to our Hub. Here, we share our ideas, methods, and demonstrations. The Hub is our way of educating, clarifying the digital chaos, and giving you the tools to make smart decisions. It’s also a demonstration of what we can do: turning knowledge into tangible, clear, and useful action."
+            },
+            background: '/images/hero/ecommerce.jpg',
+        },
+        items: {
+            title: {
+                fr: "Ce que vous y trouverez",
+                en: "What you’ll find there"
+            },
+            subtitle: {
+                fr: "Nous diffusons des contenus utiles : analyses sur la création digitale, cas concrets de projets, guides téléchargeables et démonstrations ciblées. Une manière claire et accessible de valoriser notre approche en IA, UX/UI et performance.",
+                en: "We share useful content: analyses on digital creation, real project case studies, downloadable guides, and targeted demonstrations. A clear and accessible way to showcase our approach to AI, UX/UI, and performance."
+            },
+            image: "https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png",
+            list: [
+                {
+                    id: 1,
+                    icon: "lucide:file-text",
+                    name: {
+                        fr: "Articles d’analyse sur la création de sites et d'applications",
+                        en: "Analysis articles on website and application creation"
+                    },
+                    text: {
+                        fr: "Des contenus stratégiques qui explorent les bonnes pratiques, les tendances et les choix techniques pour concevoir des sites web et applications performants",
+                        en: "Strategic content exploring best practices, trends, and technical choices to design high-performance websites and applications"
+                    }
                 },
+                {
+                    id: 2,
+                    icon: "lucide:briefcase-business",
+                    name: {
+                        fr: "Études de cas issues de projets réels ou fictifs",
+                        en: "Case studies from real or hypothetical projects"
+                    },
+                    text: {
+                        fr: "Des retours d’expérience détaillés illustrant notre méthodologie, nos solutions concrètes et les résultats obtenus sur des projets variés.",
+                        en: "Detailed feedback illustrating our methodology, concrete solutions, and results obtained on various projects."
+                    }
+                },
+                {
+                    id: 3,
+                    icon: "lucide:download",
+                    name: {
+                        fr: "Mini-guides pratiques et checklists à télécharger",
+                        en: "Practical mini-guides and checklists to download"
+                    },
+                    text: {
+                        fr: "Des ressources prêtes à l’emploi pour vous aider à structurer vos projets, vérifier les étapes clés et gagner en autonomie rapidement.",
+                        en: "Ready-to-use resources to help structure your projects, check key steps, and gain autonomy quickly."
+                    }
+                },
+                {
+                    id: 4,
+                    icon: "lucide:bot",
+                    name: {
+                        fr: "Démonstrations concrètes en IA, design et performance",
+                        en: "Hands-on demonstrations in AI, design, and performance"
+                    },
+                    text: {
+                        fr: "Des exemples visuels et interactifs de notre approche technique et créative, mettant en lumière nos expertises en intelligence artificielle, UX/UI et optimisation.",
+                        en: "Visual and interactive examples of our technical and creative approach, highlighting our expertise in AI, UX/UI, and optimization."
+                    }
+                }
+            ]
+        },
+        why: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Pourquoi ce n’est pas un blog classique',
+                    en: "Why This Isn’t a Typical Blog"
+                }
+            ],
+            subtitle: {
+                fr: "Pas de contenu vide pour le SEO. Chaque article vise à élever votre compréhension du digital, à clarifier vos décisions, et à vous faire gagner du temps – même si vous ne travaillez pas avec nous.",
+                en: "No empty content for SEO. Each article aims to enhance your understanding of digital topics, clarify your decisions, and save you time—even if you’re not working with us."
+            },
+            cta: {
+                icon: "lucide:arrow-right",
+                link: "/contact",
                 text: {
-                    fr: "Des contenus stratégiques qui explorent les bonnes pratiques, les tendances et les choix techniques pour concevoir des sites web et applications performants",
-                    en: "Strategic content exploring best practices, trends, and technical choices to design high-performance websites and applications"
+                    fr: "Lire les derniers articles",
+                    en: "Read the Latest Articles"
                 }
             },
-            {
-                id: 2,
-                icon: "lucide:briefcase-business",
-                name: {
-                    fr: "Études de cas issues de projets réels ou fictifs",
-                    en: "Case studies from real or hypothetical projects"
+            lastArticles: [
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Découvrir les dernières tendances",
+                        en: "Discover latest trends"
+                    },
                 },
-                text: {
-                    fr: "Des retours d’expérience détaillés illustrant notre méthodologie, nos solutions concrètes et les résultats obtenus sur des projets variés.",
-                    en: "Detailed feedback illustrating our methodology, concrete solutions, and results obtained on various projects."
-                }
-            },
-            {
-                id: 3,
-                icon: "lucide:download",
-                name: {
-                    fr: "Mini-guides pratiques et checklists à télécharger",
-                    en: "Practical mini-guides and checklists to download"
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Conseils pour réussir vite",
+                        en: "Tips to succeed fast"
+                    },
                 },
-                text: {
-                    fr: "Des ressources prêtes à l’emploi pour vous aider à structurer vos projets, vérifier les étapes clés et gagner en autonomie rapidement.",
-                    en: "Ready-to-use resources to help structure your projects, check key steps, and gain autonomy quickly."
-                }
-            },
-            {
-                id: 4,
-                icon: "lucide:bot",
-                name: {
-                    fr: "Démonstrations concrètes en IA, design et performance",
-                    en: "Hands-on demonstrations in AI, design, and performance"
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Astuces pour économiser facilement",
+                        en: "Easy ways to save"
+                    },
                 },
-                text: {
-                    fr: "Des exemples visuels et interactifs de notre approche technique et créative, mettant en lumière nos expertises en intelligence artificielle, UX/UI et optimisation.",
-                    en: "Visual and interactive examples of our technical and creative approach, highlighting our expertise in AI, UX/UI, and optimization."
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Inspiration pour créer aujourd'hui",
+                        en: "Inspiration to create today"
+                    },
                 }
-            }
-        ]
+            ]
+        }
     }
 }

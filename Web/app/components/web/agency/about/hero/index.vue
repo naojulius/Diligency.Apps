@@ -6,7 +6,7 @@
                 <div
                     class=" h-full w-full md:w-[700px] flex flex-col gap-4 items-start pt-12 md:pt-0 md:justify-center">
                     <h1 id="hero"
-                        class="text-center text-[2.5rem]/13 md:text-7xl/20 font-bold text-secondary tracking-normal z-10">
+                        class="text-center text-[2.5rem]/13 md:text-7xl/20 font-bold text-secondary tracking-normal z-10 w-full">
                         <span v-for="(item, index) in title" :key="index">
                             {{ item[locale] }}
                         </span>

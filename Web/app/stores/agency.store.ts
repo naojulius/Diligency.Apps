@@ -1,3 +1,5 @@
+import type { LastArticle } from "~/components/web/agency/hub/why/last-articles"
+import type { WebItems } from "~/components/web/service/web-app/web/web-item"
 import { AGENCY_DATA } from "~/data/agency.data"
 import type { AppLocale } from "~/types/interfaces/app-locale"
 import { Cta } from "~/types/interfaces/common/cta"
@@ -8,7 +10,7 @@ export const UseAgencyStore = defineStore("agency-store", () => {
     const nuxtApp = useNuxtApp()
     const apollo = nuxtApp.$apollo
     const loader = UseLoaderStore()
-    const data = ref(AGENCY_DATA);
+    const data = ref(AGENCY_DATA)
 
     //#region Hero
 
@@ -109,8 +111,48 @@ export const UseAgencyStore = defineStore("agency-store", () => {
 
     //#endregion
 
-    const GetAgencyHubItems = () => {
-        return data?.value.hub.items ?? [];
+    const GetAgencyHubFoundItems = (): Array<WebItems> => {
+        return data?.value?.hub?.items.list ?? []
+    }
+
+    const GetAgencyHubFoundItemTitle = (): AppLocale => {
+        return data?.value?.hub?.items.title
+    }
+
+    const GetAgencyHubFoundItemSubtitle = (): AppLocale => {
+        return data?.value?.hub?.items.subtitle
+    }
+
+    const GetAgencyHubFoundImage = (): string => {
+        return data?.value?.hub?.items.image
+    }
+
+    const GetAgencyHubHeroTitle = (): Array<Title> => {
+        return data?.value?.hub?.hero?.title ?? []
+    }
+
+    const GetAgencyHubHeroSubtitle = (): AppLocale => {
+        return data?.value?.hub?.hero?.subtitle
+    }
+
+    const GetAgencyHubHeroBackground = (): string => {
+        return data?.value?.hub?.hero?.background
+    }
+
+    const GetAgencyHubWhyTitle = (): Array<Title> => {
+        return data?.value?.hub.why.title ?? []
+    }
+
+    const GetAgencyHubWhySubtitle = (): AppLocale => {
+        return data?.value?.hub.why.subtitle
+    }
+
+    const GetAgencyHubWhyCta = (): Cta => {
+        return data?.value?.hub.why.cta ?? new Cta()
+    }
+
+    const GetAgencyHubWhyLastArticleItems = (): Array<LastArticle> => {
+        return data?.value?.hub.why.lastArticles ?? []
     }
 
     return {
@@ -128,7 +170,6 @@ export const UseAgencyStore = defineStore("agency-store", () => {
         GetAgencyJobCarrierProfileItems,
         GetAgencyJobCarrierProfileTitle,
         GetAgencyJobCarrierCollaborationItems,
-        GetAgencyHubItems,
         GetAgencyJobCarrierHeroTitle,
         GetAgencyJobCarrierHeroSubtitle,
         GetAgencyJobCarrierHeroBackground,
@@ -136,6 +177,19 @@ export const UseAgencyStore = defineStore("agency-store", () => {
         GetAgencyJobCarrierApplyTitle,
         GetAgencyJobCarrierApplyText,
         GetAgencyJobCarrierApplyCta,
+
+        //Hub 
+        GetAgencyHubFoundItems,
+        GetAgencyHubHeroTitle,
+        GetAgencyHubHeroSubtitle,
+        GetAgencyHubHeroBackground,
+        GetAgencyHubFoundItemTitle,
+        GetAgencyHubFoundItemSubtitle,
+        GetAgencyHubFoundImage,
+        GetAgencyHubWhyTitle,
+        GetAgencyHubWhySubtitle,
+        GetAgencyHubWhyCta,
+        GetAgencyHubWhyLastArticleItems,
 
         //Team
         GetAgencyAboutTeamTitle,

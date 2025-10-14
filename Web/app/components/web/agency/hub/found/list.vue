@@ -8,17 +8,28 @@
                         {{ item.name[locale] }}
                     </div>
                     <div class="text-sm text-tertiary/80">
-                        {{ item.text[locale] }}
+                        {{ item.text?.[locale] }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<script lang="ts" setup>
+<!-- <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
 import { UseAgencyStore } from '~/stores/agency.store';
 const agencyStore = UseAgencyStore()
 const data = ref(agencyStore.GetAgencyHubItems())
 const { locale } = useI18n()
+</script> -->
+
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
+import { UseAgencyStore } from '~/stores/agency.store';
+const store = UseAgencyStore()
+const { locale } = useI18n()
+
+const data = computed(() => {
+    return store.GetAgencyHubFoundItems()
+})
 </script>

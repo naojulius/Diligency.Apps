@@ -14,6 +14,14 @@ export const SERVICE_DATA = {
                 en: 'Tailor-made digital platform development: dashboards, CRMs, booking systems, marketplaces, and SaaS tools.'
             },
             background: '/images/hero/ecommerce.jpg',
+            cta: {
+                icon: "lucide:send",
+                link: "/contact",
+                text: {
+                    fr: "Soumettre mon projet",
+                    en: "Apply my project"
+                }
+            }
         },
         web: {
             title: [
@@ -365,12 +373,12 @@ export const SERVICE_DATA = {
     },
     ecommerce: {
         for: {
-            title: {
-
-            },
-            subtitle: [
+            title: [
 
             ],
+            subtitle: {
+
+            },
             items: [
                 {
                     fr: "Indépendants et experts du service (coachs, avocats, architectes…)",

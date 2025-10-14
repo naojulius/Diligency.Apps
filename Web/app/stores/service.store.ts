@@ -50,6 +50,10 @@ export const UseServiceStore = defineStore("service-store", () => {
         return data?.value?.webApp.hero?.background ?? ""
     }
 
+    const GetWebAppHeroCta = (): Cta => {
+        return data?.value?.webApp.hero.cta ?? new Cta()
+    }
+
     const GetWebAppWebTitle = (): Array<Title> => {
         return data?.value?.webApp.web?.title ?? []
     }
@@ -208,6 +212,7 @@ export const UseServiceStore = defineStore("service-store", () => {
         GetWebAppFaqtitle,
         GetWebAppFaqItems,
         GetWebAppCta,
-        GetWebAppCtaText
+        GetWebAppCtaText,
+        GetWebAppHeroCta
     }
 })
