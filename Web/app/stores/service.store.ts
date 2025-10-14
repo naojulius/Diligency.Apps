@@ -112,6 +112,62 @@ export const UseServiceStore = defineStore("service-store", () => {
 
     //#endregion
 
+    //#region Web Show
+
+    const GetWebShowHeroTitle = (): Array<Title> => {
+        return data?.value?.webShow.hero.title ?? []
+    }
+
+    const GetWebShowHeroSubtitle = (): AppLocale => {
+        return data?.value?.webShow.hero?.subtitle ?? []
+    }
+
+    const GetWebShowHeroBackground = (): string => {
+        return data?.value?.webShow.hero?.background ?? ""
+    }
+
+    const GetWebShowForTitle = (): Array<Title> => {
+        return data?.value?.webShow.for.title ?? []
+    }
+
+    const GetWebShowForSubtitle = (): AppLocale => {
+        return data?.value?.webShow.for.subtitle ?? []
+    }
+
+    const GetWebShowForItems = (): Array<WebItems> => {
+        return data?.value?.webShow.for.items ?? []
+    }
+
+    const GetWebShowWhyTitle = (): Array<Title> => {
+        return data?.value?.webShow.why.title ?? []
+    }
+
+    const GetWebShowWhySubtitle = (): AppLocale => {
+        return data?.value?.webShow?.why?.subtitle ?? []
+    }
+
+    const GetWebShowWhySubtitle2 = (): AppLocale => {
+        return data?.value?.webShow?.why?.subtitle2 ?? []
+    }
+
+    const GetWebShowMethodTitle = (): Array<Title> => {
+        return data?.value?.webShow.method.title ?? []
+    }
+
+    const GetWebShowMethodItems = (): Array<WebItems> => {
+        return data?.value?.webShow.method.items ?? []
+    }
+
+    const GetWebShowCta = (): Cta => {
+        return data?.value?.webShow.cta ?? new Cta()
+    }
+
+    const GetWebShowCtaText = (): AppLocale => {
+        return data?.value?.webShow.ctaText
+    }
+
+    //#endregion
+
     return {
         GetForItemsLit,
         GetMethodItemsLit,
@@ -119,6 +175,20 @@ export const UseServiceStore = defineStore("service-store", () => {
         GetServiceItIaForItems,
         GetServiceItIaMethodItems,
         GetServiceItIaExampleItems,
+        //Web Show
+        GetWebShowHeroTitle,
+        GetWebShowHeroSubtitle,
+        GetWebShowHeroBackground,
+        GetWebShowForTitle,
+        GetWebShowForSubtitle,
+        GetWebShowForItems,
+        GetWebShowWhyTitle,
+        GetWebShowWhySubtitle,
+        GetWebShowWhySubtitle2,
+        GetWebShowMethodTitle,
+        GetWebShowMethodItems,
+        GetWebShowCta,
+        GetWebShowCtaText,
 
         //web App
         GetWebAppHeroTitle,

@@ -241,6 +241,128 @@ export const SERVICE_DATA = {
             }
         }
     },
+    webShow: {
+        hero: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Création de sites vitrines sur-mesure",
+                    en: "Custom Showcase Website Development"
+                }
+            ],
+            subtitle: {
+                fr: "Une vitrine digitale qui renforce votre image, inspire confiance et génère des prises de contact.",
+                en: "A digital showcase that strengthens your brand, inspires trust, and drives leads."
+            },
+            background: '/images/hero/ecommerce.jpg',
+        },
+        for: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "À qui s'adresse ce service ?",
+                    en: "Who is this service for?"
+                }
+            ],
+            subtitle: {
+                fr: "Ce service s’adresse à toutes les structures souhaitant valoriser leur expertise et renforcer leur présence digitale. Que vous soyez indépendant, cabinet professionnel ou PME, nous vous accompagnons dans la création d’outils en ligne performants et adaptés à vos besoins métiers.",
+                en: "This service is designed for any organization looking to showcase their expertise and strengthen their digital presence. Whether you are a freelancer, professional firm, or SME, we guide you in creating high-performance online tools tailored to your business needs."
+            },
+            items: [
+                {
+                    name: { fr: "Indépendants et experts du service (coachs, avocats, architectes…)", en: "Freelancers and service experts (coaches, lawyers, architects…)" },
+                    icon: "lucide-user-check"
+                },
+                {
+                    name: { fr: "Cabinets & professions libérales", en: "Offices & liberal professions" },
+                    icon: "lucide-briefcase"
+                },
+                {
+                    name: { fr: "PME & structures souhaitant structurer leur présence en ligne", en: "SMEs & organizations looking to structure their online presence" },
+                    icon: "lucide-building-2"
+                },
+                {
+                    name: { fr: "Entrepreneurs en phase de lancement", en: "Entrepreneurs in the launch phase" },
+                    icon: "lucide-rocket"
+                }
+            ]
+        },
+        why: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Pourquoi nous confier votre site vitrine ?",
+                    en: "Why entrust us with your showcase website?"
+                }
+            ],
+            subtitle: {
+                fr: "Un site vitrine n’est pas qu’un site “simple”. C’est souvent la première impression que vous laissez à vos prospects. Il doit inspirer confiance, renforcer votre crédibilité et inciter à la prise de contact.",
+                en: "A showcase website is more than a 'simple' site. It is often the first impression you leave on potential clients. It must inspire trust, strengthen your credibility, and encourage contact."
+            },
+            subtitle2: {
+                fr: "Chez Diligency, nous créons des sites vitrines rapides, élégants, lisibles et mobiles, avec une vraie structure stratégique. Notre objectif : vous aider à convertir vos visiteurs en opportunités concrètes.",
+                en: "At Diligency, we create fast, elegant, clear, and mobile-friendly showcase websites with a real strategic structure. Our goal: to help you convert visitors into tangible opportunities."
+            }
+        },
+        method: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Notre méthode",
+                    en: "Our method"
+                }
+            ],
+            items: [
+                {
+                    name: {
+                        fr: "Compréhension de vos enjeux pour poser des fondations solides.",
+                        en: "Understanding your challenges to lay solid foundations."
+                    },
+                    icon: "lucide-target"
+                },
+                {
+                    name: {
+                        fr: "Design sur-mesure pour une interface claire, efficace et fidèle à votre image.",
+                        en: "Custom design for a clear, effective interface true to your brand."
+                    },
+                    icon: "lucide-layout-dashboard"
+                },
+                {
+                    name: {
+                        fr: "Développement performant adapté à votre budget et vos ambitions techniques.",
+                        en: "High-performance development tailored to your budget and technical ambitions."
+                    },
+                    icon: "lucide-code"
+                },
+                {
+                    name: {
+                        fr: "Visibilité maximale sur les moteurs de recherche grâce à une base saine.",
+                        en: "Maximize search engine visibility with a solid foundation."
+                    },
+                    icon: "lucide-rocket"
+                },
+                {
+                    name: {
+                        fr: "Votre site prêt à performer, avec support si besoin après livraison.",
+                        en: "Your site ready to perform, with support available if needed after delivery."
+                    },
+                    icon: "lucide-send"
+                }
+            ]
+        },
+        ctaText: {
+            fr: "Chez Diligency, nous créons des sites vitrines rapides, élégants et mobiles, adaptés à votre marque, pour inspirer confiance, renforcer votre présence digitale et convertir vos visiteurs en opportunités concrètes.",
+            en: "At Diligency, we craft fast, elegant, and mobile showcase websites, tailored to your brand, to inspire trust, strengthen your digital presence, and turn visitors into tangible opportunities."
+        },
+        cta: {
+            icon: "lucide:layers",
+            link: "/contact",
+            text: {
+                fr: "Créer mon site vitrine",
+                en: "Create my web show"
+            }
+        }
+    },
     ecommerce: {
         for: {
             title: {

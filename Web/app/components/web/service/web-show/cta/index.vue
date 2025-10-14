@@ -16,10 +16,10 @@ const store = UseServiceStore()
 const { locale } = useI18n()
 
 const text = computed(() => {
-    return store.GetWebAppCtaText()
+    return store.GetWebShowCtaText()
 })
 
 const cta = computed(() => {
-    return store.GetWebAppCta()
+    return store.GetWebShowCta()
 })
 </script>

@@ -3,4 +3,6 @@
     <WebServiceWebShowFor />
     <WebServiceWebShowWhy />
     <WebServiceWebShowMethod />
+    <WebServiceWebShowCta />
+
 </template>
