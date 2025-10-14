@@ -2,8 +2,8 @@
     <div class="w-full h-auto  px-4 lg:px-10 2xl:px-35 py-16">
         <div class="h-full w-full flex flex-col md:flex-row items-start justify-center gap-2 z-10 py-10">
             <div class="w-full md:w-1/2 space-y-6">
-                <div class="text-5xl font-bold text-tertiary ">Entrons en contact</div>
-                <div class="text-xl font-regular text-tertiary/70 w-full md:w-[700px]">
+                <div class="text-5xl font-bold text-tertiary text-center md:text-left">Entrons en contact</div>
+                <div class="text-xl font-regular text-tertiary/70 w-full md:w-[700px] text-center md:text-left">
                     Pour toute demande d’information ou de collaboration,
                     notre équipe est disponible et prête à vous répondre rapidement.
                 </div>
@@ -11,7 +11,7 @@
             </div>
             <div class="p-1 w-full md:w-1/2 h-full  flex items-end justify-end">
                 <div class="p-4 w-full md:w-9/12 h-full bg-tertiary rounded-xl ">
-                    <div class="text-primary text-5xl">
+                    <div class="text-primary text-5xl text-center">
                         Get in touch
                     </div>
                     <div class="text-tertiary">

@@ -1,7 +1,9 @@
 <template>
-    <div class="w-full">
-        <ul class="space-y-2 text-gray-300">
-            <li v-for="(item, index) in data" :key="index">{{ item }}</li>
+    <div class="w-full text-center md:text-left">
+        <ul class="space-y-1">
+            <li class="cursor-pointer text-primary hover:text-secondary-700 transition-all duration-300"
+                v-for="(item, index) in data" :key="index">
+                {{ item }}</li>
         </ul>
     </div>
 </template>

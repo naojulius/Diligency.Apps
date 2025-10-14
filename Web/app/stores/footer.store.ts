@@ -1,5 +1,6 @@
 import { FOOTER_DATA } from "~/data/footer.data";
 import type { AppLocale } from "~/types/interfaces/app-locale";
+import type { Cta } from "~/types/interfaces/common/cta";
 import type { MediaLink } from "~/types/interfaces/common/media-link";
 import type { MenuLink } from "~/types/interfaces/common/menu-link";
 import type { Menu } from "~/types/interfaces/menu";
@@ -35,6 +36,26 @@ export const UseFooterStore = defineStore('footer-store', () => {
         return data?.value.contact ?? []
     }
 
+    const GetFooterRights = (): AppLocale => {
+        return data?.value.rights
+    }
+
+    const GetFooterOpenDate = (): AppLocale => {
+        return data?.value.openDate
+    }
+
+    const GetFooterTitle = (): AppLocale => {
+        return data?.value.title
+    }
+
+    const GetFooterSubtitle = (): AppLocale => {
+        return data?.value.subtitle
+    }
+
+    const GetFooterCta = (): Cta => {
+        return data?.value.cta
+    }
+
     const extractLinks = (menus: Menu[]): MenuLink[] => {
         let links: MenuLink[] = [];
 
@@ -63,7 +84,12 @@ export const UseFooterStore = defineStore('footer-store', () => {
         GetFooterText,
         GetFooterMediaLink,
         GetFooterContact,
-        GetFooterNavigation
+        GetFooterNavigation,
+        GetFooterRights,
+        GetFooterCta,
+        GetFooterOpenDate,
+        GetFooterTitle,
+        GetFooterSubtitle
     }
 
 });

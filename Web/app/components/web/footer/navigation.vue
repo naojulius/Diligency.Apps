@@ -1,8 +1,7 @@
 <template>
     <div class="w-full">
-        <h3 class="text-lg font-semibold mb-4">Navigation</h3>
-        <div class="flex gap-4">
-            <ul class="flex-1 space-y-2">
+        <div class="flex justify-between gap-4 text-xl text-center md:text-left">
+            <ul class="flex-1 space-y-2 ">
                 <li v-for="(item, index) in leftColumn" :key="index">
                     <a :href="item.link as string" class="text-gray-300 hover:text-white transition-fast">
                         {{ item.text[locale] }}

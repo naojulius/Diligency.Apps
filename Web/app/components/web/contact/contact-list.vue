@@ -1,9 +1,15 @@
 <template>
     <div class="w-full">
-        <ul class="space-y-1 text-tertiary/80">
-            <li>contact@diligency.fr</li>
-            <li>+33 1 23 45 67 89</li>
-            <li>Paris, France</li>
+        <ul class="space-y-2 text-tertiary/80">
+            <li v-for="(item, index) in data" :key="index">{{ item }}</li>
         </ul>
     </div>
 </template>
+<script lang="ts" setup>
+import { UseFooterStore } from '~/stores/footer.store';
+const store = UseFooterStore()
+
+const data = computed(() => {
+    return store.GetFooterContact()
+})
+</script>
