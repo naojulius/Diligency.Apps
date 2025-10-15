@@ -10,7 +10,7 @@
                     </span>
                 </div>
                 <SpacingSectionTitle />
-                <p class="text-tertiary/80 text-2xl leading-7 w-full md:w-[700px]">
+                <p class="text-tertiary/80 text-xl leading-7 w-full md:w-[700px]">
                     {{ subtitle[locale] }}
                 </p>
             </div>

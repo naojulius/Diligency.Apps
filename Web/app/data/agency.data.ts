@@ -15,6 +15,7 @@ export const AGENCY_DATA = {
                 en: 'Diligency is an independent digital agency founded on a strong conviction: digital efficiency is born from a balance between rigor, modernity, and business understanding. We support SMEs, firms, ambitious organizations, and demanding entrepreneurs in creating web platforms, custom applications, and reliable digital systems. Our name is our promise: to deliver with diligence, precision, and integrity.'
             },
             background: '/images/hero/ecommerce.jpg',
+            component: "with-one-cta"
         },
         engagement: {
             title: [
@@ -107,6 +108,10 @@ export const AGENCY_DATA = {
                     en: "join us"
                 },
                 link: "/agency/jobcarrier"
+            },
+            ctaText: {
+                fr: "Confiez votre projet digital à Diligency. Notre équipe transforme vos idées en solutions fiables, performantes et élégantes, pensées pour vos objectifs réels et votre croissance durable.",
+                en: "Entrust your digital project to Diligency. Our team turns your ideas into reliable, high-performing, and elegant solutions designed around your real goals and lasting growth."
             }
         }
     },

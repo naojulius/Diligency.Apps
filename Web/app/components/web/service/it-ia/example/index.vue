@@ -1,30 +1,9 @@
-<!-- <script setup lang="ts">
-</script>
-
 <template>
-    <section class="w-full px-4 md:px-10 2xl:px-35 py-15 bg-primary">
-        <div class="text-4xl font-semibold relative z-10 text-tertiary flex gap-3 pb-4">
-            <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
-            <span>Exemples de solutions proposées</span>
-        </div>
-        <WebServiceItIaExampleList />
-    </section>
-</template> -->
-
-<template>
-    <section class="w-full px-4 md:px-10 2xl:px-35 py-10 bg-primary">
-        <div class="text-4xl font-semibold relative z-10 text-tertiary flex gap-3">
-            <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
-            <span v-for="(item, index) in title" :key="index">
-                {{ item[locale] }}
-            </span>
-        </div>
-        <SpacingSectionTitle />
-        <WebServiceItIaExampleList />
-    </section>
+    <SectionA :title="title" :component="WebServiceItIaExampleList" />
 </template>
 
 <script lang="ts" setup>
+import { WebServiceItIaExampleList } from '#components';
 import { useI18n } from 'vue-i18n';
 import { UseServiceStore } from '~/stores/service.store';
 const store = UseServiceStore()

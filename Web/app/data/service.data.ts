@@ -16,7 +16,7 @@ export const SERVICE_DATA = {
             background: '/images/hero/ecommerce.jpg',
             cta: {
                 icon: "lucide:send",
-                link: "/contact",
+                link: "/application",
                 text: {
                     fr: "Soumettre mon projet",
                     en: "Apply my project"
@@ -364,7 +364,7 @@ export const SERVICE_DATA = {
         },
         cta: {
             icon: "lucide:layers",
-            link: "/contact",
+            link: "/application",
             text: {
                 fr: "Créer mon site vitrine",
                 en: "Create my web show"
@@ -463,7 +463,7 @@ export const SERVICE_DATA = {
             background: "/images/hero/ecommerce.jpg",
             ctaA: {
                 icon: "lucide:pickaxe",
-                link: "/",
+                link: "/application",
                 text: {
                     fr: "Construire ma solution intelligente",
                     en: "Build My Smart Solution"
@@ -472,7 +472,7 @@ export const SERVICE_DATA = {
         },
         ctaA: {
             icon: "lucide:calendar",
-            link: "/",
+            link: "/contact",
             text: {
                 fr: "Réserver un appel avec un architecte Diligency",
                 en: "Book a Call with a Diligency Architect"

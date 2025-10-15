@@ -26,6 +26,10 @@ export const UseAgencyStore = defineStore("agency-store", () => {
         return data?.value?.about?.hero?.background
     }
 
+    const GetAgencyAboutHeroComponent = (): string => {
+        return data?.value?.about?.hero?.component ?? 'without-cta'
+    }
+
     //#endregion
 
     //#region About
@@ -40,6 +44,10 @@ export const UseAgencyStore = defineStore("agency-store", () => {
 
     const GetAgencyAboutEngagementItems = () => {
         return data?.value.about.engagement.items ?? [];
+    }
+
+    const GetAgencyAboutTeamCtaText = (): AppLocale => {
+        return data?.value.about.team.ctaText;
     }
 
     //#endregion
@@ -160,11 +168,13 @@ export const UseAgencyStore = defineStore("agency-store", () => {
         GetAgencyAboutHeroTitle,
         GetAgencyAboutHeroSubtitle,
         GetAgencyAboutHeroBackground,
+        GetAgencyAboutHeroComponent,
 
         //about
         GetAgencyAboutEngagementItems,
         GetAgencyAboutTitle,
         GetAgencyAboutSubtitle,
+        GetAgencyAboutTeamCtaText,
 
         //JOb Carrier
         GetAgencyJobCarrierProfileItems,

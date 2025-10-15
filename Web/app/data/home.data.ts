@@ -27,7 +27,7 @@ export const HOME_DATA = {
                 fr: 'Soumettre mon projet'
             },
             icon: "lucide:arrow-right",
-            link: "/contact"
+            link: "/application"
         },
         link: '/videos/hero.mp4',
     },

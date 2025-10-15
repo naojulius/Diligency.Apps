@@ -1,33 +1,13 @@
 <template>
-    <section class="py-5 md:py-20">
-        <div class="px-4 md:px-10 2xl:px-35">
-            <div class="mb-0">
-                <div class="text-4xl font-semibold relative z-10 text-tertiary flex gap-3">
-                    <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
-                    <span v-for="(item, index) in title" :key="index">
-                        {{ item[locale] }}
-                    </span>
-                </div>
-                <SpacingSectionTitle />
-                <div class="text-xl text-gray-500 font-regular w-full ">
-                    {{ subtitle[locale] }}
-                </div>
-            </div>
-            <SpacingBlock />
-            <div class="w-full py-2 flex flex-col md:flex-row justify-start gap-5 md:gap-10">
-                <WebServiceWebAppWebUsage />
-                <WebServiceWebAppWebAdvantage />
-            </div>
-        </div>
-    </section>
+    <SectionA :title="title" :subtitle="subtitle" :component="WebServiceWebAppWebList" />
 </template>
 
 <script lang="ts" setup>
+import { WebServiceWebAppWebList } from '#components';
 import { useI18n } from 'vue-i18n';
 import { UseServiceStore } from '~/stores/service.store';
 const store = UseServiceStore()
 const { locale } = useI18n()
-
 const title = computed(() => {
     return store.GetWebAppWebTitle()
 })
