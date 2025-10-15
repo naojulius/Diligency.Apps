@@ -1,6 +1,7 @@
 <template>
     <div class="w-full md:w-2/3 mx-auto">
-        <h1 ref="FooterTitleRef" class="text-[5rem]/20  py-10 font-regular text-center cursor-pointer overflow-hidden">
+        <h1 ref="FooterTitleRef"
+            class="text-[4rem]/15  xl:text-[5rem]/20  py-10 font-regular text-center cursor-pointer overflow-hidden">
             {{ title[locale] }}
         </h1>
         <div class="text-lg text-center w-2/3 mx-auto">
@@ -16,6 +17,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useI18n } from 'vue-i18n';
 import { UseFooterStore } from '~/stores/footer.store';
+
 const store = UseFooterStore()
 const { locale } = useI18n()
 const FooterTitleRef = ref<HTMLElement | null>(null)
