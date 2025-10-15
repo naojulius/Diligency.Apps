@@ -20,17 +20,20 @@
                 'transition-colors duration-200',
                 'text-primary',
             ]">
-                {{ option.label }}
+                {{ option.label[locale] }}
             </span>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import type { AppLocale } from '~/types/interfaces/app-locale';
+
 interface Option {
-    label: string
+    label: AppLocale
     value: string
 }
+const { locale } = useI18n()
 
 const props = defineProps<{
     modelValue: string | null
@@ -42,7 +45,7 @@ const emit = defineEmits<{
 }>()
 
 onMounted(() => {
-    if (!props.modelValue && props.options.length > 0) {
+    if (!props.modelValue && props.options.length > 0 && props.options[0] != undefined) {
         emit('update:modelValue', props.options[0].value)
     }
 })

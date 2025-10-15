@@ -68,8 +68,8 @@ export const MENU_DATA = [
             {
                 id: uuidv4(),
                 name: {
-                    fr: "Web app",
-                    en: "Web app"
+                    en: "Web app",
+                    fr: "Application web"
                 },
                 link: "/service/web-app",
                 icon: "lucide:globe",
@@ -93,20 +93,20 @@ export const MENU_DATA = [
                     en: "Elegant, fast showcase websites to highlight your brand and turn visitors into clients."
                 }
             },
-            {
-                id: uuidv4(),
-                name: {
-                    fr: "E-commerce",
-                    en: "E-commerce"
-                },
-                link: "/service/e-commerce",
-                icon: "lucide:view",
-                visible: true,
-                texte: {
-                    fr: "Des boutiques en ligne performantes, ergonomiques et optimisées pour la conversion et la fidélisation.",
-                    en: "High-performing online stores designed for conversion, usability, and customer loyalty."
-                }
-            },
+            // {
+            //     id: uuidv4(),
+            //     name: {
+            //         fr: "E-commerce",
+            //         en: "E-commerce"
+            //     },
+            //     link: "/service/e-commerce",
+            //     icon: "lucide:view",
+            //     visible: true,
+            //     texte: {
+            //         fr: "Des boutiques en ligne performantes, ergonomiques et optimisées pour la conversion et la fidélisation.",
+            //         en: "High-performing online stores designed for conversion, usability, and customer loyalty."
+            //     }
+            // },
             {
                 id: uuidv4(),
                 name: {

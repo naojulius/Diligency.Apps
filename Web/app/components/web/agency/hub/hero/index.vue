@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <PageLayout custom-class="h-auto">
         <section class=" w-full h-[calc(100vh-0rem)] lg:h-[calc(100vh-1rem)] relative">
             <BackgroundImage :image="background" />
@@ -18,11 +18,12 @@
             </div>
         </section>
     </PageLayout>
+</template> -->
+<template>
+    <HeroAgency :title="title" :subtitle="subtitle" :image="background" />
 </template>
-
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
-import PageLayout from '~/layouts/page-layout.vue';
 import { UseAgencyStore } from '~/stores/agency.store';
 const store = UseAgencyStore()
 const { locale } = useI18n()

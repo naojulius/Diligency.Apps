@@ -23,7 +23,7 @@ export const UseAgencyStore = defineStore("agency-store", () => {
     }
 
     const GetAgencyAboutHeroBackground = (): string => {
-        return data?.value?.about?.hero?.background ?? ""
+        return data?.value?.about?.hero?.background
     }
 
     //#endregion
