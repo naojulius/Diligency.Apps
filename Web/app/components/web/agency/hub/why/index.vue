@@ -1,7 +1,6 @@
 <template>
     <section class="py-10 md:py-24 relative bg-secondary">
         <div class="absolute h-[36.5rem] w-full top-0 bg-primary -z-10"></div>
-
         <div class="px-4 md:px-10 2xl:px-35">
             <div class="mb-12">
                 <div class="text-4xl font-semibold flex gap-3 text-tertiary">
