@@ -9,7 +9,8 @@
                         {{ item[locale] }}
                     </span>
                 </div>
-                <p class="text-tertiary/80 text-2xl leading-7 w-full md:w-[700px] py-10">
+                <SpacingSectionTitle />
+                <p class="text-tertiary/80 text-2xl leading-7 w-full md:w-[700px]">
                     {{ subtitle[locale] }}
                 </p>
             </div>

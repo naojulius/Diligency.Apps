@@ -7,6 +7,7 @@
             <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
             <span>Ce que vous obtenez</span>
         </div>
+        <SpacingSectionTitle />
         <WebServiceECommerceGotList />
     </section>
 </template>

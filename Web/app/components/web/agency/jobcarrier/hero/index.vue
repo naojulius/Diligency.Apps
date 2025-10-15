@@ -1,5 +1,5 @@
 <template>
-    <PageLayout custom-class="h-auto">
+    <PageLayout custom-class="h-auto relative">
         <BackgroundImage :image="background" />
         <section class="w-full h-[calc(100vh-0rem)] lg:h-[calc(100vh-1rem)] relative">
             <div class="px-10 2xl:px-35 w-full h-full pt-20 flex items-center justify-center ">

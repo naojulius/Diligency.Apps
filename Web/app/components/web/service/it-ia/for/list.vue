@@ -12,6 +12,8 @@
 import { useI18n } from 'vue-i18n';
 import { UseServiceStore } from '~/stores/service.store';
 const serviceStore = UseServiceStore()
-const data = ref(serviceStore.GetServiceItIaForItems())
+const data = computed(() => {
+    return serviceStore.GetServiceItIaForItems()
+})
 const { locale } = useI18n()
 </script>

@@ -20,9 +20,18 @@ export const UseParameterStore = defineStore('parameter-store', () => {
         }
     })
 
+    const SectionTitleSpacingStyle = computed(() => {
+        const spacing = data.value?.SectionTitleSpacing ?? new BlockSpacing();
+        return {
+            '--section-title-spacing-mobile': spacing.mobile,
+            '--section-title-spacing-desktop': spacing.desktop
+        }
+    })
+
     //#endregion
 
     return {
         blockSpacingStyle,
+        SectionTitleSpacingStyle
     }
 });

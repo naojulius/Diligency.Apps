@@ -448,7 +448,52 @@ export const SERVICE_DATA = {
         }
     },
     itia: {
+        hero: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Solutions IT & IA – Digitalisez intelligemment.",
+                    en: "IT & AI Solutions — Digitalize Smartly."
+                }
+            ],
+            subtitle: {
+                fr: "Nous créons des systèmes sur-mesure, automatisations, et intégrations augmentées par l’intelligence artificielle.",
+                en: "We design tailor-made systems, automations, and integrations enhanced by artificial intelligence."
+            },
+            background: "/images/hero/ecommerce.jpg",
+            ctaA: {
+                icon: "lucide:pickaxe",
+                link: "/",
+                text: {
+                    fr: "Construire ma solution intelligente",
+                    en: "Build My Smart Solution"
+                }
+            },
+        },
+        ctaA: {
+            icon: "lucide:calendar",
+            link: "/",
+            text: {
+                fr: "Réserver un appel avec un architecte Diligency",
+                en: "Book a Call with a Diligency Architect"
+            }
+        },
+        ctaText: {
+            fr: "Optimisez vos processus et accélérez votre croissance grâce à nos solutions IT & IA sur mesure : automatisations, intégrations intelligentes et accompagnement expert pour une transformation digitale réussie.",
+            en: "Optimize your processes and boost growth with our custom IT & AI solutions — smart automations, seamless integrations, and expert guidance for a successful digital transformation."
+        },
         for: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "À qui s'adresse ce service ?",
+                    en: "Who is this service for?"
+                }
+            ],
+            subtitle: {
+                fr: "Ce service s’adresse aux structures qui souhaitent gagner en efficacité grâce à la technologie, en automatisant leurs processus internes, en connectant leurs outils métiers et en tirant parti du potentiel de l’intelligence artificielle.",
+                en: "This service is designed for organizations aiming to improve efficiency through technology—by automating internal processes, connecting business tools, and leveraging the potential of artificial intelligence."
+            },
             items: [
                 {
                     fr: "Entreprises souhaitant automatiser leurs processus internes",
@@ -465,7 +510,28 @@ export const SERVICE_DATA = {
             ]
 
         },
+        why: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Pourquoi choisir Diligency pour vos solutions IT & IA ?",
+                    en: "Why choose Diligency for your IT & AI solutions?"
+                }
+            ],
+            subtitle: {
+                fr: "La technologie ne vaut que si elle sert une stratégie claire. Nous concevons des solutions robustes, sécurisées et intelligentes : connecteurs, automatisations, assistants internes ou plateformes boostées par l’IA. Nous vous aidons à gagner en temps, en fluidité et en prise de décision.",
+                en: "Technology only matters when it serves a clear strategy. We design robust, secure, and intelligent solutions—connectors, automations, internal assistants, or AI-powered platforms—to help you save time, streamline operations, and make better decisions."
+            },
+
+        },
         method: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Notre méthode",
+                    en: "Our method"
+                }
+            ],
             items: [
                 {
                     text: {
@@ -506,6 +572,13 @@ export const SERVICE_DATA = {
 
         },
         example: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "Exemples de solutions proposées",
+                    en: "Examples of proposed solutions"
+                }
+            ],
             items: [
                 {
                     text: {

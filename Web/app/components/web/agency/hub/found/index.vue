@@ -12,6 +12,7 @@
                                         class="mt-2 pb-2 text-3xl font-semibold tracking-tight text-pretty text-tertiary sm:text-5xl inter text-center md:text-left">
                                         {{ title[locale] }}
                                     </p>
+                                    <SpacingSectionTitle />
                                     <p class="text-lg text-tertiary/90 inter font-thin text-center md:text-left">
                                         {{ subtitle[locale] }}
                                     </p>

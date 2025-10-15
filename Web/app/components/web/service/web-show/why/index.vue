@@ -6,7 +6,8 @@
                 {{ item[locale] }}
             </span>
         </div>
-        <div class="py-4 text-left relative z-10 text-gray-500 font-regular w-full md:w-[700px] text-lg font-regular">
+        <SpacingSectionTitle />
+        <div class="text-left relative z-10 text-gray-500 font-regular w-full md:w-[700px] text-lg font-regular">
             <p>
                 {{ subtitle[locale] }}
             </p>

@@ -6,11 +6,11 @@
                 {{ item[locale] }}
             </span>
         </div>
-        <div
-            class="py-4 text-left relative z-10 text-tertiary/80 font-regular w-full md:w-[700px] text-lg font-regular">
+        <SpacingSectionTitle />
+        <div class="text-left relative z-10 text-tertiary/80 font-regular w-full md:w-[700px] text-lg font-regular">
             {{ subtitle[locale] }}
         </div>
-        <div class="w-full py-2 flex flex-col gap-4 md:flex-row items-center h-full">
+        <div class="w-full py-4 flex flex-col gap-4 md:flex-row items-center h-full">
             <WebAgencyAboutTeamCtaA />
             <WebAgencyAboutTeamCtaB />
         </div>

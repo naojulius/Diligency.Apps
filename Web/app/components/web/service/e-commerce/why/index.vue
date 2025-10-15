@@ -4,7 +4,8 @@
             <div class="min-w-[10px] max-w-[10px] bg-tertiary rounded-full"></div>
             <span>Pourquoi nous confier votre site vitrine ?</span>
         </div>
-        <div class="py-4 text-left relative z-10 text-gray-500 font-regular w-full md:w-[700px] text-lg font-regular">
+        <SpacingSectionTitle />
+        <div class="text-left relative z-10 text-gray-500 font-regular w-full md:w-[700px] text-lg font-regular">
             <p>
                 Un site vitrine n’est pas qu’un site “simple”. C’est souvent la première impression que vous laissez à
                 vos

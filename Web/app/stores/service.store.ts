@@ -172,7 +172,81 @@ export const UseServiceStore = defineStore("service-store", () => {
 
     //#endregion
 
+    //#region IT IA
+
+    const GetItIaHeroTitle = (): Array<Title> => {
+        return data?.value?.itia.hero.title ?? []
+    }
+
+    const GetItIaHeroSubTitle = (): AppLocale => {
+        return data?.value?.itia.hero?.subtitle ?? []
+    }
+
+    const GetItIaHeroBackground = (): string => {
+        return data?.value?.itia.hero?.background ?? ""
+    }
+
+    const GetItIaHeroCta = (key: string): Cta => {
+        switch (key.toLowerCase()) {
+            case "a":
+                return data?.value?.itia.hero?.ctaA;
+        }
+        return new Cta();
+    }
+
+    const GetItIaCta = (key: string): Cta => {
+        switch (key.toLowerCase()) {
+            case "a":
+                return data?.value?.itia?.ctaA;
+        }
+        return new Cta();
+    }
+
+    const GetItIaCtatext = (): AppLocale => {
+        return data?.value?.itia.ctaText
+    }
+
+    const GetItIaForTitle = (): Array<Title> => {
+        return data?.value?.itia.for.title ?? []
+    }
+
+    const GetItIaForSubtitle = (): AppLocale => {
+        return data?.value?.itia.for?.subtitle ?? []
+    }
+
+    const GetItIaWhyTitle = (): Array<Title> => {
+        return data?.value?.itia.why.title ?? []
+    }
+
+    const GetItIaWhySubtitle = (): AppLocale => {
+        return data?.value?.itia.why?.subtitle ?? []
+    }
+
+    const GetItIaWMethodTitle = (): Array<Title> => {
+        return data?.value?.itia.method?.title ?? []
+    }
+
+    const GetItIaWExampleTitle = (): Array<Title> => {
+        return data?.value?.itia.example?.title ?? []
+    }
+
+    //#endregion
+
     return {
+        //it ia
+        GetItIaHeroTitle,
+        GetItIaHeroSubTitle,
+        GetItIaHeroBackground,
+        GetItIaHeroCta,
+        GetItIaCta,
+        GetItIaForTitle,
+        GetItIaForSubtitle,
+        GetItIaWhyTitle,
+        GetItIaWhySubtitle,
+        GetItIaWMethodTitle,
+        GetItIaWExampleTitle,
+        GetItIaCtatext,
+
         GetForItemsLit,
         GetMethodItemsLit,
         GetGotItemsLit,

@@ -6,6 +6,7 @@
                 {{ item[locale] }}
             </span>
         </div>
+        <SpacingSectionTitle />
         <div class="py-5 text-xl text-gray-500 font-regular">
             {{ subtitle[locale] }}
         </div>
