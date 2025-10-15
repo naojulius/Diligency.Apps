@@ -21,12 +21,17 @@ const router = useRouter();
 // SCROLL LOGIC
 const isScrolled = ref(false)
 const SCROLL_POINT = 80
-
+const permanentTertiaryHeaderBackground = [
+  "/contact", "/application"
+]
 const handleScroll = () => {
-  if (router.currentRoute.value.path.toLowerCase().endsWith("/contact")) {
-    isScrolled.value = true;
-    return;
+  const path = router.currentRoute.value.path.toLowerCase()
+
+  if (permanentTertiaryHeaderBackground.includes(path)) {
+    isScrolled.value = true
+    return
   }
+
   isScrolled.value = window.scrollY > SCROLL_POINT
 }
 
