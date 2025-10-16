@@ -25,7 +25,6 @@ export const MENU_DATA = [
                     en: "Custom business apps: CRM, dashboard, marketplace… Secure, high-performance web platforms, fully responsive and ready to scale."
                 }
 
-
             },
             {
                 id: uuidv4(),

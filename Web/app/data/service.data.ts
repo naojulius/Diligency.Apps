@@ -199,10 +199,13 @@ export const SERVICE_DATA = {
             }
         },
         faq: {
-            title: {
-                en: "FAQ",
-                fr: "FAQ"
-            },
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: "FAQ",
+                    en: "FAQ"
+                }
+            ],
             items: [
                 {
                     q: {

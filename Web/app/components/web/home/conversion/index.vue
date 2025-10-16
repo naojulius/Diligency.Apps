@@ -1,24 +1,14 @@
 <template>
-    <section class="w-full px-4 md:px-10 2xl:px-35 py-10 md:py-20 relative h-auto">
+    <section class="relative w-full h-auto px-4 py-10 md:px-10 2xl:px-35 md:py-20">
         <WebHomeConversionBackground />
-        <div class="w-full flex flex-col md:flex-row">
-            <div class="w-full flex flex-col">
-                <div class="text-4xl font-semibold flex gap-3 text-secondary opacity-90">
-                    <div class="min-w-[10px] max-w-[10px] bg-secondary rounded-full"></div>
-                    <div>
-                        <div v-for="(item, index) in title" :key="index">
-                            {{ item[locale] }}
-                        </div>
-                    </div>
-
-                </div>
-                <SpacingSectionTitle />
-                <div class="text-xl mb-8 opacity-90 text-primary text-center md:text-left  w-full md:w-[700px]">
-                    {{ subtitle[locale] }}
-                </div>
+        <div class="flex flex-col w-full md:flex-row">
+            <div class="flex flex-col w-full">
+                <SectionTitle :title="title" custom-class="text-secondary" custom-background="bg-secondary" />
+                <SectionSubtitle :subtitle="subtitle" custom-class="text-secondary" />
             </div>
 
-            <div class="w-full py-5 flex flex-col gap-2 items-center justify-center px-4 opacity-90 ">
+
+            <div class="flex flex-col items-center justify-center w-full gap-2 px-4 py-5 opacity-90 ">
                 <WebHomeConversionCtaA />
             </div>
         </div>

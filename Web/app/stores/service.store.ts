@@ -98,7 +98,7 @@ export const UseServiceStore = defineStore("service-store", () => {
         return data?.value?.webApp.method?.items?.why ?? []
     }
 
-    const GetWebAppFaqtitle = (): AppLocale => {
+    const GetWebAppFaqtitle = (): AppLocale[] => {
         return data?.value?.webApp.faq?.title
     }
 

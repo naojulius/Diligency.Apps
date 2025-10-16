@@ -214,7 +214,7 @@ export const HOME_DATA = {
             },
             {
                 _key: uuidv4(),
-                fr: 'omprendre avant de commander',
+                fr: 'Comprendre avant de commander',
                 en: 'Understand before ordering'
             }
         ],
