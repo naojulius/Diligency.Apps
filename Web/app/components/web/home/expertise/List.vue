@@ -1,15 +1,15 @@
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10 ">
+    <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-2 lg:grid-cols-4 ">
         <a v-for="(item, index) in items" :key="index" :href="item.link"
-            class="card group hover:scale-105 transition-all duration-300 cursor-pointer bg-gray-100 p-4 rounded-lg">
-            <div class="text-center">
-                <div class="w-16 h-16  rounded-lg flex items-center justify-center mx-auto mb-4 transition-fast">
-                    <Icon :name="item.icon" class="h-16 w-16 text-accent-200" />
+            class="p-4 transition-all duration-300 bg-gray-100 rounded-lg cursor-pointer card group hover:scale-105">
+            <div class="flex flex-col text-center size-full">
+                <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-lg transition-fast">
+                    <Icon :name="item.icon" class="w-16 h-16 text-accent-200" />
                 </div>
-                <h3 class="text-tertiary text-xl font-semibold mb-3">{{ item.title[locale] }}</h3>
-                <p class="text-text-secondary mb-4">{{ item.text[locale] }}</p>
+                <h3 class="h-auto text-xl font-semibold md:h-28 text-tertiary">{{ item.title[locale] }}</h3>
+                <p class="h-full mb-4 text-text-secondary">{{ item.text[locale] }}</p>
                 <div class="opacity-0 group-hover:opacity-100 transition-fast">
-                    <div class="text-sm text-accent font-medium">
+                    <div class="text-sm font-medium text-accent">
                         {{ item.technos.join(" • ") }}
                     </div>
                 </div>

@@ -12,6 +12,8 @@ export const UseAgencyStore = defineStore("agency-store", () => {
     const loader = UseLoaderStore()
     const data = ref(AGENCY_DATA)
 
+
+
     //#region Hero
 
     const GetAgencyAboutHeroTitle = (): Array<Title> => {
@@ -24,10 +26,6 @@ export const UseAgencyStore = defineStore("agency-store", () => {
 
     const GetAgencyAboutHeroBackground = (): string => {
         return data?.value?.about?.hero?.background
-    }
-
-    const GetAgencyAboutHeroComponent = (): string => {
-        return data?.value?.about?.hero?.component ?? 'without-cta'
     }
 
     //#endregion
@@ -44,10 +42,6 @@ export const UseAgencyStore = defineStore("agency-store", () => {
 
     const GetAgencyAboutEngagementItems = () => {
         return data?.value.about.engagement.items ?? [];
-    }
-
-    const GetAgencyAboutTeamCtaText = (): AppLocale => {
-        return data?.value.about.team.ctaText;
     }
 
     //#endregion
@@ -71,6 +65,10 @@ export const UseAgencyStore = defineStore("agency-store", () => {
 
         }
         return new Cta();
+    }
+
+    const GetAgencyAboutTeamCtaText = (): AppLocale => {
+        return data?.value.about.team.ctaText
     }
 
     //#endregion
@@ -168,13 +166,11 @@ export const UseAgencyStore = defineStore("agency-store", () => {
         GetAgencyAboutHeroTitle,
         GetAgencyAboutHeroSubtitle,
         GetAgencyAboutHeroBackground,
-        GetAgencyAboutHeroComponent,
 
         //about
         GetAgencyAboutEngagementItems,
         GetAgencyAboutTitle,
         GetAgencyAboutSubtitle,
-        GetAgencyAboutTeamCtaText,
 
         //JOb Carrier
         GetAgencyJobCarrierProfileItems,
@@ -204,6 +200,7 @@ export const UseAgencyStore = defineStore("agency-store", () => {
         //Team
         GetAgencyAboutTeamTitle,
         GetAgencyAboutTeamSubtitle,
-        GetAgencyAboutTeamCta
+        GetAgencyAboutTeamCta,
+        GetAgencyAboutTeamCtaText
     }
 })

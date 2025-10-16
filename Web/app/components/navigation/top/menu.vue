@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden md:flex w-full h-full  items-center justify-center">
+  <div class="items-center justify-center hidden w-full h-full md:flex">
     <ButtonMenu v-for="(menu, index) in menusList" :key="index" :data="menu" />
   </div>
 </template>

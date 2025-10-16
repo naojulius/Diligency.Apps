@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-white text-red-500 p-2 absolute bottom-10 left-0 fixed text-3xl font-bold">
+    <div class="fixed left-0 p-2 text-3xl font-bold text-red-500 bg-white bottom-10">
         <span class="block sm:hidden">xs</span>
         <span class="hidden sm:block md:hidden">sm</span>
         <span class="hidden md:block lg:hidden">md</span>

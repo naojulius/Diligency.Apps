@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-0 size-full p-0">
+  <div class="flex flex-col gap-0 p-0 size-full">
     <button @click="setlocale"
       :class="['h-full w-full cursor-pointer p-1 uppercase inter transition-all duration-100', getActiveLocaleTextClass]">
       {{ props.text }}

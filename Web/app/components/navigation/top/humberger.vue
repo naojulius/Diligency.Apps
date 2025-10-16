@@ -1,22 +1,22 @@
 <template>
-  <div class="group lg:hidden flex h-14 w-14 cursor-pointer items-center justify-center p-2 aspect-square"
+  <div class="flex items-center justify-center p-2 cursor-pointer group lg:hidden h-14 w-14 aspect-square"
     @click="toggleMenu">
     <div class="space-y-2" ref="menuIcon">
       <span :class="[
-      'block h-1 w-8 origin-center rounded-full bg-secondary transition-transform ease-in-out',
-      isHumberger ? 'translate-y-1.5 rotate-45' : ''
-    ]"></span>
+        'block h-1 w-8 origin-center rounded-full bg-secondary transition-transform ease-in-out',
+        isHumberger ? 'translate-y-1.5 rotate-45' : ''
+      ]"></span>
       <span :class="[
-      'block h-1 w-6 origin-center rounded-full bg-accent-200 transition-all ease-in-out',
-      isHumberger ? 'w-8 -translate-y-1.5 -rotate-45' : ''
-    ]"></span>
+        'block h-1 w-6 origin-center rounded-full bg-accent-200 transition-all ease-in-out',
+        isHumberger ? 'w-8 -translate-y-1.5 -rotate-45' : ''
+      ]"></span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import { gsap } from 'gsap'
+import { gsap } from 'gsap';
+import { ref, watch } from 'vue';
 import { UseMenuStore } from '~/stores/menu.store';
 
 const menuIcon = ref<HTMLDivElement | null>(null)

@@ -2,26 +2,26 @@
 
   <div v-if="isHumberger" class="absolute w-full h-[calc(100vh-5rem)] lg:h-screen top-20 md:top-16 overflow-hidden z-20"
     ref="mobileMenu">
-    <div class="lg:hidden size-full bg-primary flex flex-col gap-5 p-4 pt-8 overflow-y-scroll">
+    <div class="flex flex-col gap-5 p-4 pt-8 overflow-y-scroll lg:hidden size-full bg-primary">
       <div v-for="(menu, index) in menusList" :key="index"
-        class="inter w-full font-semibold text-left text-tertiary-500 cursor-pointer">
+        class="w-full font-semibold text-left cursor-pointer inter text-tertiary-500">
         <div @click="toggleMenu(menu as Menu)">
-          <div class="flex flex-row items-center justify-between gap-2 w-full">
+          <div class="flex flex-row items-center justify-between w-full gap-2">
             <div class="flex flex-row items-center gap-4">
               <Icon :name="menu.icon" class="size-8" />
               <span class="text-2xl">{{ menu.name[locale] }}</span>
             </div>
             <Icon v-if="menu.children && menu.children.length > 0" name="lucide:chevron-down"
               :class="{ 'rotate-180': openMenu?.id === menu.id }"
-              class="size-6 transition-transform duration-300 mr-3" />
+              class="mr-3 transition-transform duration-300 size-6" />
             <Icon v-if="!menu.children" name="lucide:chevron-right"
-              class="size-6 transition-transform duration-300 mr-3" />
+              class="mr-3 transition-transform duration-300 size-6" />
           </div>
         </div>
 
-        <div v-if="openMenu?.id === menu.id" class="pl-12 pt-2 space-y-2">
+        <div v-if="openMenu?.id === menu.id" class="pt-2 pl-12 space-y-2">
           <div @click="clickSubMenu(subMenu)" v-for="(subMenu, subIndex) in subMenuList" :key="subIndex"
-            class="text-tertiary-500/80 size-full py-2 font-normal text-2xl flex flex-col gap-2">
+            class="flex flex-col gap-2 py-2 text-2xl font-normal text-tertiary-500/80 size-full">
             <div class="text-lg font-semibold">
               {{ subMenu.name[locale] }}
             </div>

@@ -3,7 +3,7 @@
     'border-none top-0 fixed w-full h-20 lg:h-16 flex justify-center z-50 transition-colors duration-300',
     isScrolled ? 'bg-tertiary/80' : 'bg-transparent'
   ]">
-    <div class="w-full px-4 lg:px-10 2xl:px-35 h-full flex items-center justify-between">
+    <div class="flex items-center justify-between w-full h-full px-4 lg:px-10 2xl:px-35">
       <NavigationTopLogo />
       <NavigationTopMenu />
       <NavigationTopLocale />

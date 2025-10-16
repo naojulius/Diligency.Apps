@@ -26,7 +26,7 @@ const props = defineProps({
         type: Object as PropType<Cta>,
     },
     customClass: {
-        required: true,
+        required: false,
         type: String,
         default: "text-tertiary"
     },

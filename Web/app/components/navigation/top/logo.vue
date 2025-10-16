@@ -1,5 +1,5 @@
 <template>
-    <a href="/" class="h-full w-48 text-3xl gap-2 flex items-center text-secondary font-bold">
+    <a href="/" class="flex items-center w-48 h-full gap-2 text-3xl font-bold text-secondary">
         Diligency
     </a>
 </template>

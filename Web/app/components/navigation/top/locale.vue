@@ -1,7 +1,7 @@
 <template>
-    <div ref="dropdownRef" class="dropdown relative  hidden md:inline-flex z-50">
+    <div ref="dropdownRef" class="relative z-50 hidden dropdown md:inline-flex">
         <button @click="show = !show"
-            class="w-30 inline-flex justify-center items-center gap-2 py-3 px-6 text-md text-secondary rounded-lg  cursor-pointer font-semibold text-center transition-all duration-500 hover:text-secondary-700 ">
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-center transition-all duration-500 rounded-lg cursor-pointer w-30 text-md text-secondary hover:text-secondary-700 ">
             <span class="uppercase">
                 {{locales.find(x => x.code == locale)?.code}}
             </span>
@@ -12,12 +12,12 @@
             </svg>
         </button>
         <div id="dropdown-default" v-if="show"
-            class="dropdown-menu rounded-lg shadow-lg bg-white absolute top-full w-full mt-0 open transition-all duration-300"
+            class="absolute w-full mt-0 transition-all duration-300 bg-white rounded-lg shadow-lg dropdown-menu top-full open"
             aria-labelledby="dropdown-default">
             <ul class="">
                 <li v-for="(locale, index) in locales" class="p-1">
                     <button @click="setCurrentLocale(locale.code)"
-                        class="hover:bg-secondary text-tertiary font-semibold h-10 w-full rounded-lg uppercase">
+                        class="w-full h-10 font-semibold uppercase rounded-lg hover:bg-secondary text-tertiary">
                         {{ locale.code }} </button>
                 </li>
             </ul>

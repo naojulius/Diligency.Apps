@@ -21,9 +21,11 @@ export const MENU_DATA = [
                 icon: "lucide:info",
                 visible: true,
                 texte: {
-                    fr: "Au-delà du site : votre application métier sur-mesure. CRM, dashboard, marketplace, système de réservation… Nous concevons des plateformes web robustes, sécurisées et pensées pour vos besoins métier. 100 % responsive, scalable et prêtes pour l’évolution.",
-                    en: "Beyond the website: your custom business application. CRM, dashboard, marketplace, booking system… We design robust, secure, and business-oriented web platforms. 100% responsive, scalable, and ready for growth."
+                    fr: "Applications métier sur-mesure : CRM, dashboard, marketplace… Plateformes web sécurisées, performantes, 100 % responsive et évolutives.",
+                    en: "Custom business apps: CRM, dashboard, marketplace… Secure, high-performance web platforms, fully responsive and ready to scale."
                 }
+
+
             },
             {
                 id: uuidv4(),
