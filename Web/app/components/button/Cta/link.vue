@@ -1,5 +1,5 @@
 <template>
-    <button @mouseenter="hover = true" @mouseleave="hover = false" @click="navigate" :class="[
+    <button type="button" @mouseenter="hover = true" @mouseleave="hover = false" @click="navigate" :class="[
         'relative group text-xl transition-all duration-500 h-14 bg-transparent w-full md:w-auto  flex items-center justify-center md:justify-start gap-3 font-semi-bold hover:text-secondary-700',
         customClass
     ]">

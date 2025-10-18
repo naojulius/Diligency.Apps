@@ -36,6 +36,7 @@
 </template>
 
 <script lang="ts" setup>
+import { gsap } from 'gsap/gsap-core'
 import { computed, ref } from 'vue'
 import { UseMenuStore } from '~/stores/menu.store'
 import type { Menu } from '~/types/interfaces/menu'
