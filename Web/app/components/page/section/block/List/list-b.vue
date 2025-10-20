@@ -1,0 +1,29 @@
+<template>
+    <div class="flex items-center  mx-auto border-b pb-5 mb-5 border-gray-200 sm:flex-row flex-col">
+        <div
+            class="group sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-secondary-400 text-accent-500 flex-shrink-0 cursor-pointer hover:bg-secondary-500 transition-all duration-500">
+            <Icon :name="icon" size="42" class="group-hover:scale-120 transition-all duration-500" />
+        </div>
+        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+            <h2 class="text-tertiary text-2xl inter font-bold mb-2">{{ name[locale] }}</h2>
+            <p class="leading-relaxed text-tertiary/80 text-base inter">{{ text[locale] }}</p>
+        </div>
+    </div>
+</template>
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
+import type { BlockTypeItemsReturnType } from '~/components/page/types/commons/block.type';
+
+const { locale } = useI18n()
+
+const props = defineProps({
+    data: {
+        type: Object as PropType<(BlockTypeItemsReturnType)>,
+        required: true
+    }
+})
+
+const icon = computed(() => (props.data as any)?.icon ?? null);
+const name = computed(() => (props.data as any)?.name ?? null);
+const text = computed(() => (props.data as any)?.text ?? null);
+</script>

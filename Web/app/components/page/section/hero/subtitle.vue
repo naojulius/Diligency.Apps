@@ -12,8 +12,7 @@ const { locale } = useI18n()
 const props = defineProps({
     subtitle: {
         required: true,
-        type: [Object, undefined] as PropType<AppLocale>,
-        default: []
+        type: Object as PropType<AppLocale>,
     },
     customClass: {
         required: false,

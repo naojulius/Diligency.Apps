@@ -15,13 +15,6 @@
         </div>
     </div>
 </template>
-<!-- <script lang="ts" setup>
-import { useI18n } from 'vue-i18n';
-import { UseAgencyStore } from '~/stores/agency.store';
-const agencyStore = UseAgencyStore()
-const data = ref(agencyStore.GetAgencyHubItems())
-const { locale } = useI18n()
-</script> -->
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
