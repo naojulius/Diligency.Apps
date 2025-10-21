@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { GetCtaComponent, GetFooterComponent } from '../../helpers/component.helper';
+import { GetFooterComponent } from '../../helpers/component.helper';
 import { FooterType } from '../../types/commons/footer.type';
 const { locale } = useI18n()
 const props = defineProps({

@@ -1,5 +1,5 @@
 <template>
-    <section class=" w-full h-[calc(100vh-0rem)] lg:h-[calc(100vh-1rem)] relative">
+    <section class=" w-full h-auto lg:h-[calc(100vh-1rem)] relative">
         <BackgroundVideo :video="background" />
         <div class="px-10 2xl:px-35 w-full h-full pt-20 flex items-center justify-center ">
             <div class=" h-full w-full md:w-[700px] flex flex-col gap-4 items-start pt-12 md:pt-0 md:justify-center">

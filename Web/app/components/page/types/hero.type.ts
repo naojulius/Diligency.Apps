@@ -4,6 +4,7 @@ import type { CtaType } from "./commons/cta.type";
 export class HeroType {
     title?: AppLocaleType[]
     subtitle?: AppLocaleType
-    background?: string
+    image?: string
+    video?: string
     cta?: CtaType[]
 }

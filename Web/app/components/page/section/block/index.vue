@@ -1,8 +1,9 @@
 <template>
     <section :class="[defaultClass]">
-        <PageSectionBlockTitle :title="titleData!" :custom-class="getCustomClass" />
-        <PageSectionBlockSubtitle :data="subtitleData!" />
-        <PageSectionBlockList :data="blockData!" :type="props.type" :image="imageData" :cta="ctaData" />
+        <PageSectionBlockTitle :title="titleData!" :custom-class="getCustomClass" v-if="titleData" />
+        <PageSectionBlockSubtitle :data="subtitleData!" v-if="subtitleData" />
+        <PageSectionBlockList :data="blockData!" :type="props.type" :image="imageData" :cta="ctaData"
+            v-if="blockData" />
     </section>
 </template>
 

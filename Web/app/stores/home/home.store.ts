@@ -1,18 +1,18 @@
 
 import { useBaseStore } from "~/components/page/helpers/store/base-store.helper"
-import { AGENCY_DATA } from "~/components/page/locale-datas/agency.data"
+import { HOME_DATA } from "~/components/page/locale-datas/home.data"
 import { UseLoaderStore } from "../loader.store"
 
-export const useAgencyStore = defineStore("agency-store", () => {
+export const useHomeStore = defineStore("home-store", () => {
     const nuxtApp = useNuxtApp()
     const apollo = nuxtApp.$apollo
     const loader = UseLoaderStore()
 
-    const base = useBaseStore(AGENCY_DATA)
+    const base = useBaseStore(HOME_DATA)
 
     return {
-        ...base
+        ...base,
     }
 })
 
-export type AgencyStore = ReturnType<typeof useAgencyStore>
+export type HomeStore = ReturnType<typeof useHomeStore>

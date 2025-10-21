@@ -1,3 +1,0 @@
-<template>
-    <WebServiceItIa />
-</template>

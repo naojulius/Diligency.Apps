@@ -1,13 +1,12 @@
 <template>
     <div :class="['z-10 flex gap-3 text-4xl font-semibold', getClass]">
-        <div :class="['hidden md:block min-w-[10px] max-w-[10px] rounded-full', customBackground]"></div>
-        <div class="w-full text-center md:text-left">
+        <div :class="['min-w-[10px] max-w-[10px] rounded-full', customBackground]"></div>
+        <div class="w-full">
             <div v-for="(item, index) in props.title" :key="index">
                 {{ item[locale] }}
             </div>
         </div>
     </div>
-    <SpacingSectionTitle />
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';

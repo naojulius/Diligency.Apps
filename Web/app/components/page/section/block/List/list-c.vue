@@ -1,11 +1,12 @@
 <template>
-    <div class="flex flex-row justify-start items-start gap-4  mb-5 text-gray-900">
-        <Icon :name="icon" class="size-11 text-accent/70 -mt-2" />
-        <div class="inter text-md text-tertiary w-full">
-            <div class="text-lg/5 pb-4 font-semibold">
+    <div
+        class="gourp flex flex-col md:flex-row justify-start items-center md:items-start gap-4 text-gray-900 cursor-pointer">
+        <Icon :name="icon" class="size-11 text-accent/70" />
+        <div class="inter text-md text-tertiary w-full text-center md:text-left">
+            <div class="text-xl font-semibold">
                 {{ name[locale] }}
             </div>
-            <div class="text-sm text-tertiary/80">
+            <div class="text-md text-tertiary/80">
                 {{ text[locale] }}
             </div>
         </div>

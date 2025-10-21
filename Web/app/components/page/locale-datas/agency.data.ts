@@ -11,7 +11,7 @@ export const AGENCY_DATA = {
                 fr: 'Diligency est une agence digitale indépendante fondée sur une conviction forte : l’efficacité digitale naît d’un équilibre entre rigueur, modernité et compréhension métier. Nous accompagnons les PME, cabinets, structures ambitieuses et entrepreneurs exigeants dans la création de plateformes web, d’applications sur mesure et de systèmes digitaux fiables. Notre nom est notre promesse : livrer avec diligence, précision et intégrité.',
                 en: 'Diligency is an independent digital agency founded on a strong conviction: digital efficiency is born from a balance between rigor, modernity, and business understanding. We support SMEs, firms, ambitious organizations, and demanding entrepreneurs in creating web platforms, custom applications, and reliable digital systems. Our name is our promise: to deliver with diligence, precision, and integrity.'
             },
-            background: '/images/hero/ecommerce.jpg',
+            image: '/images/hero/ecommerce.jpg',
         },
         blocks: [
             {
@@ -126,7 +126,7 @@ export const AGENCY_DATA = {
                 fr: 'Diligency est une structure hybride et agile, fondée sur l’excellence des indépendants qui la composent. Nous collaborons avec des talents freelance rigoureux, exigeants et autonomes — des professionnels capables de livrer proprement, de comprendre un projet sans blabla inutile et de proposer des solutions cohérentes.',
                 en: 'Diligency is a hybrid and agile organization, founded on the excellence of the freelancers who make it up. We work with rigorous, demanding, and autonomous freelance talents — professionals capable of delivering cleanly, understanding a project without unnecessary chatter, and proposing coherent solutions.'
             },
-            background: '/images/hero/ecommerce.jpg',
+            image: '/images/hero/ecommerce.jpg',
         },
         blocks: [
             {
@@ -293,7 +293,7 @@ export const AGENCY_DATA = {
                 fr: "Bienvenue dans notre Hub. Ici, on partage nos idées, nos méthodes, nos démonstrations. Le Hub, c’est notre façon d’éduquer, de structurer le flou digital, et de vous donner les clés pour décider intelligemment. C’est aussi une preuve de ce que nous savons faire : transformer du savoir en action concrète, lisible, utile.",
                 en: "Welcome to our Hub. Here, we share our ideas, methods, and demonstrations. The Hub is our way of educating, clarifying the digital chaos, and giving you the tools to make smart decisions. It’s also a demonstration of what we can do: turning knowledge into tangible, clear, and useful action."
             },
-            background: '/images/hero/ecommerce.jpg',
+            image: '/images/hero/ecommerce.jpg',
         },
         blocks: [
             {

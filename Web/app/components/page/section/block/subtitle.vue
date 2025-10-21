@@ -1,6 +1,6 @@
 <template>
-    <div class="space-y-4">
-        <p v-for="(item, index) in subtitles" :key="index" class="text-lg text-gray-700">
+    <div :class="['space-y-4 text-center md:text-left', getClass]">
+        <p v-for="(item, index) in subtitles" :key="index" class="text-lg">
             {{ item[locale] }}
         </p>
     </div>
@@ -17,11 +17,25 @@ const props = defineProps({
         type: [Array, Object, undefined] as PropType<AppLocaleType[] | AppLocaleType>,
         required: true,
         default: []
+    },
+    customClass: {
+        type: String,
+        required: false,
+        default: ""
     }
 })
 
 const subtitles = computed(() => {
     if (!props.data) return []
     return Array.isArray(props.data) ? props.data : [props.data]
+})
+
+const getClass = computed(() => {
+    if (props.customClass) {
+        return (props.customClass)
+    }
+    else {
+        return "text-tertiary/80"
+    }
 })
 </script>

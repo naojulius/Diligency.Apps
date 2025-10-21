@@ -1,6 +1,20 @@
-import { PageSectionBlockListA, PageSectionBlockListB, PageSectionBlockListC, PageSectionBlockListD, PageSectionCommonCtaLink, PageSectionCommonCtaSecondary, PageSectionCommonCtaTertiary, PageSectionFooterA, PageSectionFooterB } from "#components"
+import {
+    PageSectionBlockListA,
+    PageSectionBlockListB,
+    PageSectionBlockListC,
+    PageSectionBlockListD,
+    PageSectionBlockListE,
+    PageSectionBlockListF,
+    PageSectionCommonCtaLink,
+    PageSectionCommonCtaSecondary,
+    PageSectionCommonCtaTertiary,
+    PageSectionFooterA,
+    PageSectionFooterB
+} from "#components"
 
 export const GetBLockListComponent = (type: string) => {
+    if (!type) return
+
     if (type.startsWith("list-a")) {
         return PageSectionBlockListA
     }
@@ -16,9 +30,18 @@ export const GetBLockListComponent = (type: string) => {
     if (type.startsWith("list-d")) {
         return PageSectionBlockListD
     }
+
+    if (type.startsWith("list-e")) {
+        return PageSectionBlockListE
+    }
+    if (type.startsWith("list-f")) {
+        return PageSectionBlockListF
+    }
 }
 
 export const GetFooterComponent = (type: string) => {
+    if (!type) return
+
     if (type.startsWith("footer-a")) {
         return PageSectionFooterA
     }
@@ -29,6 +52,8 @@ export const GetFooterComponent = (type: string) => {
 }
 
 export const GetCtaComponent = (type: string) => {
+    if (!type) return
+
     if (type.startsWith("cta-link")) {
         return PageSectionCommonCtaLink
     }

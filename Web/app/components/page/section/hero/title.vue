@@ -1,6 +1,6 @@
 <template>
     <h1 id="hero"
-        class="text-center text-[2.5rem]/13 md:text-7xl/20 font-bold text-secondary tracking-normal z-10 w-full">
+        class="text-center text-[2.5rem]/13 xl:text-6xl/16 md:text-7xl/20 font-bold text-secondary tracking-normal z-10 w-full">
         <span v-for="(item, index) in title" :key="index">
             {{ item[locale] }}
         </span>

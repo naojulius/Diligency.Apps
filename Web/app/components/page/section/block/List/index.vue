@@ -8,13 +8,11 @@
     </div>
     <div class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-5 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
         v-if="props.type == 'list-c'">
-        <div class="lg:pt-4">
-            <div class="lg:max-w-lg py-2">
-                <component v-for="(item, index) in items" :key="index" :is="getItemComponent()" :data="item" />
-            </div>
+        <div class=" flex flex-col gap-5">
+            <component v-for="(item, index) in items" :key="index" :is="getItemComponent()" :data="item" />
         </div>
         <img :src="listCImage" alt="Product screenshot"
-            class="hover:scale-105 transition-all duration-500 shadow-xl cursor-pointer w-3xl max-w-none rounded-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 hover:opacity-90"
+            class="md:-mt-20 hover:scale-105 transition-all duration-500 shadow-xl cursor-pointer w-3xl max-w-none rounded-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 hover:opacity-90"
             width="2432" height="1442" />
     </div>
     <div class="w-full flex items-center gap-4 relative" v-if="props.type == 'list-d'">
@@ -31,6 +29,12 @@
     <div class="z-10 flex flex-col items-center justify-center md:justify-start w-full gap-5 md:flex-row"
         v-if="props.type == 'list-d'">
         <component :is="getCta(item.type ?? '')" v-for="(item, index) in cta" :key="index" :data="item" />
+    </div>
+    <div class="w-full flex flex-col md:flex-row gap-5 md:gap-10" v-if="props.type == 'list-e'">
+        <component v-for="(item, index) in items" :key="index" :is="getItemComponent()" :data="item" />
+    </div>
+    <div class="w-full flex flex-col md:flex-row gap-5 md:gap-10" v-if="props.type == 'list-f'">
+        <component v-for="(item, index) in items" :key="index" :is="getItemComponent()" :data="item" />
     </div>
 </template>
 
