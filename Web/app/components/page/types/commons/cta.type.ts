@@ -5,4 +5,5 @@ export class CtaType {
     icon?: string;
     link!: string;
     type?: string;
+    style?: string;
 }

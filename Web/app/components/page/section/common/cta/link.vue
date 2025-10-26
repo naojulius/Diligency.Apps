@@ -1,7 +1,7 @@
 <template>
     <button type="button" @mouseenter="hover = true" @mouseleave="hover = false" @click="navigate" :class="[
         'relative group text-xl transition-all duration-500 h-14 bg-transparent w-full md:w-auto  flex items-center justify-center md:justify-start gap-3 font-semi-bold hover:text-secondary-700',
-        customClass
+        style
     ]">
         <span
             class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-secondary-700 after:transition-all after:duration-500 group-hover:after:w-full after:rounded-full">
@@ -25,11 +25,10 @@ const props = defineProps({
         required: true,
         type: Object as PropType<CtaType>,
     },
-    customClass: {
-        required: false,
-        type: String,
-        default: "text-tertiary"
-    },
+})
+
+const style = computed(() => {
+    return props.data?.style ?? "text-tertiary"
 })
 
 /* ------------------------------------------------------------
@@ -45,12 +44,5 @@ const navigate = () => {
         router.push(link)
     }
 }
-
-/* ------------------------------------------------------------
-   FEATURE: Locale handling
-   ------------------------------------------------------------
-   Retrieves the current locale from vue-i18n.
-   Used to display the translated button text.
------------------------------------------------------------- */
 const { locale } = useI18n()
 </script>

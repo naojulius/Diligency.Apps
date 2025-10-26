@@ -12,7 +12,7 @@ export const SERVICE_DATA = {
                 fr: 'Développement sur-mesure de plateformes digitales : dashboards, CRM, réservation, marketplace, outils SaaS.',
                 en: 'Tailor-made digital platform development: dashboards, CRMs, booking systems, marketplaces, and SaaS tools.'
             },
-            background: '/images/hero/ecommerce.jpg',
+            image: '/images/hero/ecommerce.jpg',
             cta: [
                 {
                     icon: "lucide:send",
@@ -280,7 +280,7 @@ export const SERVICE_DATA = {
                 fr: "Une vitrine digitale qui renforce votre image, inspire confiance et génère des prises de contact.",
                 en: "A digital showcase that strengthens your brand, inspires trust, and drives leads."
             },
-            background: '/images/hero/ecommerce.jpg',
+            image: '/images/hero/ecommerce.jpg',
         },
         blocks: [
             {
@@ -429,7 +429,7 @@ export const SERVICE_DATA = {
                 fr: "Nous créons des systèmes sur-mesure, automatisations, et intégrations augmentées par l’intelligence artificielle.",
                 en: "We design tailor-made systems, automations, and integrations enhanced by artificial intelligence."
             },
-            background: "/images/hero/ecommerce.jpg",
+            image: "/images/hero/ecommerce.jpg",
             cta: [
                 {
                     icon: "lucide:pickaxe",

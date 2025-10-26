@@ -5,6 +5,7 @@ import {
     PageSectionBlockListD,
     PageSectionBlockListE,
     PageSectionBlockListF,
+    PageSectionBlockListG,
     PageSectionCommonCtaLink,
     PageSectionCommonCtaSecondary,
     PageSectionCommonCtaTertiary,
@@ -34,8 +35,13 @@ export const GetBLockListComponent = (type: string) => {
     if (type.startsWith("list-e")) {
         return PageSectionBlockListE
     }
+
     if (type.startsWith("list-f")) {
         return PageSectionBlockListF
+    }
+
+    if (type.startsWith("list-g")) {
+        return PageSectionBlockListG
     }
 }
 

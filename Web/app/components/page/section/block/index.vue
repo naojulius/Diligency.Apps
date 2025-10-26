@@ -8,10 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useI18n } from 'vue-i18n';
 import type { BlockType } from '../../types/commons/block.type';
-
-const { locale } = useI18n()
 
 const props = defineProps({
     data: {

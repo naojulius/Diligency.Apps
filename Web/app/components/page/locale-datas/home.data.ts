@@ -12,6 +12,7 @@ export const HOME_DATA = {
         },
         cta: [
             {
+                type: "cta-tertiary",
                 text: {
                     en: 'Book a strategy call',
                     fr: 'Réserver un appel stratégique'
@@ -20,14 +21,40 @@ export const HOME_DATA = {
                 link: "/contact"
             },
             {
+                type: "cta-link",
                 text: {
                     en: 'Apply my project',
                     fr: 'Soumettre mon projet'
                 },
                 icon: "lucide:arrow-right",
-                link: "/application"
+                link: "/application",
+                style: "text-secondary-500"
             },
         ],
         video: '/videos/hero.mp4',
     },
+    blocks: [
+        {
+            type: "list-g",
+            title: [
+                {
+                    fr: 'Diligency n’est pas une simple agence.',
+                    en: 'Diligency is not just an agency. '
+                },
+                {
+                    fr: 'C’est une méthode.',
+                    en: 'It’s a method.'
+                }
+            ],
+            subtitle: {
+                fr: 'Nous transformons vos idées en solutions digitales robustes, élégantes et stratégiques. Notre approche repose sur la compréhension profonde de vos objectifs, et la mise en œuvre rigoureuse de     solutions taillées pour vos enjeux. C’est ça, la diligence digitale.',
+                en: 'We transform your ideas into robust, elegant, and strategic digital solutions. Our approach is based on a deep understanding of your goals and the rigorous implementation of solutions tailored to your challenges. That’s what digital diligence is all about.',
+            },
+            items: [
+                "/images/storysets/collaboration-animate.svg",
+                "/images/storysets/collaboration-animate.svg",
+                "/images/storysets/collaboration-animate.svg",
+            ]
+        }
+    ]
 }

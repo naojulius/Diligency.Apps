@@ -7,8 +7,9 @@ import type { ListC } from "./list-c.type";
 import type { ListD } from "./list-d.type";
 import type { ListE } from "./list-e.type";
 import type { ListF } from "./list-f.type";
+import type { ListG } from "./list-g.type";
 
-export type BlockTypeItemsReturnType = ListA | ListB | ListC | ListD | ListE | ListF;
+export type BlockTypeItemsReturnType = ListA | ListB | ListC | ListD | ListE | ListF | ListG;
 
 export class BlockType {
     type?: string

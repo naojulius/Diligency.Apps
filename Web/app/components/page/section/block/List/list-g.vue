@@ -1,3 +1,3 @@
 <template>
-    <WebHome />
+    LIST G
 </template>

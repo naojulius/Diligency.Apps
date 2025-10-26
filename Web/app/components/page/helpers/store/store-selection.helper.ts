@@ -16,27 +16,21 @@ import { useServiceStore } from "~/stores/service/service.store"
  * @throws {Error} If no matching store is found.
  */
 export function getStore(name?: string) {
-    if (!name) {
-        throw new Error(`Argument "name" cannot be null or undefined.`)
+    // If name is null, undefined, or empty, return HomeStore
+    if (!name || name.trim() === "") {
+        return useHomeStore()
     }
 
     const normalized = name.toLowerCase().trim()
 
-    switch (true) {
-        case normalized.endsWith("agency"):
-            return useAgencyStore()
-
-        case normalized.endsWith("service"):
-            return useServiceStore()
-
-        case normalized.endsWith("home"):
-            return useHomeStore()
-
-        // You can add more stores easily here:
-        // case normalized.endsWith("user"):
-        //   return useUserStore()
-
-        default:
-            throw new Error(`No store found for name: ${name}`)
+    if (normalized.endsWith("agency")) {
+        return useAgencyStore()
     }
+
+    if (normalized.endsWith("service")) {
+        return useServiceStore()
+    }
+
+    // If no match, throw an error
+    throw new Error(`No store found for name: ${name}`)
 }
