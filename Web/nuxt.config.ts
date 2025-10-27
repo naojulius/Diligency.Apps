@@ -8,8 +8,10 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "@nuxt/icon",
-    "@nuxtjs/i18n"
+    "@nuxtjs/i18n",
   ],
+
+
   css: [
     "~/assets/app.css",
     "~/assets/default.css",
@@ -45,12 +47,21 @@ export default defineNuxtConfig({
       ]
     },
   },
-  runtimeConfig: {
-    SanityProjectToken: process.env.SANITY_TOKEN,
-    // Public (accessible in the browser)
-    public: {
-      SanityProjectId: process.env.SANITY_PROJECT_ID,
-      SanityProjectDataset: process.env.SANITY_DATASET,
-    }
-  }
+
+  // runtimeConfig: {
+  //   SanityProjectToken: process.env.SANITY_TOKEN,
+  //   // Public (accessible in the browser)
+  //   public: {
+  //     SanityProjectId: process.env.SANITY_PROJECT_ID,
+  //     SanityProjectDataset: process.env.SANITY_DATASET,
+  //   }
+  // }
+  // runtimeConfig: {
+  //   SanityProjectToken: process.env.SANITY_TOKEN,
+  //   public: {
+  //     SanityProjectId: process.env.SANITY_PROJECT_ID,
+  //     SanityProjectDataset: process.env.SANITY_DATASET,
+  //     graphqlEndpoint: 'https://if67oozt.api.sanity.io/v2023-08-01/graphql/production/default',
+  //   },
+  // },
 })

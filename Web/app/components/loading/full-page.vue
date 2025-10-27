@@ -10,19 +10,17 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { UseLoaderStore } from '~/stores/loader.store'
+import { UseLoaderStore } from '~/stores/loader.store';
 
 const loader = UseLoaderStore()
-loader.ShowLoader()
+// loader.ShowLoader()
 const loading = computed(() => loader.loading)
 
-onMounted(async () => {
-    const router = useRouter()
-    await router.isReady()
-    setTimeout(() => {
-        loader.HideLoader()
-    }, 500)
-})
+// onMounted(async () => {
+//     const router = useRouter()
+//     await router.isReady()
+//     setTimeout(() => {
+//         loader.HideLoader()
+//     }, 500)
+// })
 </script>

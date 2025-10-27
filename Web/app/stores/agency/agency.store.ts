@@ -1,17 +1,56 @@
-
+import { defineStore } from "pinia"
+import { ref } from "vue"
 import { useBaseStore } from "~/components/page/helpers/store/base-store.helper"
-import { AGENCY_DATA } from "~/components/page/locale-datas/agency.data"
 import { UseLoaderStore } from "../loader.store"
 
+// export const useAgencyStore = defineStore("agency-store", () => {
+//     const data = ref([]) // reactive ref to hold fetched data
+//     const loader = UseLoaderStore()
+
+
+//     const fetchData = async () => {
+//         loader.ShowLoader()
+//         try {
+//             const result = await SANITY_CLIENT.fetch(GET_AGENCY_GROQ)
+//             data.value = await TRANSFORM_DATA(result) as any
+//             loader.HideLoader()
+//         } catch (err) {
+//             console.error("Error fetching agency pages:", err)
+//         }
+//     }
+
+//     fetchData()
+
+//     const base = useBaseStore(data)
+
+//     return {
+//         ...base,
+//     }
+
+// })
+
 export const useAgencyStore = defineStore("agency-store", () => {
-    const nuxtApp = useNuxtApp()
-    const apollo = nuxtApp.$apollo
+    const data = ref([]) // reactive ref to hold transformed data
     const loader = UseLoaderStore()
 
-    const base = useBaseStore(AGENCY_DATA)
+    const fetchData = async () => {
+        loader.ShowLoader()
+        try {
+            const result = await $fetch('/api/agency') // call server endpoint
+            data.value = result as any
+            loader.HideLoader()
+        } catch (err) {
+            console.error("Error fetching agency pages:", err)
+            loader.HideLoader()
+        }
+    }
+
+    fetchData()
+
+    const base = useBaseStore(data)
 
     return {
-        ...base
+        ...base,
     }
 })
 

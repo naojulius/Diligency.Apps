@@ -13,9 +13,9 @@ export const UseFooterStore = defineStore('footer-store', () => {
     const menus = UseMenuStore().GetMenus
 
     const GetData = async () => {
-        loader.ShowLoader()
+        // loader.ShowLoader()
         data.value = FOOTER_DATA
-        loader.HideLoader()
+        //loader.HideLoader()
     }
 
     GetData()

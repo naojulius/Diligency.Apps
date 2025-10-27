@@ -8,9 +8,9 @@ export const UseContactStore = defineStore('contact-store', () => {
     const data = ref(CONTACT_DATA)
 
     const GetData = async () => {
-        loader.ShowLoader()
+        // loader.ShowLoader()
         data.value = CONTACT_DATA
-        loader.HideLoader()
+        //loader.HideLoader()
     }
 
     GetData()

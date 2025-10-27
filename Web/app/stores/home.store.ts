@@ -154,9 +154,9 @@ export const UseHomeStore = defineStore("home-store", () => {
     //#region GetMainData
 
     const GetData = async () => {
-        loader.ShowLoader()
+        //loader.ShowLoader()
         data.value = HOME_DATA;
-        loader.HideLoader()
+        //loader.HideLoader()
         // loader.ShowLoader()
 
         // try {

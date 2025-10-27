@@ -5,7 +5,7 @@ export default defineNuxtPlugin(() => {
         uri: 'https://if67oozt.api.sanity.io/v2023-08-01/graphql/production/default',
         cache: new InMemoryCache(),
         headers: {
-            Authorization: `Bearer skrBdWGLmacO4KOxn0BMxNRWMe3xYmSsl9BrfMTSTSThla08NiHGRxsY9IOUIBN1yUn4UPZjbUEdADj1t8DkIjkAsrpBvvssrSPLmKe6aCIBtUq7AyHQ5DiSpRYMCdw70gMUgHHkwVztPouRa5IBg2eejn4qrV7PKMtU5Yr7wISbUMnWntpI`,
+            Authorization: `Bearer sk2JBBAirXF1pO4LBbk2ECWf2ZGPtOyVUxtFfvZ1waSn3jKrSzWMmLYaFHfaw69fEF1RiESVFevNKdLgrBLNbBs6BAsQp963YbSEuH7mI9aEShaf7xBBdS2Is3D4CFWptxiDImIiET3F9meSM6bCcpsuYzxpj0V0FozGoAVg2L1b5MYzsLUl`,
         },
     })
 
