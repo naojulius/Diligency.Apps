@@ -19,6 +19,7 @@
     "@sanity/client": "^7.11.2",
     "@tailwindcss/vite": "^4.1.11",
     "@vue/apollo-composable": "^4.2.2",
+    "@vueuse/core": "^14.0.0",
     "daisyui": "^5.0.50",
     "graphql": "^16.11.0",
     "graphql-request": "^7.3.1",
