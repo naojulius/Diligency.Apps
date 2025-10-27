@@ -1,0 +1,117 @@
+{
+    "about": {
+        "hero": {
+            "title": [
+                {
+                    "fr": "À propos de Diligency",
+                    "en": "About Diligency"
+                }
+            ],
+            "subtitle": {
+                "fr": "Diligency est une agence digitale indépendante fondée sur une conviction forte : l’efficacité digitale naît d’un équilibre entre rigueur, modernité et compréhension métier. Nous accompagnons les PME, cabinets, structures ambitieuses et entrepreneurs exigeants dans la création de plateformes web, d’applications sur mesure et de systèmes digitaux fiables. Notre nom est notre promesse : livrer avec diligence, précision et intégrité.",
+                "en": "Diligency is an independent digital agency founded on a strong conviction: digital efficiency is born from a balance between rigor, modernity, and business understanding. We support SMEs, firms, ambitious organizations, and demanding entrepreneurs in creating web platforms, custom applications, and reliable digital systems. Our name is our promise: to deliver with diligence, precision, and integrity."
+            },
+            "image": "/images/hero/ecommerce.jpg"
+        },
+        "blocks": [
+            {
+                "type": "list-a",
+                "title": [
+                    {
+                        "fr": "Nos engagements",
+                        "en": "Our Engagement"
+                    }
+                ],
+                "subtitle": {
+                    "fr": "Chez Diligency, nous conjuguons performance et simplicité. Chaque projet repose sur une transparence totale et une communication claire. Nous choisissons des technologies pertinentes, jamais superflues, pour répondre aux besoins réels. Nos livrables sont pensés comme des solutions concrètes, utiles et alignées avec vos objectifs stratégiques et opérationnels.",
+                    "en": "At Diligency, we combine performance with simplicity. Every project is built on complete transparency and clear communication. We select relevant technologies—never superfluous—to address real needs. Our deliverables are designed as practical, useful solutions aligned with your strategic and operational objectives."
+                },
+                "items": [
+                    {
+                        "icon": "lucide:rocket",
+                        "name": {
+                            "fr": "Performance sans complexité inutile",
+                            "en": "Performance without unnecessary complexity"
+                        },
+                        "text": {
+                            "fr": "Chez Diligency, nous privilégions la clarté et l’efficacité. Nous éliminons les détours techniques superflus pour nous concentrer sur ce qui apporte une réelle valeur métier via des solutions solides et épurées.",
+                            "en": "At Diligency, we prioritize clarity and efficiency. We remove unnecessary technical detours to focus on what truly adds business value through solid and streamlined solutions."
+                        }
+                    },
+                    {
+                        "icon": "lucide:handshake",
+                        "name": {
+                            "fr": "Transparence totale tout au long du projet",
+                            "en": "Full transparency throughout the project"
+                        },
+                        "text": {
+                            "fr": "Nous communiquons avec transparence à chaque étape — des objectifs aux livrables, des délais aux éventuels obstacles. La confiance naît de la transparence, et c’est sur cette base que nous construisons chaque collaboration.",
+                            "en": "We communicate transparently at every stage — from objectives to deliverables, timelines to potential obstacles. Trust is born from transparency, and it's on this foundation that we build every collaboration."
+                        }
+                    },
+                    {
+                        "icon": "lucide:brain",
+                        "name": {
+                            "fr": "Intelligence technologique pragmatique",
+                            "en": "Pragmatic technological intelligence"
+                        },
+                        "text": {
+                            "fr": "La technologie n’est pas une fin en soi. Nous sélectionnons avec soin les outils adaptés à votre contexte métier, en nous appuyant sur l’expérience et la pertinence plutôt que sur la tendance.",
+                            "en": "Technology is not an end in itself. We carefully select the tools suited to your business context, relying on experience and relevance rather than trends."
+                        }
+                    },
+                    {
+                        "icon": "lucide:target",
+                        "name": {
+                            "fr": "Livrables pensés pour les objectifs business réels",
+                            "en": "Deliverables designed for real business goals"
+                        },
+                        "text": {
+                            "fr": "Nos livrables ne sont pas de simples productions techniques — ce sont des solutions concrètes et utiles, alignées avec vos objectifs opérationnels. Chaque fonctionnalité est pensée comme un levier de croissance.",
+                            "en": "Our deliverables are not mere technical outputs — they are concrete, useful solutions aligned with your operational goals. Each feature is designed as a lever for growth."
+                        }
+                    }
+                ]
+            },
+            {
+                "title": [
+                    {
+                        "fr": "Équipe Diligency",
+                        "en": "Diligency Team"
+                    }
+                ],
+                "subtitle": {
+                    "fr": "Notre équipe est composée d’experts engagés — développeurs, designers, chefs de projet et consultants freelances — sélectionnés pour leur rigueur, leur sens de la structure et leur adaptabilité. Chaque projet est piloté par un référent unique, garant de la qualité et de la fluidité de la production.",
+                    "en": "Our team is made up of dedicated experts — developers, designers, project managers, and freelance consultants — selected for their rigor, sense of structure, and adaptability. Each project is overseen by a single point of contact, ensuring quality and smooth project delivery."
+                }
+            }
+        ],
+        "footer": {
+            "type": "footer-a",
+            "text": {
+                "fr": "Confiez votre projet digital à Diligency. Notre équipe transforme vos idées en solutions fiables, performantes et élégantes, pensées pour vos objectifs réels et votre croissance durable.",
+                "en": "Entrust your digital project to Diligency. Our team turns your ideas into reliable, high-performing, and elegant solutions designed around your real goals and lasting growth."
+            },
+            "cta": [
+                {
+                    "icon": "lucide:mail",
+                    "text": {
+                        "fr": "Contactez-nous",
+                        "en": "Contuct us"
+                    },
+                    "link": "/contact",
+                    "type": "cta-tertiary"
+                },
+                {
+                    "icon": "lucide:arrow-right",
+                    "text": {
+                        "fr": "Nous joindre",
+                        "en": "join us"
+                    },
+                    "link": "/agency/jobcarrier",
+                    "type": "cta-link"
+                }
+            ]
+        }
+    }
+}

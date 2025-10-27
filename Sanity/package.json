@@ -10,17 +10,18 @@
     "build": "sanity build",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy",
-    "populate": "ts-node --compiler-options \"{\\\"target\\\":\\\"ES2017\\\"}\" run-populate.ts"
+    "populate": "ts-node --compiler-options \"{\\\"target\\\":\\\"ES2017\\\"}\" run-populate.ts",
+    "seed": "ts-node --compiler-options \"{\\\"target\\\":\\\"ES2017\\\"}\" run-seed.ts"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^4.10.2",
+    "@sanity/vision": "^4.11.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^3.11.0",
-    "sanity": "^4.10.2",
+    "sanity": "^4.11.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {

@@ -1,6 +1,3 @@
-import { Locale } from "./locale"
+export interface TitleType {
 
-export interface Title {
-    property: string
-    value: Array<Locale>
 }

@@ -1,11 +1,15 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { pathToFileURL } from 'url';
 
-async function runPopulateFile(filePath: string) {
+/**
+ * Import a file and call all exported async functions
+ */
+async function runSeedFile(filePath: string) {
     console.log(`Running ${filePath}`);
-    const module = await import(filePath);
+    const module = await import(pathToFileURL(filePath).href);
 
-    // Find and call exported async function
+    // Call all exported async functions
     for (const key of Object.keys(module)) {
         const fn = module[key];
         if (typeof fn === 'function') {
@@ -14,36 +18,46 @@ async function runPopulateFile(filePath: string) {
     }
 }
 
-function findPopulateFiles(dir: string, results: string[] = []): string[] {
+/**
+ * Recursively find all .seed.ts files
+ */
+function findSeedFiles(dir: string, results: string[] = []): string[] {
     const list = fs.readdirSync(dir);
     for (const file of list) {
         const fullPath = path.join(dir, file);
         const stat = fs.statSync(fullPath);
+
         if (stat.isDirectory()) {
             if (file !== 'node_modules') {
-                findPopulateFiles(fullPath, results);
+                findSeedFiles(fullPath, results);
             }
-        } else if (file === 'populate.ts') {
+        } else if (file.endsWith('.seed.ts')) {
             results.push(fullPath);
         }
     }
     return results;
 }
 
-async function runAllPopulate() {
+/**
+ * Run all seed files in the project
+ */
+async function runAllSeeds() {
     const projectRoot = process.cwd();
-    const files = findPopulateFiles(projectRoot);
+    const files = findSeedFiles(projectRoot);
 
     if (files.length === 0) {
-        console.log('No populate.ts files found.');
+        console.log('No .seed.ts files found.');
         return;
     }
 
     for (const file of files) {
-        // Resolve to absolute path and import using URL for ES modules
-        const absPath = path.resolve(file);
-        await runPopulateFile(absPath);
+        await runSeedFile(file);
     }
+
+    console.log('All seed files executed.');
 }
 
-runAllPopulate();
+runAllSeeds().catch((err) => {
+    console.error('Error running seeds:', err);
+    process.exit(1);
+});

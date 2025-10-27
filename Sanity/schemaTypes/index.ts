@@ -1,26 +1,20 @@
-import { CtaSchema } from "./common/cta";
-import { IconSchema } from "./common/icon";
-import { LinkSchema } from "./common/link";
-import { LocaleSchema } from "./common/locale";
-import { HomeSchema } from "./home";
-import { HeroSchemaField } from "./home/hero";
-import { HomeHeroType } from "./home/hero/hero.type";
-import { StrategySchemaField } from "./home/strategy";
-import { HomeStrategyType } from "./home/strategy/strategy.type";
-import { MailSchema } from "./mails";
-import { OptionSchema } from "./options";
+import { block } from "./components/block.schema";
+import { hero } from "./components/hero.schema";
+import { listA } from "./components/lists/list-a.schema";
+import { locale } from "./components/locale.scema";
+import { agencyPage } from "./pages/agency.page";
 
 export const schemaTypes = [
-  CtaSchema,
-  IconSchema,
-  LinkSchema,
-  LocaleSchema,
-  HomeStrategyType,
-  HomeHeroType,
-  StrategySchemaField,
-  HeroSchemaField,
+    //#region Components
+    locale,
+    hero,
+    block,
+    listA,
+    //#endregion
 
-  OptionSchema,
-  HomeSchema,
-  MailSchema
+    //#region Schema
+
+    agencyPage
+
+    //#endregion
 ]

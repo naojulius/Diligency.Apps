@@ -1,4 +1,4 @@
-export interface Locale {
+export interface LocaleType {
     en: string
     fr: string
 }
