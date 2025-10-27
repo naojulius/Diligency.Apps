@@ -1,5 +1,5 @@
 import { defineField, defineType } from 'sanity'
-import { blockList } from '../default-list/list-type'
+import { ListType } from '../../interfaces/type/list-type'
 export const block = defineType({
     name: 'blockType',
     title: 'Blocks',
@@ -10,13 +10,14 @@ export const block = defineType({
             title: 'Type',
             type: 'string',
             options: {
-                list: blockList,
+                list: ListType,
                 layout: 'dropdown'
             }
         }),
         defineField({ name: 'title', title: 'Title', type: 'array', of: [{ type: 'locale' }] }),
         defineField({ name: 'subtitle', title: 'Subtitle', type: 'locale' }),
-
+        defineField({ name: 'image', title: 'Image', type: 'string', hidden: ({ parent }) => !parent?.image }),
+        defineField({ name: 'cta', title: 'Cta', type: 'array', of: [{ type: 'cta' }], hidden: ({ parent }) => !parent?.cta }),
         //List A block
         defineField({
             name: 'items',

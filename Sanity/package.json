@@ -9,8 +9,6 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy",
-    "populate": "ts-node --compiler-options \"{\\\"target\\\":\\\"ES2017\\\"}\" run-populate.ts",
     "seed": "ts-node --compiler-options \"{\\\"target\\\":\\\"ES2017\\\"}\" run-seed.ts"
   },
   "keywords": [

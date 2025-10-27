@@ -2,7 +2,7 @@ import { createClient } from "@sanity/client"
 import { randomUUID } from "crypto"
 import { logError, logInfo, logSuccess } from "../../logger"
 import { Client } from "../configs/client"
-import { Blocktype } from "../interfaces/block"
+import { BlockType } from "../interfaces/block"
 import { LocaleType } from "../interfaces/locale"
 import data from "./agency.data.json"
 
@@ -28,20 +28,43 @@ export default async function seed() {
                 }
             }
 
-            // Prepare blocks if they exist
-            const blocksWithKeys = section.blocks?.map((block: Blocktype) => ({
+            // Prepare footer if it exists
+            let footerWithKeys
+            if (section.footer) {
+                footerWithKeys = {
+                    ...section.footer,
+                    _key: randomUUID(),
+                    text: section.footer.text
+                        ? { ...section.footer.text, _key: randomUUID() }
+                        : undefined,
+                    cta: section.footer.cta?.map((ctaItem: any) => ({
+                        ...ctaItem,
+                        _key: randomUUID(),
+                        text: ctaItem.text
+                            ? { ...ctaItem.text, _key: randomUUID() }
+                            : undefined,
+                    })) || [],
+                }
+            }
+
+            // Also handle blocks that may have CTA arrays
+            const blocksWithKeys = section.blocks?.map((block: BlockType) => ({
                 ...block,
                 _key: randomUUID(),
                 title: block.title?.map(t => ({ ...t, _key: randomUUID() })) || [],
                 subtitle: block.subtitle ? { ...block.subtitle, _key: randomUUID() } : undefined,
-                items: block.items?.map(item => ({
-                    ...item,
+                items: block.items?.map(item => ({ ...item, _key: randomUUID() })) || [],
+                cta: block.cta?.map((ctaItem: any) => ({
+                    ...ctaItem,
                     _key: randomUUID(),
+                    text: ctaItem.text
+                        ? { ...ctaItem.text, _key: randomUUID() }
+                        : undefined,
                 })) || [],
             }));
 
             // If neither hero nor blocks, skip silently
-            if (!heroWithKeys && !blocksWithKeys) continue
+            if (!heroWithKeys && !blocksWithKeys && !footerWithKeys) continue
 
             // Generate a unique ID for this document
             const uid = `${key}`
@@ -51,6 +74,7 @@ export default async function seed() {
                 _id: uid,
                 ...(heroWithKeys && { hero: heroWithKeys }),
                 ...(blocksWithKeys && { blocks: blocksWithKeys }),
+                ...(footerWithKeys && { footer: footerWithKeys }),
             }
 
             const result = await client.createOrReplace(doc)
