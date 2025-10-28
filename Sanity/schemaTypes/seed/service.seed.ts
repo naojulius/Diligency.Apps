@@ -3,11 +3,11 @@ import { randomUUID } from "crypto"
 import { logError, logInfo, logSuccess } from "../../logger"
 import { Client } from "../configs/client"
 import { BlockType } from "../interfaces/block"
-import data from "./agency.data.json"
+import data from "./service.data.json"
 
 export default async function seed() {
     try {
-        logInfo("Starting dynamic seed for agency pages...")
+        logInfo("Starting dynamic seed for service pages...")
 
         const client = createClient(Client)
 
@@ -85,7 +85,7 @@ export default async function seed() {
             const uid = `${key}`
 
             const doc = {
-                _type: "agencyPage",
+                _type: "servicePage",
                 _id: uid,
                 ...(heroWithKeys && { hero: heroWithKeys }),
                 ...(blocksWithKeys && { blocks: blocksWithKeys }),
@@ -99,6 +99,6 @@ export default async function seed() {
         if (err instanceof Error) logError(err)
         else logError(String(err))
     } finally {
-        logInfo("Finished dynamic agencyPage seed.")
+        logInfo("Finished dynamic servicePage seed.")
     }
 }

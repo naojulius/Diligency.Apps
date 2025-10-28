@@ -1,8 +1,8 @@
 import { MdMail } from 'react-icons/md';
 import { defineField, defineType } from 'sanity';
-import { MailPreview } from '../../../previews/mail-preview';
+import { MailPreview } from '../../previews/mail-preview';
 
-export const MailSchema = defineType({
+export const mailSchema = defineType({
     name: 'mail',
     title: 'E-Mails',
     type: 'document',

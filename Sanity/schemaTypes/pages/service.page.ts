@@ -1,9 +1,9 @@
 import { MdChevronRight } from 'react-icons/md'
 import { defineField, defineType } from 'sanity'
 
-export const agencyPage = defineType({
-    name: 'agencyPage',
-    title: 'Agency Page',
+export const servicePage = defineType({
+    name: 'servicePage',
+    title: 'Service Page',
     type: 'document',
     icon: MdChevronRight,
     fields: [
@@ -34,13 +34,12 @@ export const agencyPage = defineType({
             const { _id, titles, subtitle } = selection
 
             // Concatenate all titles for preview
-            let title = _id.toUpperCase()
-            if (title == "JOBCARRIER") {
-                title = "JOB & CARRIER"
-            }
+            const concatenatedTitle = Array.isArray(titles)
+                ? titles.map((t: any) => t.fr || t.en).join(' | ')
+                : 'No title'
 
             return {
-                title: `${title}`,
+                title: `${_id.toUpperCase()}`,
                 subtitle: subtitle || '',
             }
         },

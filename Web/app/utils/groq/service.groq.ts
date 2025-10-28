@@ -1,5 +1,5 @@
-export const GET_AGENCY_GROQ = `
-*[_type == "agencyPage"]{
+export const GET_SERVICE_GROQ = `
+*[_type == "servicePage"]{
     _id,
     hero{title, subtitle, image, cta},
     blocks[]{

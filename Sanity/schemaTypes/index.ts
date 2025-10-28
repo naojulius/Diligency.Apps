@@ -5,6 +5,9 @@ import { hero } from "./components/common/hero.schema";
 import { locale } from "./components/common/locale.scema";
 import { blocksListSchema } from "./components/lists";
 import { agencyPage } from "./pages/agency.page";
+import { mailSchema } from "./pages/mail.page";
+import { optionSchema } from "./pages/option.page";
+import { servicePage } from "./pages/service.page";
 
 export const schemaTypes = [
     //#region Components
@@ -18,7 +21,9 @@ export const schemaTypes = [
 
     //#region Schema
 
-    agencyPage
-
+    agencyPage,
+    servicePage,
+    mailSchema,
+    optionSchema,
     //#endregion
 ]
