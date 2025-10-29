@@ -47,7 +47,24 @@ export default async function seed() {
                     subtitle: block.subtitle
                         ? { ...block.subtitle, _key: randomUUID() }
                         : undefined,
-                    items: addKeysToArray(block.items),
+                    items: block.items
+                        ? block.items.map((item: any) => ({
+                            ...item,
+                            _key: item._key || randomUUID(),
+                            title: item.title
+                                ? { ...item.title, _key: randomUUID() }
+                                : undefined,
+                            list: item.list
+                                ? item.list.map((listItem: any) => ({
+                                    ...listItem,
+                                    _key: listItem._key || randomUUID(),
+                                    name: listItem.name
+                                        ? { ...listItem.name, _key: randomUUID() }
+                                        : undefined,
+                                }))
+                                : undefined,
+                        }))
+                        : undefined,
                     cta: addKeysToArray(
                         block.cta?.map((ctaItem: any) => ({
                             ...ctaItem,

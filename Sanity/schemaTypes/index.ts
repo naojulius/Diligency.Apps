@@ -2,6 +2,7 @@ import { block } from "./components/common/block.schema";
 import { cta } from "./components/common/cta.schema";
 import { footer } from "./components/common/footer.schema";
 import { hero } from "./components/common/hero.schema";
+import { localeOrArray } from "./components/common/locale-or-array.schema";
 import { locale } from "./components/common/locale.scema";
 import { blocksListSchema } from "./components/lists";
 import { agencyPage } from "./pages/agency.page";
@@ -16,6 +17,7 @@ export const schemaTypes = [
     block,
     cta,
     footer,
+    localeOrArray,
     ...blocksListSchema,
     //#endregion
 

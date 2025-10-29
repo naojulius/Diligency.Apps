@@ -1,11 +1,11 @@
-import { MdChevronRight } from 'react-icons/md'
-import { defineField, defineType } from 'sanity'
+import { MdPageview } from "react-icons/md";
+import { defineField, defineType } from 'sanity';
 
 export const agencyPage = defineType({
     name: 'agencyPage',
     title: 'Agency Page',
     type: 'document',
-    icon: MdChevronRight,
+    icon: MdPageview,
     fields: [
         defineField({
             name: 'hero',
