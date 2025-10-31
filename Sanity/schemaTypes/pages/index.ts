@@ -1,13 +1,15 @@
 import { agencyPage } from "./agency.page";
-import { mailSchema } from "./mail.page";
-import { menuSchema } from "./menu.page";
-import { optionSchema } from "./option.page";
+import { contactPage } from "./contact.page";
+import { mailPage } from "./mail.page";
+import { menuPage } from "./menu.page";
+import { optionPage } from "./option.page";
 import { servicePage } from "./service.page";
 
 export const pages = [
     agencyPage,
     servicePage,
-    mailSchema,
-    optionSchema,
-    menuSchema
+    mailPage,
+    optionPage,
+    menuPage,
+    contactPage
 ]

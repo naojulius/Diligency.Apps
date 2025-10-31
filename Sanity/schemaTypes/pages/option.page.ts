@@ -1,7 +1,7 @@
 import { MdSettings } from 'react-icons/md';
 import { defineField, defineType } from 'sanity';
 
-export const optionSchema = defineType({
+export const optionPage = defineType({
     name: 'option',
     title: 'Options',
     type: 'document',

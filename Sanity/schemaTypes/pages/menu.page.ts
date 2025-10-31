@@ -1,7 +1,7 @@
 import { MdFormatListNumbered } from "react-icons/md";
 import { defineField, defineType } from 'sanity';
 
-export const menuSchema = defineType({
+export const menuPage = defineType({
     name: 'menuPage',
     title: 'Menu Page',
     type: 'document',

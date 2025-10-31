@@ -1,7 +1,7 @@
 import { MdPeople } from "react-icons/md";
 import { defineField, defineType } from 'sanity';
 
-export const agencyPage = defineType({
+export const contactPage = defineType({
     name: 'contactPage',
     title: 'Contact Page',
     type: 'document',
@@ -13,20 +13,26 @@ export const agencyPage = defineType({
             type: 'locale',
         }),
         defineField({
-            name: 'blocks',
-            title: 'BLock Section',
-            type: 'array',
-            of: [{ type: 'blockType' }]
+            name: 'subtitle',
+            title: 'Sous Titre',
+            type: 'locale',
         }),
         defineField({
-            name: 'faq',
-            title: 'FAQ',
-            type: 'faq',
+            name: 'form',
+            title: 'Forms/Champs',
+            type: 'form',
         }),
-        defineField({
-            name: 'footer',
-            title: 'Footer Section',
-            type: 'footer',
-        }),
+
     ],
+    preview: {
+        select: {
+            subtitleFr: 'title.fr',
+        },
+        prepare({ subtitleFr }) {
+            return {
+                title: 'Données',
+                subtitle: 'Contact',
+            }
+        },
+    },
 })

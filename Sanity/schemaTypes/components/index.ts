@@ -1,4 +1,5 @@
 import { block } from "./common/block.schema";
+import { form } from "./common/contact";
 import { cta } from "./common/cta.schema";
 import { faq } from "./common/faq";
 import { footer } from "./common/footer.schema";
@@ -17,5 +18,6 @@ export const components = [
     localeOrArray,
     ...faq,
     ...blocksListSchema,
-    ...menu
+    ...menu,
+    ...form
 ]

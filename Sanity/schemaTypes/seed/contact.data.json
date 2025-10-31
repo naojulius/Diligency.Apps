@@ -1,82 +1,105 @@
 {
-    "title": {
-        "fr": "Entrons en contact",
-        "en": "Get in Touch"
-    },
-    "subtitle": {
-        "fr": "Pour toute demande d’information ou de collaboration, notre équipe est disponible et prête à vous répondre rapidement.",
-        "en": "For any questions or collaboration requests, our team is available and ready to respond quickly."
-    },
-    "form": {
+    "contact-data": {
         "title": {
             "fr": "Entrons en contact",
-            "en": "Get in touch"
+            "en": "Get in Touch"
         },
-        "name": {
-            "fr": "Nom",
-            "en": "First Name"
+        "subtitle": {
+            "fr": "Pour toute demande d’information ou de collaboration, notre équipe est disponible et prête à vous répondre rapidement.",
+            "en": "For any questions or collaboration requests, our team is available and ready to respond quickly."
         },
-        "lastname": {
-            "fr": "Prénom",
-            "en": "Last Name"
-        },
-        "email": {
-            "fr": "E-mail",
-            "en": "Email"
-        },
-        "message": {
-            "fr": "Votre message",
-            "en": "Your message"
-        },
-        "sendMessage": {
-            "fr": "Envoyer le message",
-            "en": "Send message"
-        },
-        "type": [
-            {
-                "label": {
-                    "fr": "Appel stratégique",
-                    "en": "Strategic call"
+        "form": {
+            "title": {
+                "fr": "Entrons en contact",
+                "en": "Get in touch"
+            },
+            "name": {
+                "fr": "Nom",
+                "en": "First Name"
+            },
+            "lastname": {
+                "fr": "Prénom",
+                "en": "Last Name"
+            },
+            "email": {
+                "fr": "E-mail",
+                "en": "Email"
+            },
+            "message": {
+                "fr": "Votre message",
+                "en": "Your message"
+            },
+            "sendMessage": {
+                "fr": "Envoyer le message",
+                "en": "Send message"
+            },
+            "type": [
+                {
+                    "label": {
+                        "fr": "Appel stratégique",
+                        "en": "Strategic call"
+                    },
+                    "value": "strategique"
                 },
-                "value": "strategique"
-            },
-            {
-                "label": {
-                    "fr": "Appel de découverte (Candidats / Public)",
-                    "en": "Discovery call (Candidates / Public)"
+                {
+                    "label": {
+                        "fr": "Appel de découverte (Candidats / Public)",
+                        "en": "Discovery call (Candidates / Public)"
+                    },
+                    "value": "decouverte"
+                }
+            ],
+            "errors": [
+                {
+                    "key": "INVALID_NAME",
+                    "text": {
+                        "fr": "Le nom doit contenir au moins 2 caractères",
+                        "en": "The first name must contain at least 2 characters"
+                    }
                 },
-                "value": "decouverte"
-            }
-        ],
-        "errors": [
-            {
-                "key": "INVALID_NAME",
-                "text": {
-                    "fr": "Le nom doit contenir au moins 2 caractères",
-                    "en": "The first name must contain at least 2 characters"
+                {
+                    "key": "INVALID_LAST_NAME",
+                    "text": {
+                        "fr": "Le prénom doit contenir au moins 2 caractères",
+                        "en": "The last name must contain at least 2 characters"
+                    }
+                },
+                {
+                    "key": "INVALID_EMAIL",
+                    "text": {
+                        "fr": "Adresse email invalide",
+                        "en": "Invalid email address"
+                    }
+                },
+                {
+                    "key": "INVALID_MESSAGE",
+                    "text": {
+                        "fr": "Le message doit contenir au moins 10 caractères",
+                        "en": "The message must contain at least 10 characters"
+                    }
                 }
+            ]
+        },
+        "contact": {
+            "open": {
+                "fr": "Lundi au Vendredi : 9h – 18h Samedi et Dimanche : Fermé",
+                "en": "Monday to Friday: 9 a.m. – 6 p.m. Saturday and Sunday: Closed"
             },
-            {
-                "key": "INVALID_LAST_NAME",
-                "text": {
-                    "fr": "Le prénom doit contenir au moins 2 caractères",
-                    "en": "The last name must contain at least 2 characters"
+            "emails": "contact@diligency.fr",
+            "phones": "+33 1 23 45 67 89",
+            "address": "Paris, France",
+            "socials": [
+                {
+                    "name": "facebook",
+                    "link": "",
+                    "icon": "lucide:facebook"
+                },
+                {
+                    "name": "linkedin",
+                    "link": "",
+                    "icon": "lucide:linkedin"
                 }
-            },
-            {
-                "key": "INVALID_EMAIL",
-                "text": {
-                    "fr": "Adresse email invalide",
-                    "en": "Invalid email address"
-                }
-            },
-            {
-                "key": "INVALID_MESSAGE",
-                "text": {
-                    "fr": "Le message doit contenir au moins 10 caractères",
-                    "en": "The message must contain at least 10 characters"
-                }
-            }
-        ]
+            ]
+        }
     }
 }
