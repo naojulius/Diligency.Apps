@@ -14,12 +14,8 @@ export const block = defineType({
                 layout: 'dropdown'
             }
         }),
-
         defineField({ name: 'title', title: 'Title', type: 'array', of: [{ type: 'locale' }] }),
-
-        defineField({ name: 'subtitle', title: 'Subtitle', type: 'locale' }),
-        defineField({ name: 'subtitles', title: 'Subtitle', type: 'array', of: [{ type: 'locale' }] }),
-
+        defineField({ name: 'subtitle', title: 'Subtitle', type: 'array', of: [{ type: 'locale' }] }),
         defineField({ name: 'image', title: 'Image', type: 'string', hidden: ({ parent }) => !parent?.image }),
         defineField({ name: 'cta', title: 'Cta', type: 'array', of: [{ type: 'cta' }], hidden: ({ parent }) => !parent?.cta }),
         //List A block

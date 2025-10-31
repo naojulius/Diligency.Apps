@@ -33,16 +33,20 @@
                         "en": "Why a Web Application?"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Dès qu’un site web doit faire plus que présenter, vous avez besoin d’une application. Une application web intervient là où les sites vitrines atteignent leurs limites : dès qu’il faut gérer des utilisateurs, automatiser des processus, sécuriser des données ou connecter des services. Chez Diligency, nous concevons des plateformes digitales sur-mesure : robustes, évolutives et pensées métier. Marketplace, portail client, système de réservation ou CRM sur navigateur — si votre projet exige plus qu’un simple affichage, nous le structurons et le développons comme une vraie application.",
-                    "en": "Whenever a website needs to do more than simply showcase content, you need a web application. A web app steps in where traditional websites reach their limits — when it’s time to manage users, automate processes, secure data, or connect services. At Diligency, we design custom digital platforms that are robust, scalable, and business-oriented. Whether it’s a marketplace, client portal, booking system, or browser-based CRM — if your project demands more than a simple display, we structure and develop it as a true application."
-                },
+                "subtitle": [
+                    {
+                        "fr": "Dès qu’un site web doit faire plus que présenter, vous avez besoin d’une application. Une application web intervient là où les sites vitrines atteignent leurs limites : dès qu’il faut gérer des utilisateurs, automatiser des processus, sécuriser des données ou connecter des services. Chez Diligency, nous concevons des plateformes digitales sur-mesure : robustes, évolutives et pensées métier. Marketplace, portail client, système de réservation ou CRM sur navigateur — si votre projet exige plus qu’un simple affichage, nous le structurons et le développons comme une vraie application.",
+                        "en": "Whenever a website needs to do more than simply showcase content, you need a web application. A web app steps in where traditional websites reach their limits — when it’s time to manage users, automate processes, secure data, or connect services. At Diligency, we design custom digital platforms that are robust, scalable, and business-oriented. Whether it’s a marketplace, client portal, booking system, or browser-based CRM — if your project demands more than a simple display, we structure and develop it as a true application."
+                    }
+                ],
                 "items": [
                     {
-                        "title": {
-                            "fr": "cas d'usage fréquents:",
-                            "en": "Common use cases"
-                        },
+                        "title": [
+                            {
+                                "fr": "cas d'usage fréquents:",
+                                "en": "Common use cases"
+                            }
+                        ],
                         "list": [
                             {
                                 "name": {
@@ -75,10 +79,12 @@
                         ]
                     },
                     {
-                        "title": {
-                            "fr": "Avantage concrets:",
-                            "en": "Concrete advantages:"
-                        },
+                        "title": [
+                            {
+                                "fr": "Avantage concrets:",
+                                "en": "Concrete advantages:"
+                            }
+                        ],
                         "list": [
                             {
                                 "name": {
@@ -120,10 +126,12 @@
                         "en": "Our Method"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Nous adoptons une méthode agile, rigoureuse et transparente. Chaque projet avance de façon structurée et en étroite collaboration avec nos clients, afin d’assurer une compréhension approfondie des enjeux, une conception centrée sur l’utilisateur et une exécution parfaitement maîtrisée. L’implication continue de nos clients à chaque étape nous permet de garantir la qualité, la lisibilité et la pertinence des livrables jusqu’à leur mise en production.",
-                    "en": "We follow an agile, rigorous, and transparent approach. Every project progresses in a structured way and in close collaboration with our clients, ensuring a deep understanding of challenges, user-centered design, and perfectly executed delivery. Our clients’ continuous involvement at every stage guarantees the quality, clarity, and relevance of deliverables all the way to production."
-                },
+                "subtitle": [
+                    {
+                        "fr": "Nous adoptons une méthode agile, rigoureuse et transparente. Chaque projet avance de façon structurée et en étroite collaboration avec nos clients, afin d’assurer une compréhension approfondie des enjeux, une conception centrée sur l’utilisateur et une exécution parfaitement maîtrisée. L’implication continue de nos clients à chaque étape nous permet de garantir la qualité, la lisibilité et la pertinence des livrables jusqu’à leur mise en production.",
+                        "en": "We follow an agile, rigorous, and transparent approach. Every project progresses in a structured way and in close collaboration with our clients, ensuring a deep understanding of challenges, user-centered design, and perfectly executed delivery. Our clients’ continuous involvement at every stage guarantees the quality, clarity, and relevance of deliverables all the way to production."
+                    }
+                ],
                 "items": [
                     {
                         "list": [
@@ -334,10 +342,12 @@
                         "en": "Who is this service for?"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Ce service s’adresse à toutes les structures souhaitant valoriser leur expertise et renforcer leur présence digitale. Que vous soyez indépendant, cabinet professionnel ou PME, nous vous accompagnons dans la création d’outils en ligne performants et adaptés à vos besoins métiers.",
-                    "en": "This service is designed for any organization looking to showcase their expertise and strengthen their digital presence. Whether you are a freelancer, professional firm, or SME, we guide you in creating high-performance online tools tailored to your business needs."
-                },
+                "subtitle": [
+                    {
+                        "fr": "Ce service s’adresse à toutes les structures souhaitant valoriser leur expertise et renforcer leur présence digitale. Que vous soyez indépendant, cabinet professionnel ou PME, nous vous accompagnons dans la création d’outils en ligne performants et adaptés à vos besoins métiers.",
+                        "en": "This service is designed for any organization looking to showcase their expertise and strengthen their digital presence. Whether you are a freelancer, professional firm, or SME, we guide you in creating high-performance online tools tailored to your business needs."
+                    }
+                ],
                 "items": [
                     {
                         "title": [
@@ -506,10 +516,12 @@
                         "en": "Who is this service for?"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Ce service s’adresse aux structures qui souhaitent gagner en efficacité grâce à la technologie, en automatisant leurs processus internes, en connectant leurs outils métiers et en tirant parti du potentiel de l’intelligence artificielle.",
-                    "en": "This service is designed for organizations aiming to improve efficiency through technology—by automating internal processes, connecting business tools, and leveraging the potential of artificial intelligence."
-                },
+                "subtitle": [
+                    {
+                        "fr": "Ce service s’adresse aux structures qui souhaitent gagner en efficacité grâce à la technologie, en automatisant leurs processus internes, en connectant leurs outils métiers et en tirant parti du potentiel de l’intelligence artificielle.",
+                        "en": "This service is designed for organizations aiming to improve efficiency through technology—by automating internal processes, connecting business tools, and leveraging the potential of artificial intelligence."
+                    }
+                ],
                 "items": [
                     {
                         "list": [
@@ -542,10 +554,12 @@
                         "en": "Why choose Diligency for your IT & AI solutions?"
                     }
                 ],
-                "subtitle": {
-                    "fr": "La technologie ne vaut que si elle sert une stratégie claire. Nous concevons des solutions robustes, sécurisées et intelligentes : connecteurs, automatisations, assistants internes ou plateformes boostées par l’IA. Nous vous aidons à gagner en temps, en fluidité et en prise de décision.",
-                    "en": "Technology only matters when it serves a clear strategy. We design robust, secure, and intelligent solutions—connectors, automations, internal assistants, or AI-powered platforms—to help you save time, streamline operations, and make better decisions."
-                }
+                "subtitle": [
+                    {
+                        "fr": "La technologie ne vaut que si elle sert une stratégie claire. Nous concevons des solutions robustes, sécurisées et intelligentes : connecteurs, automatisations, assistants internes ou plateformes boostées par l’IA. Nous vous aidons à gagner en temps, en fluidité et en prise de décision.",
+                        "en": "Technology only matters when it serves a clear strategy. We design robust, secure, and intelligent solutions—connectors, automations, internal assistants, or AI-powered platforms—to help you save time, streamline operations, and make better decisions."
+                    }
+                ]
             },
             {
                 "type": "list-e",

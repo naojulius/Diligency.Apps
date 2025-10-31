@@ -9,17 +9,17 @@
 
     <Icon v-if="hasChildren" name="lucide:chevron-down" :class="[
       'size-6 transition-transform duration-300 mr-3',
-      openMenu?.id === currentMenuId ? 'rotate-180' : 'rotate-0',
+      openMenu?._key === currentMenuId ? 'rotate-180' : 'rotate-0',
     ]" />
   </button>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseMenuStore } from '~/stores/menu.store'
+import { useMenuStore } from '~/stores/menu/menu.store'
 
 const router = useRouter()
-const menuStore = UseMenuStore()
+const menuStore = useMenuStore()
 const openMenu = computed(() => menuStore.openMenu)
 
 const props = defineProps({
@@ -32,7 +32,7 @@ const props = defineProps({
 const { locale } = useI18n()
 
 const hasChildren = computed(() => props.data.children?.length > 0)
-const currentMenuId = computed(() => props.data.id)
+const currentMenuId = computed(() => props.data._key)
 
 const toggleMenu = () => {
   const menu: any = props.data

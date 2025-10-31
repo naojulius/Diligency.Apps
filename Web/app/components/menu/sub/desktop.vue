@@ -11,7 +11,7 @@
           </span>
         </div>
         <div class="mt-1 text-md text-tertiary/80 font-regular">
-          {{ subMenu.texte[locale] }}
+          {{ subMenu.text?.[locale] }}
         </div>
       </a>
     </div>
@@ -20,9 +20,9 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { UseMenuStore } from '~/stores/menu.store'
+import { useMenuStore } from '~/stores/menu/menu.store'
 const { locale } = useI18n()
-const menuStore = UseMenuStore()
+const menuStore = useMenuStore()
 const router = useRouter()
 const lastScrollY = ref(0)
 

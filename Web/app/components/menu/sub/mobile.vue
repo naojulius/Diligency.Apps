@@ -12,21 +12,21 @@
               <span class="text-2xl">{{ menu.name[locale] }}</span>
             </div>
             <Icon v-if="menu.children && menu.children.length > 0" name="lucide:chevron-down"
-              :class="{ 'rotate-180': openMenu?.id === menu.id }"
+              :class="{ 'rotate-180': openMenu?._key === menu.id }"
               class="mr-3 transition-transform duration-300 size-6" />
             <Icon v-if="!menu.children" name="lucide:chevron-right"
               class="mr-3 transition-transform duration-300 size-6" />
           </div>
         </div>
 
-        <div v-if="openMenu?.id === menu.id" class="pt-2 pl-12 space-y-2">
+        <div v-if="openMenu?._key === menu.id" class="pt-2 pl-12 space-y-2">
           <div @click="clickSubMenu(subMenu)" v-for="(subMenu, subIndex) in subMenuList" :key="subIndex"
             class="flex flex-col gap-2 py-2 text-2xl font-normal text-tertiary-500/80 size-full">
             <div class="text-lg font-semibold">
               {{ subMenu.name[locale] }}
             </div>
             <div class="inter text-[18px]">
-              {{ subMenu.texte[locale] }}
+              {{ subMenu.text?.[locale] }}
             </div>
           </div>
         </div>
@@ -38,7 +38,7 @@
 <script lang="ts" setup>
 import { gsap } from 'gsap/gsap-core'
 import { computed, ref } from 'vue'
-import { UseMenuStore } from '~/stores/menu.store'
+import { useMenuStore } from '~/stores/menu/menu.store'
 import type { Menu } from '~/types/interfaces/menu'
 
 const { locale } = useI18n()
@@ -50,10 +50,10 @@ const menusList = computed(() => menuStore.menusList)
 const isHumberger = computed(() => menuStore.isHumberger)
 
 const router = useRouter()
-const menuStore = UseMenuStore()
+const menuStore = useMenuStore()
 
 const toggleMenu = (menu: Menu) => {
-  if (!menu.children) {
+  if (!menu.children && menu.link) {
     router.push(menu.link)
   } else {
     menuStore.SetSubMenuList(menu)
@@ -61,7 +61,9 @@ const toggleMenu = (menu: Menu) => {
 }
 
 const clickSubMenu = (subMenu: Menu) => {
-  router.push(subMenu.link)
+  if (subMenu.link) {
+    router.push(subMenu.link)
+  }
   menuStore.SetHumberger(false);
 }
 

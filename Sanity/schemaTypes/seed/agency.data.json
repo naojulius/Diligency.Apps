@@ -22,10 +22,12 @@
                         "en": "Our Engagement"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Chez Diligency, nous conjuguons performance et simplicité. Chaque projet repose sur une transparence totale et une communication claire. Nous choisissons des technologies pertinentes, jamais superflues, pour répondre aux besoins réels. Nos livrables sont pensés comme des solutions concrètes, utiles et alignées avec vos objectifs stratégiques et opérationnels.",
-                    "en": "At Diligency, we combine performance with simplicity. Every project is built on complete transparency and clear communication. We select relevant technologies—never superfluous—to address real needs. Our deliverables are designed as practical, useful solutions aligned with your strategic and operational objectives."
-                },
+                "subtitle": [
+                    {
+                        "fr": "Chez Diligency, nous conjuguons performance et simplicité. Chaque projet repose sur une transparence totale et une communication claire. Nous choisissons des technologies pertinentes, jamais superflues, pour répondre aux besoins réels. Nos livrables sont pensés comme des solutions concrètes, utiles et alignées avec vos objectifs stratégiques et opérationnels.",
+                        "en": "At Diligency, we combine performance with simplicity. Every project is built on complete transparency and clear communication. We select relevant technologies—never superfluous—to address real needs. Our deliverables are designed as practical, useful solutions aligned with your strategic and operational objectives."
+                    }
+                ],
                 "items": [
                     {
                         "icon": "lucide:rocket",
@@ -80,10 +82,12 @@
                         "en": "Diligency Team"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Notre équipe est composée d’experts engagés — développeurs, designers, chefs de projet et consultants freelances — sélectionnés pour leur rigueur, leur sens de la structure et leur adaptabilité. Chaque projet est piloté par un référent unique, garant de la qualité et de la fluidité de la production.",
-                    "en": "Our team is made up of dedicated experts — developers, designers, project managers, and freelance consultants — selected for their rigor, sense of structure, and adaptability. Each project is overseen by a single point of contact, ensuring quality and smooth project delivery."
-                }
+                "subtitle": [
+                    {
+                        "fr": "Notre équipe est composée d’experts engagés — développeurs, designers, chefs de projet et consultants freelances — sélectionnés pour leur rigueur, leur sens de la structure et leur adaptabilité. Chaque projet est piloté par un référent unique, garant de la qualité et de la fluidité de la production.",
+                        "en": "Our team is made up of dedicated experts — developers, designers, project managers, and freelance consultants — selected for their rigor, sense of structure, and adaptability. Each project is overseen by a single point of contact, ensuring quality and smooth project delivery."
+                    }
+                ]
             }
         ],
         "footer": {
@@ -304,10 +308,12 @@
                         "en": "What you’ll find there"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Nous diffusons des contenus utiles : analyses sur la création digitale, cas concrets de projets, guides téléchargeables et démonstrations ciblées. Une manière claire et accessible de valoriser notre approche en IA, UX/UI et performance.",
-                    "en": "We share useful content: analyses on digital creation, real project case studies, downloadable guides, and targeted demonstrations. A clear and accessible way to showcase our approach to AI, UX/UI, and performance."
-                },
+                "subtitle": [
+                    {
+                        "fr": "Nous diffusons des contenus utiles : analyses sur la création digitale, cas concrets de projets, guides téléchargeables et démonstrations ciblées. Une manière claire et accessible de valoriser notre approche en IA, UX/UI et performance.",
+                        "en": "We share useful content: analyses on digital creation, real project case studies, downloadable guides, and targeted demonstrations. A clear and accessible way to showcase our approach to AI, UX/UI, and performance."
+                    }
+                ],
                 "image": "https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png",
                 "items": [
                     {
@@ -368,10 +374,12 @@
                         "en": "Why This Isn’t a Typical Blog"
                     }
                 ],
-                "subtitle": {
-                    "fr": "Pas de contenu vide pour le SEO. Chaque article vise à élever votre compréhension du digital, à clarifier vos décisions, et à vous faire gagner du temps – même si vous ne travaillez pas avec nous.",
-                    "en": "No empty content for SEO. Each article aims to enhance your understanding of digital topics, clarify your decisions, and save you time—even if you’re not working with us."
-                },
+                "subtitle": [
+                    {
+                        "fr": "Pas de contenu vide pour le SEO. Chaque article vise à élever votre compréhension du digital, à clarifier vos décisions, et à vous faire gagner du temps – même si vous ne travaillez pas avec nous.",
+                        "en": "No empty content for SEO. Each article aims to enhance your understanding of digital topics, clarify your decisions, and save you time—even if you’re not working with us."
+                    }
+                ],
                 "cta": [
                     {
                         "icon": "lucide:arrow-right",

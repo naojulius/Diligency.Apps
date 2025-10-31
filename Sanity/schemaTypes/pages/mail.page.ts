@@ -23,7 +23,7 @@ export const mailSchema = defineType({
             name: 'lastName',
             title: 'Prénom',
             type: 'string',
-            description: 'prenom de l\'envoyeur',
+            description: 'prénom de l\'envoyeur',
         }),
         defineField({
             name: 'message',
@@ -40,7 +40,6 @@ export const mailSchema = defineType({
             message: 'message'
         },
         prepare(selection) {
-            // Insert a space before each uppercase letter (except the first letter)
             const title = `${selection.firstName} ${selection.lastName}`
             const subtitle = selection.message
             const email = selection.email

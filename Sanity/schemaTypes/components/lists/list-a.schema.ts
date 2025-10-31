@@ -6,7 +6,7 @@ export const listA = defineType({
     title: 'Item',
     type: 'object',
     fields: [
-        defineField({ name: 'title', type: 'locale', title: 'Title' }),
+        defineField({ name: 'title', type: 'array', title: 'Title', of: [{ type: 'locale' }] }),
         defineField({ name: 'icon', type: 'string', title: 'Icon' }),
         defineField({ name: 'name', type: 'locale', title: 'Name' }),
         defineField({ name: 'text', type: 'locale', title: 'Text' }),

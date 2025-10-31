@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
 import type { MailData } from '~/types/interfaces/mail-data'
-import { sanityClient } from '~/types/utils/sanity.client'
 
 
 export const useMailStore = defineStore('mail-store', () => {
@@ -14,7 +13,7 @@ export const useMailStore = defineStore('mail-store', () => {
         success.value = false
 
         try {
-            await sanityClient.create({
+            await SANITY_CLIENT.create({
                 _type: 'mail',
                 firstName: data.firstName,
                 lastName: data.lastName,

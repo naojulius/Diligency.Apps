@@ -1,11 +1,12 @@
 import type { AppLocale } from "./app-locale";
 
-export interface Menu {
-    id: string;
-    name: AppLocale;
-    link: string;
-    icon: string;
-    visible: boolean;
-    texte: AppLocale;
+export class Menu {
+    _key?: string;
+    name!: AppLocale;
+    link?: string;
+    icon!: string;
+    visible!: boolean;
+    text?: AppLocale;
     children?: Menu[];
 }
+

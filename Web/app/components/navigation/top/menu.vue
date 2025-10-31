@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { UseMenuStore } from '~/stores/menu.store';
+import { useMenuStore } from '~/stores/menu/menu.store';
 
-const menuStore = UseMenuStore();
+const menuStore = useMenuStore();
 const menusList = computed(() => menuStore.menusList);
 </script>

@@ -19,6 +19,11 @@ export const agencyPage = defineType({
             of: [{ type: 'blockType' }]
         }),
         defineField({
+            name: 'faq',
+            title: 'FAQ',
+            type: 'faq',
+        }),
+        defineField({
             name: 'footer',
             title: 'Footer Section',
             type: 'footer',

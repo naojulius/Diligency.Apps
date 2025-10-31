@@ -1,31 +1,7 @@
-import { block } from "./components/common/block.schema";
-import { cta } from "./components/common/cta.schema";
-import { footer } from "./components/common/footer.schema";
-import { hero } from "./components/common/hero.schema";
-import { localeOrArray } from "./components/common/locale-or-array.schema";
-import { locale } from "./components/common/locale.scema";
-import { blocksListSchema } from "./components/lists";
-import { agencyPage } from "./pages/agency.page";
-import { mailSchema } from "./pages/mail.page";
-import { optionSchema } from "./pages/option.page";
-import { servicePage } from "./pages/service.page";
+import { components } from "./components";
+import { pages } from "./pages";
 
 export const schemaTypes = [
-    //#region Components
-    locale,
-    hero,
-    block,
-    cta,
-    footer,
-    localeOrArray,
-    ...blocksListSchema,
-    //#endregion
-
-    //#region Schema
-
-    agencyPage,
-    servicePage,
-    mailSchema,
-    optionSchema,
-    //#endregion
+    ...components,
+    ...pages
 ]

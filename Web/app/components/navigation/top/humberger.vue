@@ -17,10 +17,10 @@
 <script setup lang="ts">
 import { gsap } from 'gsap';
 import { ref, watch } from 'vue';
-import { UseMenuStore } from '~/stores/menu.store';
+import { useMenuStore } from '~/stores/menu/menu.store';
 
 const menuIcon = ref<HTMLDivElement | null>(null)
-const menuStore = UseMenuStore()
+const menuStore = useMenuStore()
 const isHumberger = computed(() => menuStore.isHumberger)
 const toggleMenu = () => {
   let state = !isHumberger.value;

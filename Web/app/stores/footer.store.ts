@@ -5,12 +5,12 @@ import type { MediaLink } from "~/types/interfaces/common/media-link";
 import type { MenuLink } from "~/types/interfaces/common/menu-link";
 import type { Menu } from "~/types/interfaces/menu";
 import { UseLoaderStore } from "./loader.store";
-import { UseMenuStore } from "./menu.store";
+import { useMenuStore } from "./menu/menu.store";
 
 export const UseFooterStore = defineStore('footer-store', () => {
     const loader = UseLoaderStore()
     const data = ref(FOOTER_DATA)
-    const menus = UseMenuStore().GetMenus
+    const menus = useMenuStore().GetMenus
 
     const GetData = async () => {
         // loader.ShowLoader()
@@ -63,7 +63,7 @@ export const UseFooterStore = defineStore('footer-store', () => {
             if (menu.visible) {
                 links.push({
                     text: menu.name as AppLocale,
-                    link: menu.link
+                    link: menu.link ?? ""
                 });
 
                 if (menu.children?.length) {
@@ -76,7 +76,7 @@ export const UseFooterStore = defineStore('footer-store', () => {
     };
 
     const GetFooterNavigation = (): MenuLink[] => {
-        return extractLinks(menus as Menu[]);
+        return extractLinks(menus as any);
     };
 
     return {
