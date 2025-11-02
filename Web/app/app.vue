@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import SmoothScroll from './layouts/smooth-scroll.vue';
-
 </script>
 
 <template>

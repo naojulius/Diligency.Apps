@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const MENU_DATA = [
     {
-        id: uuidv4(),
+        _key: uuidv4(),
         name: {
             fr: "Agence",
             en: "Agency"
@@ -12,7 +12,7 @@ export const MENU_DATA = [
         visible: true,
         children: [
             {
-                id: uuidv4(),
+                _key: uuidv4(),
                 name: {
                     fr: "À propos",
                     en: "About"
@@ -27,7 +27,7 @@ export const MENU_DATA = [
 
             },
             {
-                id: uuidv4(),
+                _key: uuidv4(),
                 name: {
                     fr: "Job & Carrière",
                     en: "Jobs & Careers"
@@ -41,7 +41,7 @@ export const MENU_DATA = [
                 }
             },
             {
-                id: uuidv4(),
+                _key: uuidv4(),
                 name: {
                     fr: "Le Hub",
                     en: "The Hub"
@@ -57,7 +57,7 @@ export const MENU_DATA = [
         ]
     },
     {
-        id: uuidv4(),
+        _key: uuidv4(),
         name: {
             fr: "Services",
             en: "Services"
@@ -67,7 +67,7 @@ export const MENU_DATA = [
         visible: true,
         children: [
             {
-                id: uuidv4(),
+                _key: uuidv4(),
                 name: {
                     en: "Web app",
                     fr: "Application web"
@@ -81,7 +81,7 @@ export const MENU_DATA = [
                 }
             },
             {
-                id: uuidv4(),
+                _key: uuidv4(),
                 name: {
                     fr: "Sites vitrines",
                     en: "Showcase websites"
@@ -95,7 +95,7 @@ export const MENU_DATA = [
                 }
             },
             // {
-            //     id: uuidv4(),
+            //     _key: uuidv4(),
             //     name: {
             //         fr: "E-commerce",
             //         en: "E-commerce"
@@ -109,7 +109,7 @@ export const MENU_DATA = [
             //     }
             // },
             {
-                id: uuidv4(),
+                _key: uuidv4(),
                 name: {
                     fr: "Solutions IT/IA",
                     en: "IT/AI Solutions"
@@ -125,7 +125,7 @@ export const MENU_DATA = [
         ]
     },
     {
-        id: uuidv4(),
+        _key: uuidv4(),
         name: {
             fr: "Contact",
             en: "Contact"

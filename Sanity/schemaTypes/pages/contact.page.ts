@@ -22,7 +22,11 @@ export const contactPage = defineType({
             title: 'Forms/Champs',
             type: 'form',
         }),
-
+        defineField({
+            name: 'info',
+            title: 'Information',
+            type: 'info',
+        }),
     ],
     preview: {
         select: {

@@ -27,7 +27,7 @@ const router = useRouter()
 const lastScrollY = ref(0)
 
 const subMenuList = computed(() => {
-  return menuStore.subMenuList
+  return menuStore.subMenuList ?? []
 })
 
 const handleScroll = () => {

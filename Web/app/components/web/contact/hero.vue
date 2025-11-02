@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-auto  px-4 lg:px-10 2xl:px-35 py-16">
+    <div class="w-full h-auto  px-0 lg:px-10 2xl:px-35 py-16">
         <div class="h-full w-full flex flex-col md:flex-row items-start justify-center gap-2 z-10 py-10">
             <div class="w-full md:w-1/2 space-y-6">
                 <div class="text-5xl font-bold text-tertiary text-center md:text-left">
@@ -14,15 +14,12 @@
                 <div class="p-4 w-full md:w-9/12 h-full bg-tertiary rounded-xl ">
                     <form @submit.prevent="handleSubmit" class="space-y-5 pt-4">
                         <div class="flex flex-row gap-4">
-                            <input v-model="form.firstName" type="text" :placeholder="String(formName[locale])"
-                                class="h-12 w-full bg-primary rounded-lg p-2 active:ring-0" />
-                            <input v-model="form.lastName" type="text" :placeholder="String(formLastName[locale])"
-                                class="h-12 w-full bg-primary rounded-lg p-2" />
+                            <FormInput v-model="form.firstName" :placeholder="String(formName[locale])" type="text" />
+                            <FormInput v-model="form.lastName" :placeholder="String(formLastName[locale])"
+                                type="text" />
                         </div>
-                        <input v-model="form.email" type="email" :placeholder="String(formEmail[locale])"
-                            class="h-12 w-full bg-primary rounded-lg p-2" />
-                        <textarea v-model="form.message" :placeholder="String(formMessage[locale])"
-                            class="min-h-42 w-full bg-primary rounded-lg p-2"></textarea>
+                        <FormInput v-model="form.email" :placeholder="String(formEmail[locale])" type="text" />
+                        <FormText v-model="form.message" :placeholder="String(formMessage[locale])" type="text" />
 
                         <WebContactType v-model="form.typeAppel" :options="options" />
                         <hr class="text-primary">
@@ -41,8 +38,8 @@
                             <Icon name="lucide:chevron-right" class="size-7 fill-accent" />
                         </button>
 
-                        <p v-if="mailStore.success" class="text-green-500">✅ Message envoyé !</p>
-                        <p v-if="mailStore.error" class="text-red-500">❌ {{ mailStore.error }}</p>
+                        <p v-if="mailStore.success" class="text-green-500">Message envoyé !</p>
+                        <p v-if="mailStore.error" class="text-red-500">{{ mailStore.error }}</p>
                     </form>
                 </div>
             </div>
@@ -51,35 +48,44 @@
 </template>
 
 <script lang="ts" setup>
-import { WebContactList } from '#components'
-import { reactive, ref } from 'vue'
-import { z } from 'zod'
-import { UseContactStore } from '~/stores/contact.store'
+import { z } from "zod"
+import { useContactStore } from '~/stores/contact/contact.store'
+import { UseLoaderStore } from '~/stores/loader.store'
 import { useMailStore } from '~/stores/mail.store'
-
 import type { MailData } from '~/types/interfaces/mail-data'
+import { GET_CONTACT_GROQ } from '~/utils/groq/contact.groq'
 
 const mailStore = useMailStore()
-const store = UseContactStore()
+const store = useContactStore()
 const { locale } = useI18n()
+const data = ref()
+const loader = UseLoaderStore()
+const fetchData = async () => {
+    loader.ShowLoader()
+    try {
+        let query = await SANITY_CLIENT.fetch(GET_CONTACT_GROQ)
+        data.value = query[0]["contact-data"]
+        loader.HideLoader()
+    } catch (err) {
+        loader.HideLoader()
+        console.error("Error fetching contact data:", err)
+    }
+}
 
-// const options = [
-//     { label: 'Appel stratégique', value: 'strategique' },
-//     { label: 'Appel de découverte (Candidats / Public)', value: 'decouverte' },
-// ]
+onMounted(() => {
+    fetchData()
+})
 
-// Zod schema
 const MailSchema = z.object({
     firstName: z.string().min(2, { message: "INVALID_NAME" }),
     lastName: z.string().min(2, { message: "INVALID_LAST_NAME" }),
-    email: z.string().email({ message: "INVALID_EMAIL" }),
+    email: z.email({ message: "INVALID_EMAIL" }),
     message: z.string().min(10, { message: "INVALID_MESSAGE" }),
     typeAppel: z.enum(['strategique', 'decouverte'], {
         message: 'INVALID_TYPE',
     }),
 })
 
-// formulaire réactif
 const form = reactive<MailData & { email: string }>({
     firstName: '',
     lastName: '',
@@ -97,54 +103,54 @@ const handleSubmit = async () => {
 
     if (!result.success) {
         errors.value = result.error.issues.map(issue => {
-            const match = formErrors.value.find(e => e.key === issue.message)
+            const match = formErrors.value.find((e: { key: string }) => e.key === issue.message)
             return match ? match.text[locale.value] : issue.message
         })
         return
     }
 
     await mailStore.Save({
-        firstName: form.firstName,
-        lastName: form.lastName,
-        message: form.message,
-        typeAppel: form.typeAppel!,
+        firstName: form?.firstName,
+        lastName: form?.lastName,
+        message: form?.message,
+        typeAppel: form?.typeAppel!,
     } as MailData)
 }
 
 const title = computed(() => {
-    return store.GetContactTitle()
+    return data.value?.title ?? ""
 })
 
 const subtitle = computed(() => {
-    return store.GetContactSubtitle()
+    return data.value?.subtitle ?? ""
 })
 
 const formName = computed(() => {
-    return store.GetContactFormName()
+    return data.value?.form?.name ?? ""
 })
 
 const formLastName = computed(() => {
-    return store.GetContactFormLastName()
+    return data.value?.form?.lastname ?? ""
 })
 
 const formEmail = computed(() => {
-    return store.GetContactFormEmail()
+    return data.value?.form?.email ?? ""
 })
 
 const formMessage = computed(() => {
-    return store.GetContactFormMessage()
+    return data.value?.form?.message ?? ""
 })
 
 const sendMessage = computed(() => {
-    return store.GetContactSendMessage()
+    return data.value?.form?.sendMessage ?? ""
 })
 
 const formErrors = computed(() => {
-    return store.GetContactFormErros()
+    return data.value?.form?.errors ?? []
 })
 
 const options = computed(() => {
-    return store.GetContactFormType()
+    return data.value?.form?.type ?? []
 })
 
 </script>

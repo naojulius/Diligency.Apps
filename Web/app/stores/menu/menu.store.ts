@@ -1,29 +1,15 @@
-import { MENU_DATA } from "~/data/menu.data";
 import type { Menu } from "~/types/interfaces/menu";
-import { GET_MENU_GROQ } from "~/utils/groq/menu.groq";
 import { UseLoaderStore } from "../loader.store";
 
 export const useMenuStore = defineStore('menu-store', () => {
     const loader = UseLoaderStore()
     const isHumberger: Ref<Boolean> = ref(false)
-    const menusList = ref(MENU_DATA)
+    const menusList = ref()
     const subMenuList: Ref<Menu[]> = ref([])
     const openMenu: Ref<Menu | null> = ref(null)
 
-    const fetchData = async () => {
-        loader.ShowLoader()
-        try {
-            menusList.value = await SANITY_CLIENT.fetch(GET_MENU_GROQ)
-            loader.HideLoader()
-        } catch (err) {
-            console.error("Error fetching menus list:", err)
-        }
-    }
-
-    fetchData();
-
     const GetMenus = computed(() => {
-        return menusList.value
+        return menusList.value ?? []
     })
 
     const SetHumberger = (state: boolean) => {

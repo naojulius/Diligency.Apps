@@ -80,15 +80,15 @@
                 }
             ]
         },
-        "contact": {
+        "info": {
             "open": {
                 "fr": "Lundi au Vendredi : 9h – 18h Samedi et Dimanche : Fermé",
                 "en": "Monday to Friday: 9 a.m. – 6 p.m. Saturday and Sunday: Closed"
             },
-            "emails": "contact@diligency.fr",
-            "phones": "+33 1 23 45 67 89",
+            "email": "contact@diligency.fr",
+            "phone": "+33 1 23 45 67 89",
             "address": "Paris, France",
-            "socials": [
+            "social": [
                 {
                     "name": "facebook",
                     "link": "",

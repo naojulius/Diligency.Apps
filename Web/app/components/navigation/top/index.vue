@@ -15,10 +15,12 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref } from 'vue';
-const router = useRouter();
-const route = useRoute()
+import { UseLoaderStore } from '~/stores/loader.store'
+import { useMenuStore } from '~/stores/menu/menu.store'
+import { GET_MENU_GROQ } from '~/utils/groq/menu.groq'
 
+const route = useRoute()
+const menustore = useMenuStore()
 const isScrolled = ref(false)
 const SCROLL_POINT = ref(80)
 const permanentTertiaryHeaderBackground = [
@@ -47,5 +49,23 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+})
+
+const loader = UseLoaderStore()
+
+const fetchData = async () => {
+  loader.ShowLoader()
+  try {
+    let res = await SANITY_CLIENT.fetch(GET_MENU_GROQ)
+    menustore.menusList = res
+    loader.HideLoader()
+  } catch (err) {
+    loader.HideLoader()
+    console.error("Error fetching contact data:", err)
+  }
+}
+
+onMounted(() => {
+  fetchData()
 })
 </script>
