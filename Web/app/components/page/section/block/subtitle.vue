@@ -21,7 +21,7 @@ const props = defineProps({
     customClass: {
         type: String,
         required: false,
-        default: ""
+        default: "text-tertiary/80"
     }
 })
 
@@ -31,11 +31,6 @@ const subtitles = computed(() => {
 })
 
 const getClass = computed(() => {
-    if (props.customClass) {
-        return (props.customClass)
-    }
-    else {
-        return "text-tertiary/80"
-    }
+    return props.customClass
 })
 </script>

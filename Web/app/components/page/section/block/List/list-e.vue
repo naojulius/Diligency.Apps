@@ -17,12 +17,12 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
-import type { BlockTypeItemsReturnType } from '~/components/page/types/commons/block.type';
+import type { ListLayout } from '~/components/page/types/commons/list';
 
 const { locale } = useI18n()
 const props = defineProps({
     data: {
-        type: Object as PropType<(BlockTypeItemsReturnType[])>,
+        type: Object as PropType<(ListLayout[])>,
         required: true
     },
     type: {
@@ -32,19 +32,19 @@ const props = defineProps({
     },
 })
 
-const icon = (item: BlockTypeItemsReturnType) => {
+const icon = (item: ListLayout) => {
     return (item as any)?.icon ?? null
 };
 
-const list = (item: BlockTypeItemsReturnType) => {
+const list = (item: ListLayout) => {
     return (item as any)?.list ?? []
 };
 
-const title = (item: BlockTypeItemsReturnType) => {
+const title = (item: ListLayout) => {
     return (item as any)?.title ?? null
 }
 
-const name = (item: BlockTypeItemsReturnType) => {
+const name = (item: ListLayout) => {
     return (item as any)?.name ?? null
 }
 

@@ -1,5 +1,6 @@
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10" v-if="props.type == 'list-a'">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-10" v-if="props.type == 'list-h'">
+        List-H
         <div v-for="(item, index) in data" :key="index"
             class="card group hover:scale-101 transition-all duration-300 cursor-pointer border-1 border-tertiary/50 bg-tertiary/10 p-4 rounded-lg hover:bg-tertiary">
             <div class="text-center py-4">

@@ -1,3 +1,4 @@
 <template>
-    <WebHome />
+    <!-- <WebHome /> -->
+    <PageBuilder />
 </template>

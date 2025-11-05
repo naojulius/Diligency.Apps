@@ -19,13 +19,13 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
 import { GetCtaComponent } from '~/components/page/helpers/component.helper';
-import type { BlockTypeItemsReturnType } from '~/components/page/types/commons/block.type';
 import { CtaType } from '~/components/page/types/commons/cta.type';
+import type { ListLayout } from '~/components/page/types/commons/list';
 
 const { locale } = useI18n()
 const props = defineProps({
     data: {
-        type: Object as PropType<(BlockTypeItemsReturnType[])>,
+        type: Object as PropType<(ListLayout[])>,
         required: true
     },
     type: {
@@ -40,11 +40,11 @@ const props = defineProps({
     },
 })
 
-const image = (item: BlockTypeItemsReturnType) => {
+const image = (item: ListLayout) => {
     return (item as any)?.image ?? null
 };
 
-const text = (item: BlockTypeItemsReturnType) => {
+const text = (item: ListLayout) => {
     return (item as any)?.text ?? null
 }
 

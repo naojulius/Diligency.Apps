@@ -1,15 +1,15 @@
 <template>
     <section :class="[defaultClass]">
-        <PageSectionBlockTitle :title="titleData!" :custom-class="getCustomClass" v-if="titleData" />
-        <PageSectionBlockSubtitle :data="subtitleData!" v-if="subtitleData" />
-        <PageSectionBlockList :data="blockData!" :type="props.type" :image="imageData" :cta="ctaData"
-            v-if="blockData" />
+        <PageSectionBlockTitle :title="titleData!" :custom-class="getCustomClass" v-if="displayTitle" />
+        <PageSectionBlockSubtitle :data="subtitleData!" v-if="displaySubTitle" />
+        <PageSectionBlockList :data="blockData!" :type="props.type" :image="imageData" :cta="ctaData" v-if="blockData"
+            :title="titleData" :subtitle="subtitleData" />
     </section>
 </template>
 
 <script lang="ts" setup>
 import type { BlockType } from '../../types/commons/block.type';
-
+let hidedListSection = ['list-g']
 const props = defineProps({
     data: {
         required: true,
@@ -20,6 +20,14 @@ const props = defineProps({
         type: [String],
         default: ""
     },
+})
+
+const displayTitle = computed(() => {
+    return !(hidedListSection.includes(props.type) && titleData.value);
+})
+
+const displaySubTitle = computed(() => {
+    return !(hidedListSection.includes(props.type) && subtitleData.value);
 })
 
 const defaultClass = computed(() => {

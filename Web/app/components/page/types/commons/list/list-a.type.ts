@@ -1,4 +1,4 @@
-import type { AppLocaleType } from "./app-locale.type";
+import type { AppLocaleType } from "../app-locale.type";
 
 export class ListA {
     type?: string;
