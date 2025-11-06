@@ -5,45 +5,41 @@
 </template>
 
 <script lang="ts" setup>
-import { GetBLockListComponent } from '~/components/page/helpers/component.helper'
+import { GetBlockListComponent } from '~/components/page/helpers/component.helper'
 import type { AppLocaleType } from '~/components/page/types/commons/app-locale.type'
 import type { CtaType } from '~/components/page/types/commons/cta.type'
-import type { ListLayout } from '~/components/page/types/commons/list'
+import type { Layouts } from '~/components/page/types/commons/list'
 import type { AppLocale } from '~/types/interfaces/app-locale'
 
 const props = defineProps({
     title: {
         required: false,
-        type: Object as PropType<Array<AppLocale>>,
+        type: [Object, undefined] as PropType<Array<AppLocale>>,
     },
     subtitle: {
         type: [Array, Object, undefined] as PropType<AppLocaleType[] | AppLocaleType>,
-        required: true,
-        default: []
+        required: false,
     },
     data: {
-        type: Array as PropType<(ListLayout)[]>,
-        required: true
+        type: [Array, undefined] as PropType<(Layouts)[]>,
+        required: true,
     },
     type: {
-        type: String,
-        required: true,
-        default: ""
+        type: String as PropType<string>,
+        required: false,
     },
     image: {
-        type: String,
+        type: String as PropType<string>,
         required: false,
-        default: ""
     },
     cta: {
-        type: Array as PropType<(CtaType)[]>,
+        type: [Array, undefined] as PropType<(CtaType)[]>,
         required: false,
-        default: []
     },
 })
 
 const getItemComponent = () => {
-    return GetBLockListComponent(props.type)
+    return GetBlockListComponent(props.type ?? "")
 }
 
 const image = computed(() => { return props.image });

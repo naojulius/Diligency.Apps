@@ -1,4 +1,4 @@
 export class AppLocaleType {
-    en!: string;
-    fr!: string;
+    en!: string | string[];
+    fr!: string | string[];
 }

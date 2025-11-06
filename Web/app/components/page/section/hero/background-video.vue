@@ -13,6 +13,7 @@ const props = defineProps({
     video: {
         required: true,
         type: String,
+        default: ""
     },
 })
 

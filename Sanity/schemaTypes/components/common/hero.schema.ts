@@ -8,5 +8,6 @@ export const hero = defineType({
         defineField({ name: 'subtitle', title: 'Subtitle', type: 'locale' }),
         defineField({ name: 'image', title: 'Image', type: 'string' }),
         defineField({ name: 'cta', title: 'CTA', type: 'array', of: [{ type: 'cta' }] }),
+        defineField({ name: 'video', title: 'Video', type: 'string' }),
     ],
 })

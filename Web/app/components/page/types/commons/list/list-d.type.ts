@@ -1,6 +1,10 @@
-import type { AppLocaleType } from "../app-locale.type"
+import type { AppLocaleType } from "../app-locale.type";
+import type { BaseLayout } from "./base-layout";
 
-export class ListD {
-    image?: string
-    text?: AppLocaleType
+/**
+ * Liste D — contient une image et un texte.
+ */
+export class LayoutD implements BaseLayout {
+    image?: string;
+    text?: AppLocaleType;
 }

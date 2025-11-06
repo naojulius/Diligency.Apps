@@ -1,10 +1,7 @@
 <template>
-    <h1 id="hero"
-        class="text-center text-[2.5rem]/13 md:text-7xl/20 font-bold text-secondary tracking-normal z-10 w-full">
-        <span v-for="(item, index) in props.title" :key="index">
-            {{ item[locale] }}
-        </span>
-    </h1>
+    <div :class="['w-full text-xl leading-7  z-10', props.customClass]" v-if="props.subtitle">
+        {{ props.subtitle?.[locale] }}
+    </div>
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
@@ -13,9 +10,10 @@ import type { AppLocale } from '~/types/interfaces/app-locale';
 const { locale } = useI18n()
 
 const props = defineProps({
-    title: {
+    subtitle: {
         required: true,
-        type: Object as PropType<AppLocale[]>,
+        type: [Object, undefined] as PropType<AppLocale>,
+        default: []
     },
     customClass: {
         required: false,

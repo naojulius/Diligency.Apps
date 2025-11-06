@@ -15,8 +15,7 @@ const { locale } = useI18n()
 const props = defineProps({
     data: {
         type: [Array, Object, undefined] as PropType<AppLocaleType[] | AppLocaleType>,
-        required: true,
-        default: []
+        required: false,
     },
     customClass: {
         type: String,

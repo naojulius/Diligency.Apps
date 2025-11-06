@@ -90,33 +90,35 @@
                 ]
             }
         ],
-        "footer": {
-            "type": "footer-a",
-            "text": {
-                "fr": "Confiez votre projet digital à Diligency. Notre équipe transforme vos idées en solutions fiables, performantes et élégantes, pensées pour vos objectifs réels et votre croissance durable.",
-                "en": "Entrust your digital project to Diligency. Our team turns your ideas into reliable, high-performing, and elegant solutions designed around your real goals and lasting growth."
-            },
-            "cta": [
-                {
-                    "icon": "lucide:mail",
-                    "text": {
-                        "fr": "Contactez-nous",
-                        "en": "Contuct us"
-                    },
-                    "link": "/contact",
-                    "type": "cta-tertiary"
+        "footer": [
+            {
+                "type": "footer-a",
+                "text": {
+                    "fr": "Confiez votre projet digital à Diligency. Notre équipe transforme vos idées en solutions fiables, performantes et élégantes, pensées pour vos objectifs réels et votre croissance durable.",
+                    "en": "Entrust your digital project to Diligency. Our team turns your ideas into reliable, high-performing, and elegant solutions designed around your real goals and lasting growth."
                 },
-                {
-                    "icon": "lucide:arrow-right",
-                    "text": {
-                        "fr": "Nous joindre",
-                        "en": "join us"
+                "cta": [
+                    {
+                        "icon": "lucide:mail",
+                        "text": {
+                            "fr": "Contactez-nous",
+                            "en": "Contuct us"
+                        },
+                        "link": "/contact",
+                        "type": "cta-tertiary"
                     },
-                    "link": "/agency/jobcarrier",
-                    "type": "cta-link"
-                }
-            ]
-        }
+                    {
+                        "icon": "lucide:arrow-right",
+                        "text": {
+                            "fr": "Nous joindre",
+                            "en": "join us"
+                        },
+                        "link": "/agency/jobcarrier",
+                        "type": "cta-link"
+                    }
+                ]
+            }
+        ]
     },
     "jobcarrier": {
         "hero": {
@@ -260,30 +262,32 @@
                 ]
             }
         ],
-        "footer": {
-            "type": "footer-b",
-            "title": [
-                {
-                    "fr": "Postuler",
-                    "en": "Apply"
-                }
-            ],
-            "text": {
-                "fr": "Tu te reconnais dans notre vision ? Tu veux faire partie d’un cercle exigeant mais humain ? Envoie ton profil (LinkedIn, mini-portfolio ou lien GitHub) à recrutement@diligency.com Ou réserve un appel rapide pour un premier échange informel.",
-                "en": "Do you identify with our vision? Do you want to be part of a demanding yet human circle? Send your profile (LinkedIn, mini-portfolio, or GitHub link) to recrutement@diligency.com, or book a quick call for an informal first chat."
-            },
-            "cta": [
-                {
-                    "icon": "lucide:calendar",
-                    "text": {
-                        "fr": "Réserver un appel découverte",
-                        "en": "Book a discovery call"
-                    },
-                    "link": "/contact",
-                    "type": "cta-tertiary"
-                }
-            ]
-        }
+        "footer": [
+            {
+                "type": "footer-b",
+                "title": [
+                    {
+                        "fr": "Postuler",
+                        "en": "Apply"
+                    }
+                ],
+                "text": {
+                    "fr": "Tu te reconnais dans notre vision ? Tu veux faire partie d’un cercle exigeant mais humain ? Envoie ton profil (LinkedIn, mini-portfolio ou lien GitHub) à recrutement@diligency.com Ou réserve un appel rapide pour un premier échange informel.",
+                    "en": "Do you identify with our vision? Do you want to be part of a demanding yet human circle? Send your profile (LinkedIn, mini-portfolio, or GitHub link) to recrutement@diligency.com, or book a quick call for an informal first chat."
+                },
+                "cta": [
+                    {
+                        "icon": "lucide:calendar",
+                        "text": {
+                            "fr": "Réserver un appel découverte",
+                            "en": "Book a discovery call"
+                        },
+                        "link": "/contact",
+                        "type": "cta-tertiary"
+                    }
+                ]
+            }
+        ]
     },
     "hub": {
         "hero": {

@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import { GetFooterComponent } from '../../helpers/component.helper';
 import { FooterType } from '../../types/commons/footer.type';
-const { locale } = useI18n()
+
 const props = defineProps({
     data: {
         required: true,

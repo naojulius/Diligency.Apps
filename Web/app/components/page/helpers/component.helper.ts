@@ -1,74 +1,93 @@
 import {
-    PageSectionBlockListA,
-    PageSectionBlockListB,
-    PageSectionBlockListC,
-    PageSectionBlockListD,
-    PageSectionBlockListE,
-    PageSectionBlockListF,
-    PageSectionBlockListG,
     PageSectionCommonCtaLink,
     PageSectionCommonCtaSecondary,
     PageSectionCommonCtaTertiary,
     PageSectionFooterA,
-    PageSectionFooterB
-} from "#components"
+    PageSectionFooterB,
+    PageSectionFooterC
+} from "#components";
+import { blockComponents } from "../types/commons/list";
 
-export const GetBLockListComponent = (type: string) => {
-    if (!type) return
 
-    if (type.startsWith("list-a")) {
-        return PageSectionBlockListA
-    }
+/**
+ * =====================================================
+ *  MAPPING DES COMPOSANTS DE TYPE "FOOTER"
+ * -----------------------------------------------------
+ *  Associe les préfixes des types de pied de page
+ *  avec leurs composants respectifs.
+ * =====================================================
+ */
+const footerComponents: Record<string, any> = {
+    "footer-a": PageSectionFooterA,
+    "footer-b": PageSectionFooterB,
+    "footer-c": PageSectionFooterC,
+};
 
-    if (type.startsWith("list-b")) {
-        return PageSectionBlockListB
-    }
+/**
+ * =====================================================
+ *  MAPPING DES COMPOSANTS DE TYPE "CTA" (Call-To-Action)
+ * -----------------------------------------------------
+ *  Cet objet associe les différents types de CTA
+ *  à leurs composants respectifs.
+ *  Exemples :
+ *  - "cta-link"
+ *  - "cta-secondary"
+ *  - "cta-tertiary"
+ * =====================================================
+ */
+const ctaComponents: Record<string, any> = {
+    "cta-link": PageSectionCommonCtaLink,
+    "cta-secondary": PageSectionCommonCtaSecondary,
+    "cta-tertiary": PageSectionCommonCtaTertiary,
+};
 
-    if (type.startsWith("list-c")) {
-        return PageSectionBlockListC
-    }
+/**
+ * =====================================================
+ *  FONCTION : GetBlockListComponent()
+ * -----------------------------------------------------
+ *  Retourne le composant de section approprié
+ *  en fonction du type fourni.
+ * 
+ *  Exemple :
+ *    GetBlockListComponent("list-a-hero") ➜ PageSectionBlockListA
+ * =====================================================
+ */
+export const GetBlockListComponent = (type: string) => {
+    if (!type) return;
+    const key = Object.keys(blockComponents).find((k) => type.startsWith(k));
+    return key ? blockComponents[key] : undefined;
+};
 
-    if (type.startsWith("list-d")) {
-        return PageSectionBlockListD
-    }
-
-    if (type.startsWith("list-e")) {
-        return PageSectionBlockListE
-    }
-
-    if (type.startsWith("list-f")) {
-        return PageSectionBlockListF
-    }
-
-    if (type.startsWith("list-g")) {
-        return PageSectionBlockListG
-    }
-}
-
+/**
+ * =====================================================
+ *  FONCTION : GetFooterComponent()
+ * -----------------------------------------------------
+ *  Retourne le composant de pied de page approprié
+ *  selon le type de section passé en paramètre.
+ * 
+ *  Exemple :
+ *    GetFooterComponent("footer-a") ➜ PageSectionFooterA
+ * =====================================================
+ */
 export const GetFooterComponent = (type: string) => {
-    if (!type) return
+    if (!type) return;
+    const key = Object.keys(footerComponents).find((k) => type.startsWith(k));
+    return key ? footerComponents[key] : undefined;
+};
 
-    if (type.startsWith("footer-a")) {
-        return PageSectionFooterA
-    }
-
-    if (type.startsWith("footer-b")) {
-        return PageSectionFooterB
-    }
-}
-
+/**
+ * =====================================================
+ *  FONCTION : GetCtaComponent()
+ * -----------------------------------------------------
+ *  Retourne le composant CTA (Call-To-Action) correspondant
+ *  au type de section fourni.
+ * 
+ *  Exemple :
+ *    GetCtaComponent("cta-secondary-hero") ➜ PageSectionCommonCtaSecondary
+ * =====================================================
+ */
 export const GetCtaComponent = (type: string) => {
-    if (!type) return
-
-    if (type.startsWith("cta-link")) {
-        return PageSectionCommonCtaLink
-    }
-
-    if (type.startsWith("cta-secondary")) {
-        return PageSectionCommonCtaSecondary
-    }
-
-    if (type.startsWith("cta-tertiary")) {
-        return PageSectionCommonCtaTertiary
-    }
-}
+    if (!type) return;
+    const key = Object.keys(ctaComponents).find((k) => type.startsWith(k));
+    return key ? ctaComponents[key] : undefined;
+};

@@ -1,7 +1,9 @@
-import { ListA } from "./list-a.type";
+import { LayoutA } from "./list-a.type";
 
-
-export class ListH extends ListA {
-    technos?: string[]
-    link?: string
+/**
+ * Liste H — basée sur ListA, avec des technos et un lien optionnel.
+ */
+export class LayoutH extends LayoutA {
+    technos?: string[];
+    link?: string;
 }

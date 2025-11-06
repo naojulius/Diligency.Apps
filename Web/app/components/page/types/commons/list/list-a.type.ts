@@ -1,8 +1,12 @@
 import type { AppLocaleType } from "../app-locale.type";
+import type { BaseLayout } from "./base-layout";
 
-export class ListA {
+/**
+ * Liste de base contenant une icône, un nom et un texte.
+ */
+export class LayoutA implements BaseLayout {
     type?: string;
     icon?: string;
-    name?: AppLocaleType
-    text?: AppLocaleType
+    name?: AppLocaleType;
+    text?: AppLocaleType;
 }

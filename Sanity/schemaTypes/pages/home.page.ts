@@ -1,11 +1,11 @@
-import { MdPageview } from "react-icons/md";
+import { MdHome } from "react-icons/md";
 import { defineField, defineType } from 'sanity';
 
-export const servicePage = defineType({
-    name: 'servicePage',
-    title: 'Service Page',
+export const homePage = defineType({
+    name: 'homePage',
+    title: 'Home Page',
     type: 'document',
-    icon: MdPageview,
+    icon: MdHome,
     fields: [
         defineField({
             name: 'hero',
@@ -32,17 +32,11 @@ export const servicePage = defineType({
     ],
     preview: {
         select: {
-            titles: 'hero.title',
             subtitle: 'hero.subtitle.fr',
             _id: '_id',
         },
         prepare(selection) {
-            const { _id, titles, subtitle } = selection
-
-            // Concatenate all titles for preview
-            const concatenatedTitle = Array.isArray(titles)
-                ? titles.map((t: any) => t.fr || t.en).join(' | ')
-                : 'No title'
+            const { _id, subtitle } = selection
 
             return {
                 title: `${_id.toUpperCase()}`,

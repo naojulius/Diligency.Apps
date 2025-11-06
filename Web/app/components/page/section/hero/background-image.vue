@@ -10,6 +10,7 @@ const props = defineProps({
     image: {
         required: false,
         type: String,
+        default: "",
     },
 })
 

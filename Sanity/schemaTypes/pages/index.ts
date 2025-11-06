@@ -1,5 +1,6 @@
 import { agencyPage } from "./agency.page";
 import { contactPage } from "./contact.page";
+import { homePage } from "./home.page";
 import { mailPage } from "./mail.page";
 import { menuPage } from "./menu.page";
 import { optionPage } from "./option.page";
@@ -11,5 +12,6 @@ export const pages = [
     mailPage,
     optionPage,
     menuPage,
-    contactPage
+    contactPage,
+    homePage,
 ]

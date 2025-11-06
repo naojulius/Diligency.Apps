@@ -1,5 +1,6 @@
-import { ListA } from "./list-a.type";
+import { LayoutA } from "./list-a.type";
 
-export class ListC extends ListA {
-
-}
+/**
+ * Liste C — même structure que la liste A.
+ */
+export class LayoutC extends LayoutA { }

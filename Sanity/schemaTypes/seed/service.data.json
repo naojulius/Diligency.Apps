@@ -463,24 +463,26 @@
                 ]
             }
         ],
-        "footer": {
-            "type": "footer-a",
-            "text": {
-                "fr": "Chez Diligency, nous créons des sites vitrines rapides, élégants et mobiles, adaptés à votre marque, pour inspirer confiance, renforcer votre présence digitale et convertir vos visiteurs en opportunités concrètes.",
-                "en": "At Diligency, we craft fast, elegant, and mobile showcase websites, tailored to your brand, to inspire trust, strengthen your digital presence, and turn visitors into tangible opportunities."
-            },
-            "cta": [
-                {
-                    "icon": "lucide:layers",
-                    "link": "/application",
-                    "text": {
-                        "fr": "Créer mon site vitrine",
-                        "en": "Create my web show"
-                    },
-                    "type": "cta-tertiary"
-                }
-            ]
-        }
+        "footer": [
+            {
+                "type": "footer-a",
+                "text": {
+                    "fr": "Chez Diligency, nous créons des sites vitrines rapides, élégants et mobiles, adaptés à votre marque, pour inspirer confiance, renforcer votre présence digitale et convertir vos visiteurs en opportunités concrètes.",
+                    "en": "At Diligency, we craft fast, elegant, and mobile showcase websites, tailored to your brand, to inspire trust, strengthen your digital presence, and turn visitors into tangible opportunities."
+                },
+                "cta": [
+                    {
+                        "icon": "lucide:layers",
+                        "link": "/application",
+                        "text": {
+                            "fr": "Créer mon site vitrine",
+                            "en": "Create my web show"
+                        },
+                        "type": "cta-tertiary"
+                    }
+                ]
+            }
+        ]
     },
     "it-ia": {
         "hero": {
@@ -665,23 +667,25 @@
                 ]
             }
         ],
-        "footer": {
-            "type": "footer-a",
-            "text": {
-                "fr": "Chez Diligency, nous concevons des solutions IT et IA robustes et intelligentes pour automatiser, connecter et accélérer votre croissance digitale en toute confiance.",
-                "en": "At Diligency, we design robust, intelligent IT and AI solutions to automate, connect, and accelerate your digital growth with confidence."
-            },
-            "cta": [
-                {
-                    "icon": "lucide:pickaxe",
-                    "link": "/application",
-                    "text": {
-                        "fr": "Construire ma solution intelligente",
-                        "en": "Build My Smart Solution"
-                    },
-                    "type": "cta-tertiary"
-                }
-            ]
-        }
+        "footer": [
+            {
+                "type": "footer-a",
+                "text": {
+                    "fr": "Chez Diligency, nous concevons des solutions IT et IA robustes et intelligentes pour automatiser, connecter et accélérer votre croissance digitale en toute confiance.",
+                    "en": "At Diligency, we design robust, intelligent IT and AI solutions to automate, connect, and accelerate your digital growth with confidence."
+                },
+                "cta": [
+                    {
+                        "icon": "lucide:pickaxe",
+                        "link": "/application",
+                        "text": {
+                            "fr": "Construire ma solution intelligente",
+                            "en": "Build My Smart Solution"
+                        },
+                        "type": "cta-tertiary"
+                    }
+                ]
+            }
+        ]
     }
 }

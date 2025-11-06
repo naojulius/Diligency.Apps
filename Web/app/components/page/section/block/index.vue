@@ -1,7 +1,7 @@
 <template>
     <section :class="[defaultClass]">
         <PageSectionBlockTitle :title="titleData!" :custom-class="getCustomClass" v-if="displayTitle" />
-        <PageSectionBlockSubtitle :data="subtitleData!" v-if="displaySubTitle" />
+        <PageSectionBlockSubtitle :data="subtitleData" v-if="displaySubTitle" />
         <PageSectionBlockList :data="blockData!" :type="props.type" :image="imageData" :cta="ctaData" v-if="blockData"
             :title="titleData" :subtitle="subtitleData" />
     </section>

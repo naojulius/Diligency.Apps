@@ -249,24 +249,26 @@ export const SERVICE_DATA = {
                 }
             ]
         },
-        footer: {
-            type: "footer-a",
-            text: {
-                fr: "Votre plateforme mérite plus qu’un site standard. Construisons une application qui vous fait gagner du temps, des clients, et du contrôle.",
-                en: "our platform deserves more than a standard website. Let’s build an application that saves you time, attracts clients, and gives you control."
-            },
-            cta: [
-                {
-                    icon: "lucide:calendar",
-                    link: "/contact",
-                    text: {
-                        fr: "Réservez un appel stratégique",
-                        en: "Book a strategic call"
-                    },
-                    type: "cta-tertiary"
-                }
-            ]
-        }
+        footer: [
+            {
+                type: "footer-a",
+                text: {
+                    fr: "Votre plateforme mérite plus qu’un site standard. Construisons une application qui vous fait gagner du temps, des clients, et du contrôle.",
+                    en: "our platform deserves more than a standard website. Let’s build an application that saves you time, attracts clients, and gives you control."
+                },
+                cta: [
+                    {
+                        icon: "lucide:calendar",
+                        link: "/contact",
+                        text: {
+                            fr: "Réservez un appel stratégique",
+                            en: "Book a strategic call"
+                        },
+                        type: "cta-tertiary"
+                    }
+                ]
+            }
+        ]
     },
     "web-show": {
         hero: {
@@ -398,24 +400,26 @@ export const SERVICE_DATA = {
                 ]
             }
         ],
-        footer: {
-            type: "footer-a",
-            text: {
-                fr: "Chez Diligency, nous créons des sites vitrines rapides, élégants et mobiles, adaptés à votre marque, pour inspirer confiance, renforcer votre présence digitale et convertir vos visiteurs en opportunités concrètes.",
-                en: "At Diligency, we craft fast, elegant, and mobile showcase websites, tailored to your brand, to inspire trust, strengthen your digital presence, and turn visitors into tangible opportunities."
-            },
-            cta: [
-                {
-                    icon: "lucide:layers",
-                    link: "/application",
-                    text: {
-                        fr: "Créer mon site vitrine",
-                        en: "Create my web show"
-                    },
-                    type: "cta-tertiary"
-                }
-            ]
-        }
+        footer: [
+            {
+                type: "footer-a",
+                text: {
+                    fr: "Chez Diligency, nous créons des sites vitrines rapides, élégants et mobiles, adaptés à votre marque, pour inspirer confiance, renforcer votre présence digitale et convertir vos visiteurs en opportunités concrètes.",
+                    en: "At Diligency, we craft fast, elegant, and mobile showcase websites, tailored to your brand, to inspire trust, strengthen your digital presence, and turn visitors into tangible opportunities."
+                },
+                cta: [
+                    {
+                        icon: "lucide:layers",
+                        link: "/application",
+                        text: {
+                            fr: "Créer mon site vitrine",
+                            en: "Create my web show"
+                        },
+                        type: "cta-tertiary"
+                    }
+                ]
+            }
+        ]
     },
     "it-ia": {
         hero: {

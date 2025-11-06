@@ -1,6 +1,6 @@
-import { ListE } from "./list-e.type";
+import { LayoutE } from "./list-e.type";
 
-
-export class ListF extends ListE {
-
-}
+/**
+ * Liste F — même structure que la liste E.
+ */
+export class LayoutF extends LayoutE { }

@@ -17,30 +17,21 @@
 </template>
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
-import type { ListLayout } from '~/components/page/types/commons/list';
+import { BLOCK_PROPS } from '~/components/page/helpers/props/block-props.helper';
+import type { Layouts } from '~/components/page/types/commons/list';
 
 const { locale } = useI18n()
-const props = defineProps({
-    data: {
-        type: Object as PropType<(ListLayout[])>,
-        required: true
-    },
-    type: {
-        type: String,
-        required: true,
-        default: ""
-    },
-})
+const props = defineProps(BLOCK_PROPS)
 
-const icon = (item: ListLayout) => {
+const icon = (item: Layouts) => {
     return (item as any)?.icon ?? null
 };
 
-const list = (item: ListLayout) => {
+const list = (item: Layouts) => {
     return (item as any)?.list ?? []
 };
 
-const name = (item: ListLayout) => {
+const name = (item: Layouts) => {
     return (item as any)?.name ?? null
 }
 </script>

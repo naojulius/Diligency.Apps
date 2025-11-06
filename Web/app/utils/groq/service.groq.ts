@@ -5,5 +5,6 @@ export const GET_SERVICE_GROQ = `
     blocks[]{
         type, title, subtitle, items[]{icon, name, text, image, title, list[]{icon, name, text, image}}, image, cta
     },
-    footer{type, title, text, cta[]{type, icon, text, link}}
+    faq,
+    footer[]
 }`

@@ -19,29 +19,13 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-import type { AppLocaleType } from '~/components/page/types/commons/app-locale.type';
-import type { ListLayout } from '~/components/page/types/commons/list';
-import type { AppLocale } from '~/types/interfaces/app-locale';
+import { BLOCK_PROPS } from '~/components/page/helpers/props/block-props.helper';
 
 const leftRef = ref<HTMLElement | null>(null)
 const rightRef = ref<HTMLElement | null>(null)
 
 
-const props = defineProps({
-    title: {
-        required: false,
-        type: Object as PropType<Array<AppLocale>>,
-    },
-    subtitle: {
-        type: [Array, Object, undefined] as PropType<AppLocaleType[] | AppLocaleType>,
-        required: true,
-        default: []
-    },
-    data: {
-        type: Array as PropType<(ListLayout)[] | string[]>,
-        required: true
-    },
-})
+const props = defineProps(BLOCK_PROPS)
 
 const images = computed(() => {
     return props.data ?? []

@@ -19,32 +19,18 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
 import { GetCtaComponent } from '~/components/page/helpers/component.helper';
+import { BLOCK_PROPS } from '~/components/page/helpers/props/block-props.helper';
 import { CtaType } from '~/components/page/types/commons/cta.type';
-import type { ListLayout } from '~/components/page/types/commons/list';
+import type { Layouts } from '~/components/page/types/commons/list';
 
 const { locale } = useI18n()
-const props = defineProps({
-    data: {
-        type: Object as PropType<(ListLayout[])>,
-        required: true
-    },
-    type: {
-        type: String,
-        required: true,
-        default: ""
-    },
-    cta: {
-        type: Object as PropType<(CtaType[])>,
-        required: false,
-        default: null
-    },
-})
+const props = defineProps(BLOCK_PROPS)
 
-const image = (item: ListLayout) => {
+const image = (item: Layouts) => {
     return (item as any)?.image ?? null
 };
 
-const text = (item: ListLayout) => {
+const text = (item: Layouts) => {
     return (item as any)?.text ?? null
 }
 
