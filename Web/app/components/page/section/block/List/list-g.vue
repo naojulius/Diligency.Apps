@@ -18,6 +18,7 @@
 </template>
 
 <script lang="ts" setup>
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ref } from 'vue';
 import { BLOCK_PROPS } from '~/components/page/helpers/props/block-props.helper';
 
