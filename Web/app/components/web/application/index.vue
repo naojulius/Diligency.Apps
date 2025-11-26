@@ -5,8 +5,9 @@
 </template>
 
 <script lang="ts" setup>
+import { useApplicationStore } from '~/stores/application/application.store';
 
-import { UseApplicationStore } from '~/stores/application.store';
-const store = UseApplicationStore()
+
+const store = useApplicationStore()
 
 </script>

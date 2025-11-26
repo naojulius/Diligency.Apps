@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts" setup>
-import { UseApplicationStore } from '~/stores/application.store';
+import { useApplicationStore } from '~/stores/application/application.store';
 import type { Cta } from '~/types/interfaces/common/cta';
-const store = UseApplicationStore()
+const store = useApplicationStore()
 const cta: Cta = {
     icon: "lucide:arrow-right",
     link: "",
