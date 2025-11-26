@@ -3,20 +3,17 @@
         <div class="py-4 text-5xl text-center text-tertiary text-semibold">
             Détail de votre projet
         </div>
-        <form @submit.prevent="submit" class="flex flex-col gap-4 text-center text-lg/6 text-tertiary/80">
-
-            <FormInput name="projectName" type="text" placeholder="Nom du projet" />
-
-            <FormInput name="projectType" type="text"
+        <form @submit.prevent="handleSubmit" class="flex flex-col gap-4 text-center text-lg/6 text-tertiary/80">
+            <FormInput v-model="form.projectName" :error="errors.projectName" type="text" placeholder="Nom du projet" />
+            <FormInput v-model="form.projectType" :error="errors.projectType" type="text"
                 placeholder="Type du projet: Application mobile / Application web / Site vitrine / etc..." />
-
-            <FormInput name="deadline" type="text" placeholder="Délai souhaité: 1 mois / 2 mois / 3 mois" />
-
-            <FormText name="description" placeholder="Description du projet" />
+            <FormInput v-model="form.deadline" :error="errors.deadline" type="text"
+                placeholder="Délai souhaité: 1 mois / 2 mois / 3 mois" />
+            <FormText v-model="form.description" :error="errors.description" placeholder="Description du projet" />
+            <div class="flex items-center justify-end py-2">
+                <ButtonCtaLink :data="cta" type="submit" />
+            </div>
         </form>
-        <div class="flex items-center justify-center py-2">
-            <ButtonCtaLink :data="cta" @click="submit()" />
-        </div>
     </div>
 </template>
 
@@ -38,11 +35,23 @@ const cta: Cta = {
 // ZOD VALIDATION SCHEMA
 // ----------------------------
 const schema = z.object({
-    projectName: z.string().min(2, "Le nom du projet est obligatoire"),
-    projectType: z.string().min(3, "Le type du projet est obligatoire"),
-    deadline: z.string().min(3, "Le délai est obligatoire"),
-    description: z.string().min(10, "La description est obligatoire"),
+    projectName: z.string()
+        .nonempty("Le nom du projet ne peut pas être vide")
+        .min(3, "Le nom du projet doit contenir au moins 3 caractères"),
+
+    projectType: z.string()
+        .nonempty("Le type du projet ne peut pas être vide")
+        .min(3, "Le type du projet doit contenir au moins 3 caractères"),
+
+    deadline: z.string()
+        .nonempty("Le délai ne peut pas être vide")
+        .min(3, "Le délai doit contenir au moins 3 caractères"),
+
+    description: z.string()
+        .nonempty("La description ne peut pas être vide")
+        .min(10, "La description doit contenir au moins 10 caractères"),
 });
+
 
 // ----------------------------
 // INIT FORM
@@ -59,8 +68,11 @@ const errors = reactive<Record<string, string>>({});
 // ----------------------------
 // SUBMIT FUNCTION
 // ----------------------------
-const submit = () => {
-    // Clear old errors
+const hasErrors = computed(() => {
+    return Object.values(errors).some(error => error && error.length > 0)
+})
+
+const handleSubmit = () => {
     Object.keys(errors).forEach(k => errors[k] = "");
 
     const result = schema.safeParse(form);
@@ -70,13 +82,14 @@ const submit = () => {
             const field = issue.path[0] as string;
             errors[field] = issue.message;
         });
-        return; // Stop submit
-    }
-    console.log("Project Details:", result.data);
-    // Valid → Store it
-    //store.projectDetails = result.data;
 
-    // Go next
+        store.hasError = true;
+        return;
+    }
+
+    store.hasError = false;
+    store.updateDetails(result.data);
     store.next();
 };
+
 </script>
