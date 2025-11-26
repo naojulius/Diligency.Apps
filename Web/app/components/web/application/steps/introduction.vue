@@ -9,7 +9,7 @@
             plateforme ou un outil intelligent, soumettre votre projet est la première étape pour le concrétiser
             rapidement et efficacement.
         </div>
-        <div class="flex items-center justify-center py-5">
+        <div class="flex items-center justify-end py-5">
             <ButtonCtaLink :data="cta" @click="store.next()" />
         </div>
     </div>

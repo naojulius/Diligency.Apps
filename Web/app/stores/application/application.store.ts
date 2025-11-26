@@ -1,7 +1,8 @@
 import { WebApplicationStepsError, WebApplicationStepsGuidance, WebApplicationStepsIntroduction, WebApplicationStepsProject, WebApplicationStepsSuccess, WebApplicationStepsTech } from "#components"
 import { useLocalStorage } from "@vueuse/core"
 import { defineStore } from "pinia"
-import type { FinalProjectData, ProjectAccompagnement, ProjectDetails, ProjectTech } from "~/components/page/types/application"
+import type { ProjectAccompagnement, ProjectDetails, ProjectTech } from "~/components/page/types/application"
+import { UseLoaderStore } from "../loader.store"
 
 export const useApplicationStore = defineStore("application-store", () => {
 
@@ -12,8 +13,10 @@ export const useApplicationStore = defineStore("application-store", () => {
     const saving = ref(false)
     const success = ref(false)
     const error = ref<string | null>(null)
+    const submitting = ref(false)
 
     let AS = useLocalStorage("AS", 0)
+    const loader = UseLoaderStore()
     let hasError = ref(false)
     const successComponent = WebApplicationStepsSuccess;
     const errorComponent = WebApplicationStepsError;
@@ -70,33 +73,47 @@ export const useApplicationStore = defineStore("application-store", () => {
         tech.value = { ...tech.value, ...data }
     }
 
-    // FINAL SAVE
+    // FINAL SAVE using SANITY_CLIENT like MailData
     const Save = async () => {
+        submitting.value = true
         saving.value = true
         success.value = false
         error.value = null
+        hasError.value = false
 
         try {
-            const finalData: FinalProjectData = {
-                details: details.value as ProjectDetails,
-                accompagnement: accompagnement.value as ProjectAccompagnement,
-                tech: tech.value as ProjectTech
+            // Only include fields that exist in your Sanity schema
+            const sanityData = {
+                _type: "applicationPage",
+
+                projectName: details.value.projectName || "",
+                projectType: details.value.projectType || "",
+                deadline: details.value.deadline || "",
+                description: details.value.description || "",
+
+                analyse: accompagnement.value.analyse ?? false,
+                design: accompagnement.value.design ?? false,
+                dev: accompagnement.value.developpement ?? false,
+                maintenance: accompagnement.value.maintenance ?? false,
+                autre: accompagnement.value.autre || "",
+
+                techs: tech.value.technologies || "",
+                hasSpecs: tech.value.hasCahier ?? false,
             }
 
-            // send to API, sanity, etc.
-            await $fetch("/api/project", {
-                method: "POST",
-                body: finalData
-            })
+            await SANITY_CLIENT.create(sanityData)
 
             success.value = true
-
+            submitting.value = false
+            next()
         } catch (err: any) {
             error.value = err.message || "Save failed"
+            hasError.value = true
         } finally {
             saving.value = false
         }
     }
+
 
     return {
         details,
@@ -113,6 +130,7 @@ export const useApplicationStore = defineStore("application-store", () => {
         prev,
         CleanStep,
         ComposStep,
-        hasError
+        hasError,
+        submitting
     }
 })
