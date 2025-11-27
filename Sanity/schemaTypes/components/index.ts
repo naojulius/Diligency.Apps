@@ -1,3 +1,4 @@
+import { applicationData } from "./common/application-data";
 import { block } from "./common/block.schema";
 import { form } from "./common/contact";
 import { cta } from "./common/cta.schema";
@@ -16,6 +17,7 @@ export const components = [
     cta,
     footer,
     localeOrArray,
+    ...applicationData,
     ...faq,
     ...blocksListSchema,
     ...menu,

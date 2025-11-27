@@ -1,0 +1,158 @@
+{
+    "applicationIntroduction": {
+        "title": [
+            {
+                "fr": "soumettre mon projet",
+                "en": "submit my application"
+            }
+        ],
+        "description": {
+            "fr": "Partagez votre idée ou projet avec notre équipe d’experts. Nous vous accompagnons dans l’analyse, la conception et le développement de solutions digitales sur-mesure. Que ce soit pour une application, une plateforme ou un outil intelligent, soumettre votre projet est la première étape pour le concrétiser rapidement et efficacement.",
+            "en": "Share your idea or project with our team of experts. We support you in the analysis, design, and development of bespoke digital solutions. Whether it's an application, a platform, or an intelligent tool, submitting your project is the first step toward bringing it to life quickly and efficiently."
+        }
+    },
+    "applicationForm": [
+        {
+            "title": [
+                {
+                    "fr": "Détails de votre projet",
+                    "en": "Your project details"
+                }
+            ],
+            "items": [
+                {
+                    "id": "projectName",
+                    "text": {
+                        "fr": "Nom du projet",
+                        "en": "Project name"
+                    },
+                    "type": "textInput"
+                },
+                {
+                    "id": "projectType",
+                    "text": {
+                        "fr": "Type du projet: Application mobile / Application web / Site vitrine / etc...",
+                        "en": "Project type: Mobile application / Web application / Showcase site / etc..."
+                    },
+                    "type": "textInput"
+                },
+                {
+                    "id": "deadline",
+                    "text": {
+                        "fr": "Délai souhaité pour le projet: 1 mois / 3 mois / 6 mois / plus de 6 mois",
+                        "en": "Desired project deadline: 1 month / 3 months / 6 months / more than 6 months"
+                    },
+                    "type": "textInput"
+                },
+                {
+                    "id": "description",
+                    "text": {
+                        "fr": "Description du projet",
+                        "en": "Project description"
+                    },
+                    "type": "textArea"
+                }
+            ]
+        },
+        {
+            "title": [
+                {
+                    "fr": "Aspetcs techniques",
+                    "en": "Technical aspects"
+                }
+            ],
+            "items": [
+                {
+                    "id": "techs",
+                    "text": {
+                        "fr": "Téchnologies preférées: React Native / Flutter / Vue.js / etc...",
+                        "en": "Preferred technologies: React Native / Flutter / Vue.js / etc..."
+                    },
+                    "type": "textInput"
+                },
+                {
+                    "id": "hasSpecs",
+                    "text": {
+                        "fr": "Déjà un cahier de charges ou maquette ?",
+                        "en": "Already have a specifications document or mockup?"
+                    },
+                    "type": "checkbox"
+                }
+            ]
+        },
+        {
+            "title": [
+                {
+                    "fr": "Accompagnement",
+                    "en": "Guidance"
+                }
+            ],
+            "items": [
+                {
+                    "id": "analyse",
+                    "text": {
+                        "fr": "Analyse et conseil stratégique",
+                        "en": "Analysis and strategic advice"
+                    },
+                    "type": "checkbox"
+                },
+                {
+                    "id": "design",
+                    "text": {
+                        "fr": "Design UX/UI",
+                        "en": "UX/UI Design"
+                    },
+                    "type": "checkbox"
+                },
+                {
+                    "id": "dev",
+                    "text": {
+                        "fr": "Développement",
+                        "en": "Development"
+                    },
+                    "type": "checkbox"
+                },
+                {
+                    "id": "maintenance",
+                    "text": {
+                        "fr": "Maintenance et developpement",
+                        "en": "Maintenance and development"
+                    },
+                    "type": "checkbox"
+                },
+                {
+                    "id": "autre",
+                    "text": {
+                        "fr": "Autre (optionnel)",
+                        "en": "Other (optional)"
+                    },
+                    "type": "textInput"
+                }
+            ]
+        }
+    ],
+    "applicationSuccess": {
+        "title": [
+            {
+                "fr": "Soumis avec succès!",
+                "en": "Submitted successfully!"
+            }
+        ],
+        "description": {
+            "fr": "Votre demande à été recus, nous reviendrons vers vous dans les plus brief délais. Merci!",
+            "en": "Your request has been received, we will get back to you as soon as possible. Thank you!"
+        }
+    },
+    "applicationError": {
+        "title": [
+            {
+                "fr": "Une erreur est survenue",
+                "en": "An error occurred"
+            }
+        ],
+        "description": {
+            "fr": "Une erreur est survenue lors de la soumission de votre demande. Veuillez réessayer plus tard.",
+            "en": "An error occurred while submitting your request. Please try again later."
+        }
+    }
+}
