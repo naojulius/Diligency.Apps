@@ -36,7 +36,7 @@ export const BLOCK_PROPS = {
     },
 
     action: {
-        type: Array as PropType<string[]>,
+        type: String,
         required: false,
     },
 };

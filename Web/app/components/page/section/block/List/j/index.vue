@@ -18,15 +18,21 @@ import { CtaType } from '~/components/page/types/commons/cta.type';
 import { useArticleStore } from '~/stores/article/article.store';
 
 const props = defineProps(BLOCK_PROPS)
-const store = useArticleStore()
-const items = computed(() => {
-    // if (Array.isArray(props.action) ? props.action.includes('getArticleList') : props.action === 'getArticleList') {
-    //     // Fetch article list logic here
-    //     // For demonstration, returning an empty array
-    //     return [] as LayoutJ[]
-    // }
-    return []
-})
+const articleStore = useArticleStore()
+const items = ref<any[]>([])
+
+watch(
+    () => props.action,
+    async (newAction) => {
+        if (newAction === "getArticleList") {
+
+            items.value = await articleStore.GetFourLastArticle()
+        } else {
+            items.value = []
+        }
+    },
+    { immediate: true }
+)
 
 const getCta = (cta: CtaType) => {
     return GetCtaComponent(cta?.type ?? '') ?? new CtaType()

@@ -1,9 +1,8 @@
 export const GET_HOME_GROQ = `
-*[_type == "homePage"][0]{
-  "home-data": {
+*[_type == "homePage"]{
+        _id,
         hero,
         blocks[],
         footer[]
-    }
 }
 `
