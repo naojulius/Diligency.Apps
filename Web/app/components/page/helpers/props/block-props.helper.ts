@@ -34,4 +34,9 @@ export const BLOCK_PROPS = {
         type: Array as PropType<CtaType[]>,
         required: false,
     },
+
+    action: {
+        type: Array as PropType<string[]>,
+        required: false,
+    },
 };

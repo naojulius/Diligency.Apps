@@ -1,6 +1,6 @@
 <template>
     <div class="w-full md:w-1/2">
-        <div class="py-4 text-5xl text-center text-tertiary text-semibold">
+        <div class="py-4 text-5xl text-center text-green-500/60 text-semibold">
             Soumis avec succès!
         </div>
         <div class="text-center text-lg/6 text-tertiary/80">

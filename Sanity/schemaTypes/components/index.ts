@@ -6,12 +6,14 @@ import { faq } from "./common/faq";
 import { footer } from "./common/footer.schema";
 import { hero } from "./common/hero.schema";
 import { localeOrArray } from "./common/locale-or-array.schema";
+import { localeText } from "./common/locale-text.schema";
 import { locale } from "./common/locale.scema";
 import { menu } from "./common/menu";
 import { blocksListSchema } from "./lists";
 
 export const components = [
     locale,
+    localeText,
     hero,
     block,
     cta,

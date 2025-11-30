@@ -1,86 +1,129 @@
 <template>
-    <div class="w-full md:w-1/2">
+    <div class="w-full h-auto md:w-1/2" v-if="props.data">
         <div class="py-4 text-5xl text-center text-tertiary text-semibold">
-            Détail de votre projet
+            <span v-for="item in title" :key="item">
+                {{ item[locale] }}
+            </span>
         </div>
+
         <form @submit.prevent="handleSubmit" class="flex flex-col gap-4 text-center text-lg/6 text-tertiary/80">
-            <FormInput v-model="form.projectName" :error="errors.projectName" type="text" placeholder="Nom du projet" />
-            <FormInput v-model="form.projectType" :error="errors.projectType" type="text"
-                placeholder="Type du projet: Application mobile / Application web / Site vitrine / etc..." />
-            <FormInput v-model="form.deadline" :error="errors.deadline" type="text"
-                placeholder="Délai souhaité: 1 mois / 2 mois / 3 mois" />
-            <FormText v-model="form.description" :error="errors.description" placeholder="Description du projet" />
+
+            <component v-for="(item, index) in fields" :key="index" :is="GetComponent(item.type)"
+                :placeholder="item.text[locale]" v-model="form[item._key]" :error="errors[item._key]" type="text" />
+
             <div class="flex items-center justify-end py-2">
                 <ButtonCtaLink :data="cta" type="submit" />
             </div>
+
         </form>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { z } from 'zod';
-import { useApplicationStore } from '~/stores/application/application.store';
-import type { Cta } from '~/types/interfaces/common/cta';
-const store = useApplicationStore()
+import { ref, watch } from "vue";
+import { z } from "zod";
+
+import { FormCheck, FormInput, FormText } from "#components";
+import { useApplicationStore } from "~/stores/application/application.store";
+import type { Cta } from "~/types/interfaces/common/cta";
+
+const store = useApplicationStore();
+const { locale } = useI18n();
+
+// -----------------------------
+// CTA BUTTON
+// -----------------------------
 const cta: Cta = {
     icon: "lucide:arrow-right",
     link: "",
-    text: {
-        fr: "Suivant",
-        en: "Next"
+    text: { fr: "Suivant", en: "Next" }
+};
+
+// -----------------------------
+// PROPS
+// -----------------------------
+const props = defineProps({
+    data: { type: Object, required: true }
+});
+
+// -----------------------------
+// STATE
+// -----------------------------
+const title = ref<any[]>([]);
+const fields = ref<any[]>([]);
+
+const form = ref<Record<string, any>>({});
+const errors = ref<Record<string, string>>({});
+
+let schema: z.ZodObject<any> | null = null;
+
+// -----------------------------
+// COMPONENT RESOLVER
+// -----------------------------
+const GetComponent = (type: string) => {
+    switch (type) {
+        case "textInput": return FormInput;
+        case "textArea": return FormText;
+        case "checkbox": return FormCheck;
     }
-}
+};
 
-// ----------------------------
-// ZOD VALIDATION SCHEMA
-// ----------------------------
-const schema = z.object({
-    projectName: z.string()
-        .nonempty("Le nom du projet ne peut pas être vide")
-        .min(3, "Le nom du projet doit contenir au moins 3 caractères"),
+// -----------------------------
+// WATCH PROPS AND INIT FIELDS
+// -----------------------------
+watch(
+    () => props.data,
+    (data) => {
+        if (!data) return;
 
-    projectType: z.string()
-        .nonempty("Le type du projet ne peut pas être vide")
-        .min(3, "Le type du projet doit contenir au moins 3 caractères"),
+        title.value = data.applicationIntroduction?.title ?? [];
+        fields.value = data.applicationForm?.[store.GetCurrentStep() - 1]?.items ?? [];
 
-    deadline: z.string()
-        .nonempty("Le délai ne peut pas être vide")
-        .min(3, "Le délai doit contenir au moins 3 caractères"),
+        // INIT FORM
+        form.value = {};
+        fields.value.forEach(item => {
+            form.value[item._key] = "";
+        });
 
-    description: z.string()
-        .nonempty("La description ne peut pas être vide")
-        .min(10, "La description doit contenir au moins 10 caractères"),
-});
+        // INIT ERRORS
+        errors.value = {};
+        fields.value.forEach(item => {
+            errors.value[item._key] = "";
+        });
 
+        // BUILD SCHEMA DYNAMICALLY
+        const fieldText = { fr: "Le champ", en: "The field" };
+        const emptyText = { fr: "ne peut pas être vide", en: "should not be empty" };
+        const minText = { fr: "doit contenir au moins 3 caractères", en: "must contain at least 3 characters" };
 
-// ----------------------------
-// INIT FORM
-// ----------------------------
-const form = reactive({
-    projectName: "",
-    projectType: "",
-    deadline: "",
-    description: "",
-});
+        schema = z.object(
+            fields.value.reduce((acc: any, item: any) => {
+                acc[item._key] = z.string()
+                    .nonempty(`${fieldText[locale.value]} ${item.text[locale.value]} ${emptyText[locale.value]}`)
+                    .min(3, `${fieldText[locale.value]} ${item.text[locale.value]} ${minText[locale.value]}`);
+                return acc;
+            }, {})
+        );
+    },
+    { immediate: true }
+);
 
-const errors = reactive<Record<string, string>>({});
-
-// ----------------------------
-// SUBMIT FUNCTION
-// ----------------------------
-const hasErrors = computed(() => {
-    return Object.values(errors).some(error => error && error.length > 0)
-})
-
+// -----------------------------
+// SUBMIT HANDLER
+// -----------------------------
 const handleSubmit = () => {
-    Object.keys(errors).forEach(k => errors[k] = "");
+    // Reset errors
+    Object.keys(errors.value).forEach(k => {
+        errors.value[k] = "";
+    });
 
-    const result = schema.safeParse(form);
+    if (!schema) return;
+
+    const result = schema.safeParse(form.value);
 
     if (!result.success) {
-        result.error.issues.forEach(issue => {
-            const field = issue.path[0] as string;
-            errors[field] = issue.message;
+        result.error.issues.forEach((issue: any) => {
+            errors.value[issue.path[0]] = issue.message;
         });
 
         store.hasError = true;
@@ -88,8 +131,7 @@ const handleSubmit = () => {
     }
 
     store.hasError = false;
-    store.updateDetails(result.data);
+    store.updateData(result.data);
     store.next();
 };
-
 </script>

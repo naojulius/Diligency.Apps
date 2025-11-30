@@ -1,25 +1,25 @@
-import { WebApplicationStepsError, WebApplicationStepsGuidance, WebApplicationStepsIntroduction, WebApplicationStepsProject, WebApplicationStepsSuccess, WebApplicationStepsTech } from "#components"
+import {
+    WebApplicationStepsError,
+    WebApplicationStepsGuidance,
+    WebApplicationStepsIntroduction,
+    WebApplicationStepsProject,
+    WebApplicationStepsSuccess,
+    WebApplicationStepsTech
+} from "#components"
 import { useLocalStorage } from "@vueuse/core"
 import { defineStore } from "pinia"
-import type { ProjectAccompagnement, ProjectDetails, ProjectTech } from "~/components/page/types/application"
-import { UseLoaderStore } from "../loader.store"
 
 export const useApplicationStore = defineStore("application-store", () => {
-
-    const details = ref<Partial<ProjectDetails>>({})
-    const accompagnement = ref<Partial<ProjectAccompagnement>>({})
-    const tech = ref<Partial<ProjectTech>>({})
 
     const saving = ref(false)
     const success = ref(false)
     const error = ref<string | null>(null)
     const submitting = ref(false)
+    const data = ref<Record<string, any>>({})
+    const mainData = ref(null as any)
 
     let AS = useLocalStorage("AS", 0)
-    const loader = UseLoaderStore()
     let hasError = ref(false)
-    const successComponent = WebApplicationStepsSuccess;
-    const errorComponent = WebApplicationStepsError;
 
     let steps = [
         {
@@ -35,6 +35,10 @@ export const useApplicationStore = defineStore("application-store", () => {
             component: WebApplicationStepsGuidance
         },
     ]
+
+    const SetMainData = (maindata: any) => {
+        mainData.value = maindata
+    }
 
     const next = () => {
         if (AS.value >= steps.length) { return }
@@ -58,20 +62,33 @@ export const useApplicationStore = defineStore("application-store", () => {
         AS.value = 0
     }
 
-    // STEP 1
-    const updateDetails = (data: Partial<ProjectDetails>) => {
-        details.value = { ...details.value, ...data }
+    const GetCurrentStep = () => {
+        return AS.value
     }
 
-    // STEP 2
-    const updateAccompagnement = (data: Partial<ProjectAccompagnement>) => {
-        accompagnement.value = { ...accompagnement.value, ...data }
-    }
+    const updateData = (newdata: any) => {
+        console.log("mainData:", mainData.value);
+        console.log("newdata:", newdata);
 
-    // STEP 3
-    const updateTech = (data: Partial<ProjectTech>) => {
-        tech.value = { ...tech.value, ...data }
-    }
+        const form = mainData.value?.applicationForm;
+        const mappedData: Record<string, any> = {};
+        const dataArray = Object.entries(newdata).map(([key, value]) => ({ key, value }));
+
+        dataArray.forEach(({ key, value }) => {
+            form?.forEach((formItem: any) => {
+                var items = formItem.items;
+                var found = items.find((x: any) => x._key === key);
+                if (found) {
+                    mappedData[found.id] = value;
+                }
+            })
+        });
+
+        // Merge ONLY the undefined fields
+        data.value = { ...data.value, ...mappedData };
+
+        console.log("mapped:", data.value);
+    };
 
     // FINAL SAVE using SANITY_CLIENT like MailData
     const Save = async () => {
@@ -85,24 +102,10 @@ export const useApplicationStore = defineStore("application-store", () => {
             // Only include fields that exist in your Sanity schema
             const sanityData = {
                 _type: "applicationPage",
-
-                projectName: details.value.projectName || "",
-                projectType: details.value.projectType || "",
-                deadline: details.value.deadline || "",
-                description: details.value.description || "",
-
-                analyse: accompagnement.value.analyse ?? false,
-                design: accompagnement.value.design ?? false,
-                dev: accompagnement.value.developpement ?? false,
-                maintenance: accompagnement.value.maintenance ?? false,
-                autre: accompagnement.value.autre || "",
-
-                techs: tech.value.technologies || "",
-                hasSpecs: tech.value.hasCahier ?? false,
+                ...data.value,
             }
 
             await SANITY_CLIENT.create(sanityData)
-
             success.value = true
             submitting.value = false
             next()
@@ -114,23 +117,19 @@ export const useApplicationStore = defineStore("application-store", () => {
         }
     }
 
-
     return {
-        details,
-        accompagnement,
-        tech,
-        updateDetails,
-        updateAccompagnement,
-        updateTech,
-        Save,
+        ComposStep,
+        error,
         saving,
         success,
-        error,
+        hasError,
+        submitting,
+        updateData,
+        Save,
         next,
         prev,
+        GetCurrentStep,
         CleanStep,
-        ComposStep,
-        hasError,
-        submitting
+        SetMainData
     }
 })

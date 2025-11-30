@@ -1,7 +1,8 @@
-import { createClient } from "@sanity/client"
-import { logError, logInfo, logSuccess } from "../../logger"
-import { Client } from "../configs/client"
-import { addKeysRecursively } from "./add-keys.helper"
+import { createClient } from "@sanity/client";
+import { v4 as uuidv4 } from "uuid";
+import { logError, logInfo, logSuccess } from "../../logger";
+import { Client } from "../configs/client";
+import { addKeysRecursively } from "./add-keys.helper";
 
 
 export const ApplySeed = async (data: any, type: string) => {
@@ -48,4 +49,28 @@ export const seedApplicationDataPage = async (data: any, page: string) => {
 
     const result = await client.createOrReplace(doc);
     logSuccess(`Seeded 'applicationDataPage' document successfully! ID: ${result._id}`);
+};
+
+export const seedArray = async (items: any[], page: string) => {
+    const client = createClient(Client);
+
+    for (const item of items) {
+        const doc = {
+            _id: uuidv4(),
+            _type: page,
+            title: addKeysRecursively(item.title),
+            thumbnail: item.thumbnail,
+            image: item.image,
+            topTags: item.topTags,
+            author: item.author,
+            bottomTags: item.bottomTags,
+            content: addKeysRecursively(item.content),
+        };
+
+        //const result = await client.createOrReplace(doc);
+
+        //logSuccess(`Seeded ${page}: ${result._id}`);
+        logSuccess(`Seeded ${page} ${doc._id}`);
+
+    }
 };

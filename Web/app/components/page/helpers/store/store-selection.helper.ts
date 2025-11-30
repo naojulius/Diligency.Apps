@@ -6,7 +6,9 @@ import { useServiceStore } from "~/stores/service/service.store"
  * Dynamically returns a Pinia store instance based on a name.
  */
 export function getStore(name?: string) {
-    if (!name || name.trim() === "") return useHomeStore()
+    if (!name || name.trim() === "") {
+        return useHomeStore()
+    }
 
     const normalized = name.toLowerCase().trim()
 

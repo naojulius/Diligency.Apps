@@ -15,12 +15,17 @@
 import { GetCtaComponent } from '~/components/page/helpers/component.helper';
 import { BLOCK_PROPS } from '~/components/page/helpers/props/block-props.helper';
 import { CtaType } from '~/components/page/types/commons/cta.type';
-import type { LayoutJ } from '~/components/page/types/commons/list/list-j.type';
+import { useArticleStore } from '~/stores/article/article.store';
 
 const props = defineProps(BLOCK_PROPS)
-
+const store = useArticleStore()
 const items = computed(() => {
-    return props.data as LayoutJ[]
+    // if (Array.isArray(props.action) ? props.action.includes('getArticleList') : props.action === 'getArticleList') {
+    //     // Fetch article list logic here
+    //     // For demonstration, returning an empty array
+    //     return [] as LayoutJ[]
+    // }
+    return []
 })
 
 const getCta = (cta: CtaType) => {
