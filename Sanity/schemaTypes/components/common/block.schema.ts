@@ -29,7 +29,6 @@ export const block = defineType({
             title: 'List Block',
             type: 'array',
             of: [{ type: 'item' }],
-            // hidden: ({ parent }) => parent?.type !== 'list-a',
         }),
     ],
 })

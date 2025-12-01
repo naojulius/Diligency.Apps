@@ -176,12 +176,15 @@
                     {
                         "id": "essential",
                         "icon": "lucide:heart-plus",
-                        "title": {
-                            "fr": "Essentiel",
-                            "en": "Essential"
-                        },
+                        "title": [
+                            {
+                                "fr": "Essentiel",
+                                "en": "Essential"
+                            }
+                        ],
                         "price": "0",
                         "features": {
+                            "_type": "essential",
                             "fr": [
                                 "RDV de cadrage stratégique (objectifs, besoins, attentes)",
                                 "Développement sur-mesure selon cahier des charges",
@@ -203,12 +206,15 @@
                     {
                         "id": "premium",
                         "icon": "lucide:crown",
-                        "title": {
-                            "fr": "Premium",
-                            "en": "Premium"
-                        },
+                        "title": [
+                            {
+                                "fr": "Premium",
+                                "en": "Premium"
+                            }
+                        ],
                         "price": "29",
                         "features": {
+                            "_type": "premium",
                             "fr": [
                                 "Tous les avantages de l’Offre Essentielle",
                                 "10 heures de développement additionnel incluses",
