@@ -1,0 +1,407 @@
+import { v4 as uuidv4 } from 'uuid';
+export const AGENCY_DATA = {
+    about: {
+        hero: {
+            section: 'Hero',
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'À propos de Diligency',
+                    en: 'About Diligency'
+                }
+            ],
+            subtitle: {
+                fr: 'Diligency est une agence digitale indépendante fondée sur une conviction forte : l’efficacité digitale naît d’un équilibre entre rigueur, modernité et compréhension métier. Nous accompagnons les PME, cabinets, structures ambitieuses et entrepreneurs exigeants dans la création de plateformes web, d’applications sur mesure et de systèmes digitaux fiables. Notre nom est notre promesse : livrer avec diligence, précision et intégrité.',
+                en: 'Diligency is an independent digital agency founded on a strong conviction: digital efficiency is born from a balance between rigor, modernity, and business understanding. We support SMEs, firms, ambitious organizations, and demanding entrepreneurs in creating web platforms, custom applications, and reliable digital systems. Our name is our promise: to deliver with diligence, precision, and integrity.'
+            },
+            background: '/images/hero/ecommerce.jpg',
+            component: "with-one-cta"
+        },
+        engagement: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Nos engagements',
+                    en: 'Our Engagement'
+                }
+            ],
+            subtitle: {
+                fr: "Chez Diligency, nous conjuguons performance et simplicité. Chaque projet repose sur une transparence totale et une communication claire. Nous choisissons des technologies pertinentes, jamais superflues, pour répondre aux besoins réels. Nos livrables sont pensés comme des solutions concrètes, utiles et alignées avec vos objectifs stratégiques et opérationnels.",
+                en: "At Diligency, we combine performance with simplicity. Every project is built on complete transparency and clear communication. We select relevant technologies—never superfluous—to address real needs. Our deliverables are designed as practical, useful solutions aligned with your strategic and operational objectives."
+            },
+            items: [
+                {
+                    id: 1,
+                    icon: "lucide:rocket",
+                    name: {
+                        fr: "Performance sans complexité inutile",
+                        en: "Performance without unnecessary complexity"
+                    },
+                    text: {
+                        fr: "Chez Diligency, nous privilégions la clarté et l’efficacité. Nous éliminons les détours techniques superflus pour nous concentrer sur ce qui apporte une réelle valeur métier via des solutions solides et épurées.",
+                        en: "At Diligency, we prioritize clarity and efficiency. We remove unnecessary technical detours to focus on what truly adds business value through solid and streamlined solutions."
+                    }
+                },
+                {
+                    id: 2,
+                    icon: "lucide:handshake",
+                    name: {
+                        fr: "Transparence totale tout au long du projet",
+                        en: "Full transparency throughout the project"
+                    },
+                    text: {
+                        fr: "Nous communiquons avec transparence à chaque étape — des objectifs aux livrables, des délais aux éventuels obstacles. La confiance naît de la transparence, et c’est sur cette base que nous construisons chaque collaboration.",
+                        en: "We communicate transparently at every stage — from objectives to deliverables, timelines to potential obstacles. Trust is born from transparency, and it's on this foundation that we build every collaboration."
+                    }
+                },
+                {
+                    id: 3,
+                    icon: "lucide:brain",
+                    name: {
+                        fr: "Intelligence technologique pragmatique",
+                        en: "Pragmatic technological intelligence"
+                    },
+                    text: {
+                        fr: "La technologie n’est pas une fin en soi. Nous sélectionnons avec soin les outils adaptés à votre contexte métier, en nous appuyant sur l’expérience et la pertinence plutôt que sur la tendance.",
+                        en: "Technology is not an end in itself. We carefully select the tools suited to your business context, relying on experience and relevance rather than trends."
+                    }
+                },
+                {
+                    id: 4,
+                    icon: "lucide:target",
+                    name: {
+                        fr: "Livrables pensés pour les objectifs business réels",
+                        en: "Deliverables designed for real business goals"
+                    },
+                    text: {
+                        fr: "Nos livrables ne sont pas de simples productions techniques — ce sont des solutions concrètes et utiles, alignées avec vos objectifs opérationnels. Chaque fonctionnalité est pensée comme un levier de croissance.",
+                        en: "Our deliverables are not mere technical outputs — they are concrete, useful solutions aligned with your operational goals. Each feature is designed as a lever for growth."
+                    }
+                }
+            ]
+
+        },
+        team: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Équipe Diligency',
+                    en: 'Diligency Team'
+                }
+            ],
+            subtitle: {
+                fr: "Notre équipe est composée d’experts engagés — développeurs, designers, chefs de projet et consultants freelances — sélectionnés pour leur rigueur, leur sens de la structure et leur adaptabilité. Chaque projet est piloté par un référent unique, garant de la qualité et de la fluidité de la production.",
+                en: "Our team is made up of dedicated experts — developers, designers, project managers, and freelance consultants — selected for their rigor, sense of structure, and adaptability. Each project is overseen by a single point of contact, ensuring quality and smooth project delivery."
+            },
+            ctaA: {
+                icon: "lucide:mail",
+                text: {
+                    fr: "Contactez-nous",
+                    en: "Contuct us"
+                },
+                link: "/contact"
+            },
+            ctaB: {
+                icon: "lucide:arrow-right",
+                text: {
+                    fr: "Nous joindre",
+                    en: "join us"
+                },
+                link: "/agency/jobcarrier"
+            },
+            ctaText: {
+                fr: "Confiez votre projet digital à Diligency. Notre équipe transforme vos idées en solutions fiables, performantes et élégantes, pensées pour vos objectifs réels et votre croissance durable.",
+                en: "Entrust your digital project to Diligency. Our team turns your ideas into reliable, high-performing, and elegant solutions designed around your real goals and lasting growth."
+            }
+        }
+    },
+    jobcarrier: {
+        hero: {
+            section: 'Hero',
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Rejoindre Diligency',
+                    en: 'Join Diligency'
+                }
+            ],
+            subtitle: {
+                fr: 'Diligency est une structure hybride et agile, fondée sur l’excellence des indépendants qui la composent. Nous collaborons avec des talents freelance rigoureux, exigeants et autonomes — des professionnels capables de livrer proprement, de comprendre un projet sans blabla inutile et de proposer des solutions cohérentes.',
+                en: 'Diligency is a hybrid and agile organization, founded on the excellence of the freelancers who make it up. We work with rigorous, demanding, and autonomous freelance talents — professionals capable of delivering cleanly, understanding a project without unnecessary chatter, and proposing coherent solutions.'
+            },
+            background: '/images/hero/ecommerce.jpg',
+        },
+
+        profile: {
+            title: {
+                fr: "Profils recherchés",
+                en: "Needed profile"
+            },
+            items: [
+                {
+                    id: 1,
+                    name: {
+                        fr: "Développeurs front-end",
+                        en: "Front-end Developers"
+                    },
+                    icon: "lucide:braces",
+                    text: {
+                        fr: "Spécialistes du développement front-end, ils conçoivent des interfaces web modernes, intuitives et réactives. À partir de maquettes graphiques, ils développent des pages interactives en utilisant HTML, CSS, JavaScript et des frameworks comme Vue.js, Next.js ou React avec Tailwind CSS.",
+                        en: "Front-end development specialists who design modern, intuitive, and responsive web interfaces. Based on graphic mockups, they build interactive pages using HTML, CSS, JavaScript, and frameworks like Vue.js, Next.js, or React with Tailwind CSS."
+                    }
+                },
+                {
+                    id: 2,
+                    name: {
+                        fr: "Intégrateurs / UI engineers",
+                        en: "Integrators / UI Engineers"
+                    },
+                    icon: "lucide:layout-template",
+                    text: {
+                        fr: "Experts en intégration pixel-perfect, ces profils ont une forte sensibilité au détail et une excellente maîtrise du HTML/CSS. Ils traduisent fidèlement les maquettes UI en interfaces réactives, accessibles et performantes sur tous les appareils.",
+                        en: "Pixel-perfect integration experts with a strong attention to detail and excellent mastery of HTML/CSS. They faithfully translate UI mockups into responsive, accessible, and high-performance interfaces across all devices."
+                    }
+                },
+                {
+                    id: 3,
+                    name: {
+                        fr: "Designers UX/UI",
+                        en: "UX/UI Designers"
+                    },
+                    icon: "lucide:palette",
+                    text: {
+                        fr: "Designers centrés sur l’utilisateur, capables de proposer des interfaces à la fois esthétiques et fonctionnelles. Ils transforment des idées abstraites en solutions concrètes, intuitives et cohérentes avec les besoins métiers.",
+                        en: "User-centered designers capable of delivering interfaces that are both aesthetic and functional. They turn abstract ideas into concrete, intuitive solutions aligned with business needs."
+                    }
+                },
+                {
+                    id: 4,
+                    name: {
+                        fr: "Développeurs back-end",
+                        en: "Back-end Developers"
+                    },
+                    icon: "lucide:server",
+                    text: {
+                        fr: "Développeurs capables de concevoir et maintenir des APIs robustes, performantes et sécurisées. Ils maîtrisent la logique serveur, les bases de données, l’authentification, et assurent la fiabilité des échanges entre le front-end et le back-end.",
+                        en: "Developers skilled in designing and maintaining robust, high-performance, and secure APIs. They master server logic, databases, authentication, and ensure reliable communication between the front-end and back-end."
+                    }
+                }
+            ]
+        },
+        collaboration: {
+            title: {
+                fr: "Ce que nous offrons",
+                en: "What We Offer"
+            },
+            items: [
+                {
+                    id: 1,
+                    name: {
+                        fr: "Collaboration structurée",
+                        en: "Structured Collaboration"
+                    },
+                    icon: "lucide-workflow",
+                    text: {
+                        fr: "Travail organisé sur des outils collaboratifs modernes comme Notion, Trello, Git et Figma pour assurer une communication claire et efficace.",
+                        en: "Organized work using modern collaborative tools like Notion, Trello, Git, and Figma to ensure clear and effective communication."
+                    }
+                },
+                {
+                    id: 2,
+                    name: {
+                        fr: "Briefs clairs et cadrés",
+                        en: "Clear and Structured Briefs"
+                    },
+                    icon: "lucide-clipboard-list",
+                    text: {
+                        fr: "Des briefs synthétiques mais suffisamment structurés pour garantir la bonne compréhension des besoins et des objectifs.",
+                        en: "Concise yet structured briefs to ensure a clear understanding of requirements and objectives."
+                    }
+                },
+                {
+                    id: 3,
+                    name: {
+                        fr: "Engagement & délais respectés",
+                        en: "Commitment & Deadlines Respected"
+                    },
+                    icon: "lucide-calendar-clock",
+                    text: {
+                        fr: "Nous respectons les délais annoncés et le périmètre prévu, pour une collaboration professionnelle et fiable.",
+                        en: "We respect announced deadlines and agreed scope, ensuring professional and reliable collaboration."
+                    }
+                },
+                {
+                    id: 4,
+                    name: {
+                        fr: "Évolution & responsabilités",
+                        en: "Growth & Responsibilities"
+                    },
+                    icon: "lucide-arrow-up",
+                    text: {
+                        fr: "Possibilité d’évoluer vers un rôle de référent ou de lead projet en fonction de votre implication et de vos compétences.",
+                        en: "Opportunity to evolve into a reference or project lead role based on your involvement and skills."
+                    }
+                },
+                {
+                    id: 5,
+                    name: {
+                        fr: "Projets à forte valeur",
+                        en: "High-Value Projects"
+                    },
+                    icon: "lucide-star",
+                    text: {
+                        fr: "Pas de tâches jetables : chaque mission apporte une vraie valeur, sur des projets concrets, utiles et durables.",
+                        en: "No disposable tasks: every assignment brings real value through concrete, useful, and lasting projects."
+                    }
+                }
+            ],
+        },
+        apply: {
+            title: {
+                fr: "Postuler",
+                en: "Apply"
+            },
+            text: {
+                fr: "Tu te reconnais dans notre vision ? Tu veux faire partie d’un cercle exigeant mais humain ? Envoie ton profil (LinkedIn, mini-portfolio ou lien GitHub) à recrutement@diligency.com Ou réserve un appel rapide pour un premier échange informel.",
+                en: "Do you identify with our vision? Do you want to be part of a demanding yet human circle? Send your profile (LinkedIn, mini-portfolio, or GitHub link) to recrutement@diligency.com, or book a quick call for an informal first chat."
+            },
+            cta: {
+                icon: "lucide:calendar",
+                text: {
+                    fr: "Réserver un appel découverte",
+                    en: "Book a discovery call"
+                },
+                link: "/contact"
+            }
+        }
+    },
+    hub: {
+        hero: {
+            section: 'Hero',
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Le Hub Diligency',
+                    en: 'The Diligency Hub'
+                }
+            ],
+            subtitle: {
+                fr: "Bienvenue dans notre Hub. Ici, on partage nos idées, nos méthodes, nos démonstrations. Le Hub, c’est notre façon d’éduquer, de structurer le flou digital, et de vous donner les clés pour décider intelligemment. C’est aussi une preuve de ce que nous savons faire : transformer du savoir en action concrète, lisible, utile.",
+                en: "Welcome to our Hub. Here, we share our ideas, methods, and demonstrations. The Hub is our way of educating, clarifying the digital chaos, and giving you the tools to make smart decisions. It’s also a demonstration of what we can do: turning knowledge into tangible, clear, and useful action."
+            },
+            background: '/images/hero/ecommerce.jpg',
+        },
+        items: {
+            title: {
+                fr: "Ce que vous y trouverez",
+                en: "What you’ll find there"
+            },
+            subtitle: {
+                fr: "Nous diffusons des contenus utiles : analyses sur la création digitale, cas concrets de projets, guides téléchargeables et démonstrations ciblées. Une manière claire et accessible de valoriser notre approche en IA, UX/UI et performance.",
+                en: "We share useful content: analyses on digital creation, real project case studies, downloadable guides, and targeted demonstrations. A clear and accessible way to showcase our approach to AI, UX/UI, and performance."
+            },
+            image: "https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png",
+            list: [
+                {
+                    id: 1,
+                    icon: "lucide:file-text",
+                    name: {
+                        fr: "Articles d’analyse sur la création de sites et d'applications",
+                        en: "Analysis articles on website and application creation"
+                    },
+                    text: {
+                        fr: "Des contenus stratégiques qui explorent les bonnes pratiques, les tendances et les choix techniques pour concevoir des sites web et applications performants",
+                        en: "Strategic content exploring best practices, trends, and technical choices to design high-performance websites and applications"
+                    }
+                },
+                {
+                    id: 2,
+                    icon: "lucide:briefcase-business",
+                    name: {
+                        fr: "Études de cas issues de projets réels ou fictifs",
+                        en: "Case studies from real or hypothetical projects"
+                    },
+                    text: {
+                        fr: "Des retours d’expérience détaillés illustrant notre méthodologie, nos solutions concrètes et les résultats obtenus sur des projets variés.",
+                        en: "Detailed feedback illustrating our methodology, concrete solutions, and results obtained on various projects."
+                    }
+                },
+                {
+                    id: 3,
+                    icon: "lucide:download",
+                    name: {
+                        fr: "Mini-guides pratiques et checklists à télécharger",
+                        en: "Practical mini-guides and checklists to download"
+                    },
+                    text: {
+                        fr: "Des ressources prêtes à l’emploi pour vous aider à structurer vos projets, vérifier les étapes clés et gagner en autonomie rapidement.",
+                        en: "Ready-to-use resources to help structure your projects, check key steps, and gain autonomy quickly."
+                    }
+                },
+                {
+                    id: 4,
+                    icon: "lucide:bot",
+                    name: {
+                        fr: "Démonstrations concrètes en IA, design et performance",
+                        en: "Hands-on demonstrations in AI, design, and performance"
+                    },
+                    text: {
+                        fr: "Des exemples visuels et interactifs de notre approche technique et créative, mettant en lumière nos expertises en intelligence artificielle, UX/UI et optimisation.",
+                        en: "Visual and interactive examples of our technical and creative approach, highlighting our expertise in AI, UX/UI, and optimization."
+                    }
+                }
+            ]
+        },
+        why: {
+            title: [
+                {
+                    _key: uuidv4(),
+                    fr: 'Pourquoi ce n’est pas un blog classique',
+                    en: "Why This Isn’t a Typical Blog"
+                }
+            ],
+            subtitle: {
+                fr: "Pas de contenu vide pour le SEO. Chaque article vise à élever votre compréhension du digital, à clarifier vos décisions, et à vous faire gagner du temps – même si vous ne travaillez pas avec nous.",
+                en: "No empty content for SEO. Each article aims to enhance your understanding of digital topics, clarify your decisions, and save you time—even if you’re not working with us."
+            },
+            cta: {
+                icon: "lucide:arrow-right",
+                link: "/contact",
+                text: {
+                    fr: "Lire les derniers articles",
+                    en: "Read the Latest Articles"
+                }
+            },
+            lastArticles: [
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Découvrir les dernières tendances",
+                        en: "Discover latest trends"
+                    },
+                },
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Conseils pour réussir vite",
+                        en: "Tips to succeed fast"
+                    },
+                },
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Astuces pour économiser facilement",
+                        en: "Easy ways to save"
+                    },
+                },
+                {
+                    image: "/images/hero/ecommerce.jpg",
+                    text: {
+                        fr: "Inspiration pour créer aujourd'hui",
+                        en: "Inspiration to create today"
+                    },
+                }
+            ]
+        }
+    }
+}
