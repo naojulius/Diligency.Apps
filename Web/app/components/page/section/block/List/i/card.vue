@@ -4,7 +4,10 @@
         <div
             class="relative flex flex-col h-full p-6 overflow-hidden transition-all bg-white border-2 rounded-lg duration-600 hover:bg-secondary border-secondary-600">
             <h1 class="pb-4 mb-4 text-5xl leading-none inter text-tertiary">
-                {{ title?.[locale] }}
+                {{Array.isArray(title)
+                    ? title.map(t => t?.[locale]).join(', ')
+                    : title?.[locale]
+                }}
             </h1>
             <p class="flex flex-row items-start mb-3 inter text-tertiary" v-for="(item, index) in plan" :key="index">
                 <span

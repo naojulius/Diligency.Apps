@@ -15,7 +15,7 @@ export interface BaseLayout {
     icon?: string;
     name?: AppLocaleType;
     text?: AppLocaleType;
-    title?: AppLocale | AppLocaleType;
+    title?: AppLocale | AppLocaleType | AppLocaleType[];
     description?: AppLocaleType;
     features?: AppLocaleType;
 }

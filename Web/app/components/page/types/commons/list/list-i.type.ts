@@ -7,7 +7,7 @@ import type { BaseLayout } from "./base-layout";
 export class LayoutI implements BaseLayout {
     id?: string;
     icon?: string;
-    title?: AppLocaleType;
+    title?: AppLocaleType | AppLocaleType[];
     features?: AppLocaleType;
     description?: AppLocaleType;
 }

@@ -371,7 +371,7 @@
                 ]
             },
             {
-                "type": "list-d",
+                "type": "list-j",
                 "title": [
                     {
                         "fr": "Pourquoi ce n’est pas un blog classique",
@@ -387,7 +387,7 @@
                 "cta": [
                     {
                         "icon": "lucide:arrow-right",
-                        "link": "/contact",
+                        "link": "/article",
                         "text": {
                             "fr": "Lire les derniers articles",
                             "en": "Read the Latest Articles"
@@ -395,36 +395,8 @@
                         "type": "cta-link"
                     }
                 ],
-                "items": [
-                    {
-                        "image": "/images/hero/ecommerce.jpg",
-                        "text": {
-                            "fr": "Découvrir les dernières tendances",
-                            "en": "Discover latest trends"
-                        }
-                    },
-                    {
-                        "image": "/images/hero/ecommerce.jpg",
-                        "text": {
-                            "fr": "Conseils pour réussir vite",
-                            "en": "Tips to succeed fast"
-                        }
-                    },
-                    {
-                        "image": "/images/hero/ecommerce.jpg",
-                        "text": {
-                            "fr": "Astuces pour économiser facilement",
-                            "en": "Easy ways to save"
-                        }
-                    },
-                    {
-                        "image": "/images/hero/ecommerce.jpg",
-                        "text": {
-                            "fr": "Inspiration pour créer aujourd'hui",
-                            "en": "Inspiration to create today"
-                        }
-                    }
-                ]
+                "items": [],
+                "action": "getArticleList"
             }
         ]
     }
