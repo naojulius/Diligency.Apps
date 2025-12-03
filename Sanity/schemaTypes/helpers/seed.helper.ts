@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import { createClient } from "@sanity/client"
-import { logError, logInfo, logSuccess } from "../../logger"
-import { Client } from "../configs/client"
-import { addKeysRecursively } from "./add-keys.helper"
-=======
 import { createClient } from "@sanity/client";
-import { v4 as uuidv4 } from "uuid";
 import { logError, logInfo, logSuccess } from "../../logger";
 import { Client } from "../configs/client";
 import { addKeysMainRecursively, addKeysRecursively } from "./add-keys.helper";
->>>>>>> c7bfc53 (Fixed list i)
 
 
 export const ApplySeed = async (data: any, type: string) => {
