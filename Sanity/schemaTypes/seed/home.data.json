@@ -176,12 +176,15 @@
                     {
                         "id": "essential",
                         "icon": "lucide:heart-plus",
-                        "title": {
-                            "fr": "Essentiel",
-                            "en": "Essential"
-                        },
+                        "title": [
+                            {
+                                "fr": "Essentiel",
+                                "en": "Essential"
+                            }
+                        ],
                         "price": "0",
                         "features": {
+                            "_type": "essential",
                             "fr": [
                                 "RDV de cadrage stratégique (objectifs, besoins, attentes)",
                                 "Développement sur-mesure selon cahier des charges",
@@ -203,12 +206,15 @@
                     {
                         "id": "premium",
                         "icon": "lucide:crown",
-                        "title": {
-                            "fr": "Premium",
-                            "en": "Premium"
-                        },
+                        "title": [
+                            {
+                                "fr": "Premium",
+                                "en": "Premium"
+                            }
+                        ],
                         "price": "29",
                         "features": {
+                            "_type": "premium",
                             "fr": [
                                 "Tous les avantages de l’Offre Essentielle",
                                 "10 heures de développement additionnel incluses",
@@ -252,7 +258,7 @@
                 "cta": [
                     {
                         "icon": "lucide:arrow-right",
-                        "link": "/contact",
+                        "link": "/article",
                         "text": {
                             "fr": "Lire les articles",
                             "en": "Read articles"
@@ -260,35 +266,8 @@
                         "type": "cta-link"
                     }
                 ],
-                "items": [
-                    {
-                        "image": "/images/hero/000.jpg",
-                        "name": "Thomas Moreau",
-                        "role": "CTO, FinTech Solutions",
-                        "quote": {
-                            "fr": "Application de trading développée en 12 semaines. Performance exceptionnelle, zéro bug critique depuis le lancement.",
-                            "en": "Trading app developed in 12 weeks. Outstanding performance, zero critical bugs since launch."
-                        }
-                    },
-                    {
-                        "image": "/images/hero/001.jpg",
-                        "name": "Sophie Lambert",
-                        "role": "Directrice Marketing, E-Shop Pro",
-                        "quote": {
-                            "fr": "Notre site e-commerce a doublé son taux de conversion. L'expérience utilisateur est fluide et moderne.",
-                            "en": "Our e-commerce website doubled its conversion rate. The user experience is smooth and modern."
-                        }
-                    },
-                    {
-                        "image": "/images/hero/002.jpg",
-                        "name": "Karim Benali",
-                        "role": "Fondateur, StartApp",
-                        "quote": {
-                            "fr": "Application mobile livrée en avance. Le design est superbe et la performance au rendez-vous.",
-                            "en": "Mobile app delivered ahead of schedule. The design is beautiful and the performance is on point."
-                        }
-                    }
-                ]
+                "action": "getArticleList",
+                "items": []
             }
         ],
         "footer": [

@@ -3,7 +3,7 @@
         <PageSectionBlockTitle :title="titleData!" :custom-class="getCustomClass" v-if="displayTitle" />
         <PageSectionBlockSubtitle :data="subtitleData" v-if="displaySubTitle" />
         <PageSectionBlockList :data="blockData!" :type="props.type" :image="imageData" :cta="ctaData" v-if="blockData"
-            :title="titleData" :subtitle="subtitleData" />
+            :title="titleData" :subtitle="subtitleData" :action="actionData" />
     </section>
 </template>
 
@@ -19,6 +19,11 @@ const props = defineProps({
         required: true,
         type: [String],
         default: ""
+    },
+    action: {
+        required: false,
+        type: [String],
+        default: null
     },
 })
 
@@ -43,6 +48,10 @@ const subtitleData = computed(() => {
 
 const blockData = computed(() => {
     return props.data.items ?? []
+})
+
+const actionData = computed(() => {
+    return props.action
 })
 
 const imageData = computed(() => {

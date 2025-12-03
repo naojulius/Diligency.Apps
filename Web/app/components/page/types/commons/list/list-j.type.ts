@@ -5,7 +5,15 @@ import type { AppLocaleType } from "../app-locale.type";
  */
 export class LayoutJ {
     name?: string
-    image?: string
+    // image?: string
     role?: AppLocaleType
     quote?: AppLocaleType
+
+    author?: string
+    topTags?: string[]
+    bottomTags?: string[]
+    image?: string
+    thumbnail?: string
+    title?: AppLocaleType
+    content?: AppLocaleType
 }

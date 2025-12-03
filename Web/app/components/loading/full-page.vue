@@ -13,14 +13,5 @@
 import { UseLoaderStore } from '~/stores/loader.store';
 
 const loader = UseLoaderStore()
-// loader.ShowLoader()
 const loading = computed(() => loader.loading)
-
-// onMounted(async () => {
-//     const router = useRouter()
-//     await router.isReady()
-//     setTimeout(() => {
-//         loader.HideLoader()
-//     }, 500)
-// })
 </script>

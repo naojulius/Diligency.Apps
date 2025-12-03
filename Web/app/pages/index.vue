@@ -1,4 +1,3 @@
 <template>
-    <!-- <WebHome /> -->
     <PageBuilder />
 </template>

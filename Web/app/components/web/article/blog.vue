@@ -29,7 +29,9 @@
                         class="text-xs text-secondary font-medium hover:text-gray-900 transition duration-500 ease-in-out">
                         #{{ item }}
                     </a>,
+
                 </div>
+
             </div>
         </div>
     </div>

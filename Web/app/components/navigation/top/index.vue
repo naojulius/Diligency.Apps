@@ -24,7 +24,7 @@ const menustore = useMenuStore()
 const isScrolled = ref(false)
 const SCROLL_POINT = ref(80)
 const permanentTertiaryHeaderBackground = [
-  "/contact", "/application"
+  "/contact", "/application", "/article"
 ]
 const path = computed(() => route.path)
 

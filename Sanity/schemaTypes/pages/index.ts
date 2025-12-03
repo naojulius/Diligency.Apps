@@ -1,4 +1,7 @@
 import { agencyPage } from "./agency.page";
+import { applicationDataPage } from "./application-data.page";
+import { applicationPage } from "./application.page";
+import { articlePage } from "./article.page";
 import { contactPage } from "./contact.page";
 import { homePage } from "./home.page";
 import { mailPage } from "./mail.page";
@@ -14,4 +17,7 @@ export const pages = [
     menuPage,
     contactPage,
     homePage,
+    applicationPage,
+    applicationDataPage,
+    articlePage,
 ]

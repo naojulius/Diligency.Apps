@@ -227,7 +227,7 @@ export const HOME_DATA = {
             cta: [
                 {
                     icon: "lucide:arrow-right",
-                    link: "/contact",
+                    link: "/article",
                     text: {
                         fr: "Lire les articles",
                         en: "Read articles"

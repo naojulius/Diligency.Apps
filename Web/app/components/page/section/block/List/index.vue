@@ -1,7 +1,7 @@
 <template>
     <SpacingBlock />
     <component :is="getItemComponent()" :data="items" :type="props.type" :image="image" :cta="cta" :title="props.title"
-        :subtitle="props.subtitle" />
+        :subtitle="props.subtitle" :action="props.action" />
 </template>
 
 <script lang="ts" setup>
@@ -36,6 +36,11 @@ const props = defineProps({
         type: [Array, undefined] as PropType<(CtaType)[]>,
         required: false,
     },
+    action: {
+        required: false,
+        type: String,
+        default: null
+    }
 })
 
 const getItemComponent = () => {

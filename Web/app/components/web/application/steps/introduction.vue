@@ -1,24 +1,28 @@
 <template>
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-1/2" v-if="props.data">
         <div class="py-4 text-5xl text-center text-tertiary text-semibold">
-            soumettre mon projet
+            <span v-for="item in title">
+                {{ item[locale] }}
+            </span>
         </div>
         <div class="text-center text-lg/6 text-tertiary/80">
-            Partagez votre idée ou projet avec notre équipe d’experts. Nous vous accompagnons dans l’analyse, la
-            conception et le développement de solutions digitales sur-mesure. Que ce soit pour une application, une
-            plateforme ou un outil intelligent, soumettre votre projet est la première étape pour le concrétiser
-            rapidement et efficacement.
+            {{ description?.[locale] }}
         </div>
-        <div class="flex items-center justify-center py-5">
+        <div class="flex items-center justify-end py-5">
             <ButtonCtaLink :data="cta" @click="store.next()" />
         </div>
     </div>
 </template>
 
 <script lang="ts" setup>
-import { UseApplicationStore } from '~/stores/application.store';
+import { AppLocaleType } from '~/components/page/types/commons/app-locale.type';
+import { useApplicationStore } from '~/stores/application/application.store';
 import type { Cta } from '~/types/interfaces/common/cta';
-const store = UseApplicationStore()
+const { locale } = useI18n()
+const store = useApplicationStore()
+const title = ref([])
+const description = ref(null)
+
 const cta: Cta = {
     icon: "lucide:arrow-right",
     link: "",
@@ -27,4 +31,19 @@ const cta: Cta = {
         en: "Start application"
     }
 }
+
+const props = defineProps({
+    data: {
+        required: true,
+        type: [Object, null],
+        default: null
+    },
+})
+
+watch(() => props.data, (_data) => {
+    if (_data) {
+        title.value = _data.applicationIntroduction?.title ?? []
+        description.value = _data.applicationIntroduction?.description ?? new AppLocaleType()
+    }
+})  
 </script>
